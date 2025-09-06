@@ -1,0 +1,281 @@
+@import './_var'
+@import './component/_variable'
+@import './component/_dropdown'
+@import './component/_model'
+@import './component/_datepicker'
+@import './component/_button'
+@import './component/_input'
+@import './component/_select2'
+@import './component/_tooltip'
+@import './component/_form'
+*,
+*::before,
+*::after
+    padding: 0
+    margin: 0
+    list-style: none
+    box-sizing: border-box
+
+:root
+    --header: 68px
+    --aside: 170px
+    --asidecollapse: 80px
+    --mainpaddingleftright: 30px
+    --primary-a: #1E5EFF
+    --primary-b: #336DFF
+    --primary-c: #4F81FF
+    --primary-d: #608DFF
+    --primary-e: #89ABFF
+    --primary-f: #B6CBFF
+    --primary-g: #D9E4FF
+    --primary-h: #ECF2FF
+
+    --secondary-a: #6E0BD4
+    --secondary-b: #8125DF
+    --secondary-c: #9645E9
+    --secondary-d: #A75EF1
+    --secondary-e: #B97FF3
+    --secondary-f: #D8B1FF
+    --secondary-g: #E9D3FF
+    --secondary-h: #F4E9FE
+
+    --general-a: #131523
+    --general-b: #333752
+    --general-c: #5A607F
+    --general-d: #7E84A3
+    --general-e: #A1A7C4
+    --general-f: #D7DBEC
+    --general-g: #E6E9F4
+    --general-h: #F5F6FA
+    --general-i: #D9E1EC
+    --general-j: #E2E6F6
+
+    --red-a: #F0142F
+    --red-b: #F12B43
+    --red-c: #F34359
+    --red-d: #F45A6D
+    --red-e: #F8919D
+    --red-f: #FAB3BC
+    --red-g: #FCD5D9
+    --red-h: #FDE7EA
+
+    --green-a: #06A561
+    --green-b: #1FD286
+    --green-c: #25E191
+    --green-d: #48E9A5
+    --green-e: #74EFB9
+    --green-f: #95F6CC
+    --green-g: #C4F8E2
+    --green-h: #DAF9EC
+
+    --yellow-a: #F99600
+    --yellow-b: #FFC700
+    --yellow-c: #FFD613
+    --yellow-d: #FFE45F
+    --yellow-e: #FFE582
+    --yellow-f: #FFECA3
+    --yellow-g: #FFF4C9
+    --yellow-h: #FFF9E1
+
+    --white: #fff
+    --black: #000
+    --text: #666
+body,html
+    font-size: 14px
+    line-height: 1.5
+    font-optical-sizing: auto
+    font-style: normal
+    color: var(--general-c)
+    @include font
+div
+    line-height: normal
+
+
+li
+    color: var(--general-c)
+p
+    line-height: 1.5
+
+a[href]
+    text-decoration: none
+    transition: .5s ease
+img
+    max-width: 100%
+
+[data-icon]
+    font-size: 20px
+
+input,button,select
+    font-family: inherit
+    font-size: inherit
+    cursor: pointer
+    border: none
+    border-radius: 0
+    &:focus
+        outline: none
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button
+        -webkit-appearance: none
+        margin: 0
+input[type=number]
+    -moz-appearance: textfield
+button
+    background: none
+    appearance: none
+
+b
+    font-weight: normal
+    @include font(600)
+
+hr
+    border-style: initial
+    height: 1px
+    background: var(--general-f)
+    margin: 30px 0
+// 
+
+[data-copy]
+    position: relative
+    --icon: 15px
+    padding-right: calc(var(--icon) + 3px)
+    cursor: pointer
+    &::before
+        content: ''
+        position: absolute
+        right: 0
+        bottom: 0
+        height: var(--icon)
+        width: var(--icon)
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 256 256'%3E%3Cpath fill='%237E84A3' d='M216 34H88a6 6 0 0 0-6 6v42H40a6 6 0 0 0-6 6v128a6 6 0 0 0 6 6h128a6 6 0 0 0 6-6v-42h42a6 6 0 0 0 6-6V40a6 6 0 0 0-6-6m-54 176H46V94h116Zm48-48h-36V88a6 6 0 0 0-6-6H94V46h116Z'/%3E%3C/svg%3E")
+        background-repeat: no-repeat
+        background-size: 100% 100%
+// Commom class
+
+
+.logo
+    display: block
+
+.text-center
+    text-align: center
+
+.text-right
+    text-align: right
+
+.d-block
+    display: block
+
+.flex
+    display: flex
+    flex-wrap: wrap
+
+.inline-flex
+    display: inline-flex
+    gap: 12px
+
+.align-center
+    align-items: center
+.align-start
+    align-items: flex-start
+.align-end
+    align-items: flex-end
+
+.justify-center
+    justify-content: center
+.justify-end
+    justify-content: end
+.justify-between
+    justify-content: space-between
+
+.mr-auto
+    margin-right: auto
+.ml-auto
+    margin-left: auto
+
+.f-12
+    font-size: 12px
+.f-13
+    font-size: 13px
+.f-14
+    font-size: 14px
+.f-15
+    font-size: 15px
+.f-16
+    font-size: 16px
+.f-18
+    font-size: 18px
+
+.lh-16
+    line-height: 16px
+.lh-18
+    line-height: 18px
+.lh-20
+    line-height: 20px
+.lh-22
+    line-height: 22px
+.lh-24
+    line-height: 24px
+
+.f-medium
+    @include font(500)
+.f-bold
+    @include font(600)
+.red
+    color: var(--red-a)
+.green
+    color: var(--green-b)
+.yellow
+    color: var(--yellow-a)
+.primary
+    color: var(--primary-a)
+.black
+    color: var(--black)
+.gray
+    color: var(--text)
+.general-a
+    color: var(--general-a)
+.general-b
+    color: var(--general-b)
+.general-c
+    color: var(--general-c)
+.general-d
+    color: var(--general-d)
+.general-e
+    color: var(--general-e)
+.general-f
+    color: var(--general-f)
+.general-g
+    color: var(--general-g)
+.general-h
+    color: var(--general-h)
+
+.card
+    background: var(--white)
+    box-shadow: 0px 1px 4px 0px #15223214
+    border-radius: 6px
+.card-body
+    padding: 20px
+
+.border-card
+    border: 1px solid #D7DBEC
+    padding: 10px
+    border-radius: 5px
+//
+
+
+h3
+    font-size: 32px
+    line-height: 44px
+    color: var(--general-a)
+    @include font(700)
+
+h4
+    font-size: 24px
+    line-height: 36px
+    color: var(--general-a)
+    @include font(700)
+
+h5
+    font-size: 20px
+    line-height: 28px
+    color: var(--general-a)
+    @include font(700)

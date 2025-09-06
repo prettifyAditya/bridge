@@ -1,0 +1,2687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowPro CRM</title>
+    <link rel="stylesheet" href="assets/fonts/font.css">
+    <!-- Select 2 css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- datepicker css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.min.css" integrity="sha512-rBi1cGvEdd3NmSAQhPWId5Nd6QxE8To4ADjM2a6n0BrqQdisZ/RPUlm0YycDzvNL1HHAh1nKZqI0kSbif+5upQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- datatable css -->
+    <link rel="stylesheet" href="assets/css/datatables.min.css">
+    <!-- Style css -->
+    <link rel="stylesheet" href="assets/sass/style.css">
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Iconify -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js" integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Select2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- DatePicker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <!-- Data Tables -->
+    <script type="text/javascript" src="assets/js/datatables.min.js"></script>
+    <!-- Main Js -->
+    <script type="text/javascript" src="assets/js/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-wrapper">
+            <div class="colA">
+                <a href="" class="logo"><img src="assets/img/realtydigi-logo.png" alt=""></a>
+            </div>
+            <div class="colB">
+                <ul>
+                    <li>
+                        <div class="notification-div" data-dialog="zuwkw">
+                            <img src="assets/icon/notification.svg" alt="">
+                            <span>5</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown-wrap inline-flex align-center">
+                            <div class="user-ico"><img src="assets/img/user.png" alt=""></div>
+                            <div data-dropdown>
+                                <span class="title">Deepak chauhan</span>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li><a href="">My Profile</a></li>
+                                        <li><a href="">Settings</a></li>
+                                        <li><a href="">Leads</a></li>
+                                        <li><a href="">Projects</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="" class="logo"><img src="assets/img/grow-logo.png" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <aside>
+        <div class="aside-wrap">
+            <div class="aside-col">
+                <ul>
+                    <li><a href="dashboard-home.html"><i class="iconify" data-icon="eva:home-outline"></i>Home</a></li>
+                    <li><a href=""><i class="iconify" data-icon="ph:user"></i>User</a></li>
+                    <li><a href=""><i class="iconify" data-icon="ant-design:team-outlined"></i>Team</a></li>
+                    <li><a href=""><i class="iconify" data-icon="carbon:laptop"></i>Projects</a></li>
+                    <li><a class="active" href="manage-leads.html"><i class="iconify" data-icon="solar:chart-linear"></i>Leads</a></li>
+                    <li><a href=""><i class="iconify" data-icon="bi:phone"></i>Calling</a></li>
+                    <li><a href=""><i class="iconify" data-icon="solar:widget-linear"></i>Reports</a></li>
+                    <li><a href=""><i class="iconify" data-icon="mi:notification"></i>Notificaitons</a></li>
+                    <li><a href=""><i class="iconify" data-icon="tabler:message"></i>Activity</a></li>
+                    <li><a href=""><i class="iconify" data-icon="hugeicons:logout-04"></i>Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <button type="button" class="aside-collapse-btn"><i class="iconify" data-icon="ic:round-play-arrow"></i></button>
+    <main>
+        <div class="manage-leads-sec">
+            <div class="filter-wrap">
+                <div class="colA">
+                    <div class="col">
+                        <select name="" id="" class="form-control small">
+                            <option value="">All Leads</option>
+                            <option value="">My Leads</option>
+                            <option value="">Team Leads</option>
+                            <option value="">Other Leads</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control small search" placeholder="Search...">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control small date-range" placeholder="All time">
+                    </div>
+                </div>
+                <div class="colB">
+                    <div data-dropdown>
+                        <a href="javascript:void(0);" class="btn small"><i class="iconify" data-icon="lucide:plus"></i> Leads</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="">Add Quick Lead</a></li>
+                                <li><a href="">Create Lead</a></li>
+                                <li><a href="javascript:void(0);" data-dialog="vCWRi7g">Import Leads</a></li>
+                                <li><a href="">Export Leads</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-wrap">
+            <div class="team-lead-table-wrap">
+                <table id="teamLeadTable" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="inline-flex">
+                                    <input type="checkbox" class="form-control" name="" id="">
+                                    <p>Leads</p>
+                                </div>
+                            </th>
+                            <th>Subject</th>
+                            <th>Lead Source</th>
+                            <th>Lead Quality</th>
+                            <th>Priority</th>
+                            <th>Lead Status</th>
+                            <th>Owner</th>
+                            <th>Project</th>
+                            <th>Sub Source</th>
+                            <th>Created On </th>
+                            <th>Updated On </th>
+                            <th>Recording</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="wrp">
+                                    <input type="checkbox" class="form-control" name="" id="">
+                                    <div class="inf">
+                                        <p><span>Suraj</span></p><p data-copy="ksuraj01283@gmail.com">ksuraj01283@gmail.com</p>
+                                        <p style="display: inline-block;" data-copy="+919671314269">+919671314269</p>
+                                    </div>
+                                    <span class="noti-dupli notification-dot protip">2</span>
+                                </div>
+                                <div class="sub-info">
+                                    <i class="iconify" data-icon="pepicons-pencil:dots-y"></i>
+                                    <ul>
+                                        <li><a href="javascript:void(0);" data-dialog="li7DnA4"><i class="iconify" data-icon="ph:eye"></i>Quick View</a></li>
+                                        <li><a href="javascript:void(0);" data-dialog="Cl01Tpw"><i class="iconify" data-icon="fluent:apps-list-detail-20-regular"></i> Details</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>phone_no_?:9811788940;phone_number:+919811788940;</td>
+                            <td>Facebook</td>
+                            <td><p data-dialog="uGCiMh0">None</p></td>
+                            <td><p data-dialog="FkFDshc">None</p></td>
+                            <td><div class="badge green light p-14" data-dialog="zNneKS4">New</div></td>
+                            <td><p data-dialog="ibbBji4">Dolatram</p></td>
+                            <td><p data-dialog="ei7MTcw">M3M SKY LOFT</p></td>
+                            <td>FB-Residential Project In Gurgaon1</td>
+                            <td>7/07/2024 19:32:09</td>
+                            <td>18/07/2024 11:01:00</td>
+                            <td><audio controls><source src="" type="audio/ogg"><source src="" type="audio/mpeg"></audio></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="wrp">
+                                    <input type="checkbox" class="form-control" name="" id="">
+                                    <div class="inf">
+                                        <p><span>Suraj</span></p><p data-copy="ksuraj01283@gmail.com">ksuraj01283@gmail.com</p>
+                                        <p style="display: inline-block;" data-copy="+919671314269">+919671314269</p>
+                                    </div>
+                                    <span class="noti-dupli notification-dot">2</span>
+                                </div>
+                                <div class="sub-info">
+                                    <i class="iconify" data-icon="pepicons-pencil:dots-y"></i>
+                                    <ul>
+                                        <li><a href="javascript:void(0);" data-dialog="li7DnA4"><i class="iconify" data-icon="ph:eye"></i>Quick View</a></li>
+                                        <li><a href="javascript:void(0);" data-dialog="Cl01Tpw"><i class="iconify" data-icon="fluent:apps-list-detail-20-regular"></i> Details</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>phone_no_?:9811788940;phone_number:+919811788940;</td>
+                            <td>Facebook</td>
+                            <td><p data-dialog="uGCiMh0">None</p></td>
+                            <td><p data-dialog="FkFDshc">None</p></td>
+                            <td><div class="badge green light p-14" data-dialog="zNneKS4">New</div></td>
+                            <td><p data-dialog="ibbBji4">Dolatram</p></td>
+                            <td><p data-dialog="ei7MTcw">M3M SKY LOFT</p></td>
+                            <td>FB-Residential Project In Gurgaon1</td>
+                            <td>7/07/2024 19:32:09</td>
+                            <td>18/07/2024 11:01:00</td>
+                            <td><audio controls><source src="" type="audio/ogg"><source src="" type="audio/mpeg"></audio></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="wrp">
+                                    <input type="checkbox" class="form-control" name="" id="">
+                                    <div class="inf">
+                                        <p><span>Suraj</span></p><p data-copy="ksuraj01283@gmail.com">ksuraj01283@gmail.com</p>
+                                        <p style="display: inline-block;" data-copy="+919671314269">+919671314269</p>
+                                    </div>
+                                    <span class="noti-dupli notification-dot">2</span>
+                                </div>
+                                <div class="sub-info">
+                                    <i class="iconify" data-icon="pepicons-pencil:dots-y"></i>
+                                    <ul>
+                                        <li><a href="javascript:void(0);" data-dialog="li7DnA4"><i class="iconify" data-icon="ph:eye"></i>Quick View</a></li>
+                                        <li><a href="javascript:void(0);" data-dialog="Cl01Tpw"><i class="iconify" data-icon="fluent:apps-list-detail-20-regular"></i> Details</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>phone_no_?:9811788940;phone_number:+919811788940;</td>
+                            <td>Facebook</td>
+                            <td><p data-dialog="uGCiMh0">None</p></td>
+                            <td><p data-dialog="FkFDshc">None</p></td>
+                            <td><div class="badge green light p-14" data-dialog="zNneKS4">New</div></td>
+                            <td><p data-dialog="ibbBji4">Dolatram</p></td>
+                            <td><p data-dialog="ei7MTcw">M3M SKY LOFT</p></td>
+                            <td>FB-Residential Project In Gurgaon1</td>
+                            <td>7/07/2024 19:32:09</td>
+                            <td>18/07/2024 11:01:00</td>
+                            <td><audio controls><source src="" type="audio/ogg"><source src="" type="audio/mpeg"></audio></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="wrp">
+                                    <input type="checkbox" class="form-control" name="" id="">
+                                    <div class="inf">
+                                        <p><span>Suraj</span></p><p data-copy="ksuraj01283@gmail.com">ksuraj01283@gmail.com</p>
+                                        <p style="display: inline-block;" data-copy="+919671314269">+919671314269</p>
+                                    </div>
+                                    <span class="noti-dupli notification-dot">2</span>
+                                </div>
+                                <div class="sub-info">
+                                    <i class="iconify" data-icon="pepicons-pencil:dots-y"></i>
+                                    <ul>
+                                        <li><a href="javascript:void(0);" data-dialog="li7DnA4"><i class="iconify" data-icon="ph:eye"></i>Quick View</a></li>
+                                        <li><a href="javascript:void(0);" data-dialog="Cl01Tpw"><i class="iconify" data-icon="fluent:apps-list-detail-20-regular"></i> Details</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>phone_no_?:9811788940;phone_number:+919811788940;</td>
+                            <td>Facebook</td>
+                            <td><p data-dialog="uGCiMh0">None</p></td>
+                            <td><p data-dialog="FkFDshc">None</p></td>
+                            <td><div class="badge green light p-14" data-dialog="zNneKS4">New</div></td>
+                            <td><p data-dialog="ibbBji4">Dolatram</p></td>
+                            <td><p data-dialog="ei7MTcw">M3M SKY LOFT</p></td>
+                            <td>FB-Residential Project In Gurgaon1</td>
+                            <td>7/07/2024 19:32:09</td>
+                            <td>18/07/2024 11:01:00</td>
+                            <td><audio controls><source src="" type="audio/ogg"><source src="" type="audio/mpeg"></audio></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="wrp">
+                                    <input type="checkbox" class="form-control" name="" id="">
+                                    <div class="inf">
+                                        <p><span>Suraj</span></p><p data-copy="ksuraj01283@gmail.com">ksuraj01283@gmail.com</p>
+                                        <p style="display: inline-block;" data-copy="+919671314269">+919671314269</p>
+                                    </div>
+                                    <span class="noti-dupli notification-dot">2</span>
+                                </div>
+                                <div class="sub-info">
+                                    <i class="iconify" data-icon="pepicons-pencil:dots-y"></i>
+                                    <ul>
+                                        <li><a href="javascript:void(0);" data-dialog="li7DnA4"><i class="iconify" data-icon="ph:eye"></i>Quick View</a></li>
+                                        <li><a href="javascript:void(0);" data-dialog="Cl01Tpw"><i class="iconify" data-icon="fluent:apps-list-detail-20-regular"></i> Details</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>phone_no_?:9811788940;phone_number:+919811788940;</td>
+                            <td>Facebook</td>
+                            <td><p data-dialog="uGCiMh0">None</p></td>
+                            <td><p data-dialog="FkFDshc">None</p></td>
+                            <td><div class="badge green light p-14" data-dialog="zNneKS4">New</div></td>
+                            <td><p data-dialog="ibbBji4">Dolatram</p></td>
+                            <td><p data-dialog="ei7MTcw">M3M SKY LOFT</p></td>
+                            <td>FB-Residential Project In Gurgaon1</td>
+                            <td>7/07/2024 19:32:09</td>
+                            <td>18/07/2024 11:01:00</td>
+                            <td><audio controls><source src="" type="audio/ogg"><source src="" type="audio/mpeg"></audio></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="wrp">
+                                    <input type="checkbox" class="form-control" name="" id="">
+                                    <div class="inf">
+                                        <p><span>Suraj</span></p><p data-copy="ksuraj01283@gmail.com">ksuraj01283@gmail.com</p>
+                                        <p style="display: inline-block;" data-copy="+919671314269">+919671314269</p>
+                                    </div>
+                                    <span class="noti-dupli notification-dot">2</span>
+                                </div>
+                                <div class="sub-info">
+                                    <i class="iconify" data-icon="pepicons-pencil:dots-y"></i>
+                                    <ul>
+                                        <li><a href="javascript:void(0);" data-dialog="li7DnA4"><i class="iconify" data-icon="ph:eye"></i>Quick View</a></li>
+                                        <li><a href="javascript:void(0);" data-dialog="Cl01Tpw"><i class="iconify" data-icon="fluent:apps-list-detail-20-regular"></i> Details</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>phone_no_?:9811788940;phone_number:+919811788940;</td>
+                            <td>Facebook</td>
+                            <td><p data-dialog="uGCiMh0">None</p></td>
+                            <td><p data-dialog="FkFDshc">None</p></td>
+                            <td><div class="badge green light p-14" data-dialog="zNneKS4">New</div></td>
+                            <td><p data-dialog="ibbBji4">Dolatram</p></td>
+                            <td><p data-dialog="ei7MTcw">M3M SKY LOFT</p></td>
+                            <td>FB-Residential Project In Gurgaon1</td>
+                            <td>7/07/2024 19:32:09</td>
+                            <td>18/07/2024 11:01:00</td>
+                            <td><audio controls><source src="" type="audio/ogg"><source src="" type="audio/mpeg"></audio></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="wrp">
+                                    <input type="checkbox" class="form-control" name="" id="">
+                                    <div class="inf">
+                                        <p><span>Suraj</span></p><p data-copy="ksuraj01283@gmail.com">ksuraj01283@gmail.com</p>
+                                        <p style="display: inline-block;" data-copy="+919671314269">+919671314269</p>
+                                    </div>
+                                    <span class="noti-dupli notification-dot">2</span>
+                                </div>
+                                <div class="sub-info">
+                                    <i class="iconify" data-icon="pepicons-pencil:dots-y"></i>
+                                    <ul>
+                                        <li><a href="javascript:void(0);" data-dialog="li7DnA4"><i class="iconify" data-icon="ph:eye"></i>Quick View</a></li>
+                                        <li><a href="javascript:void(0);" data-dialog="Cl01Tpw"><i class="iconify" data-icon="fluent:apps-list-detail-20-regular"></i> Details</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>phone_no_?:9811788940;phone_number:+919811788940;</td>
+                            <td>Facebook</td>
+                            <td><p data-dialog="uGCiMh0">None</p></td>
+                            <td><p data-dialog="FkFDshc">None</p></td>
+                            <td><div class="badge green light p-14" data-dialog="zNneKS4">New</div></td>
+                            <td><p data-dialog="ibbBji4">Dolatram</p></td>
+                            <td><p data-dialog="ei7MTcw">M3M SKY LOFT</p></td>
+                            <td>FB-Residential Project In Gurgaon1</td>
+                            <td>7/07/2024 19:32:09</td>
+                            <td>18/07/2024 11:01:00</td>
+                            <td><audio controls><source src="" type="audio/ogg"><source src="" type="audio/mpeg"></audio></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="wrp">
+                                    <input type="checkbox" class="form-control" name="" id="">
+                                    <div class="inf">
+                                        <p><span>Suraj</span></p><p data-copy="ksuraj01283@gmail.com">ksuraj01283@gmail.com</p>
+                                        <p style="display: inline-block;" data-copy="+919671314269">+919671314269</p>
+                                    </div>
+                                    <span class="noti-dupli notification-dot">2</span>
+                                </div>
+                                <div class="sub-info">
+                                    <i class="iconify" data-icon="pepicons-pencil:dots-y"></i>
+                                    <ul>
+                                        <li><a href="javascript:void(0);" data-dialog="li7DnA4"><i class="iconify" data-icon="ph:eye"></i>Quick View</a></li>
+                                        <li><a href="javascript:void(0);" data-dialog="Cl01Tpw"><i class="iconify" data-icon="fluent:apps-list-detail-20-regular"></i> Details</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>phone_no_?:9811788940;phone_number:+919811788940;</td>
+                            <td>Facebook</td>
+                            <td><p data-dialog="uGCiMh0">None</p></td>
+                            <td><p data-dialog="FkFDshc">None</p></td>
+                            <td><div class="badge green light p-14" data-dialog="zNneKS4">New</div></td>
+                            <td><p data-dialog="ibbBji4">Dolatram</p></td>
+                            <td><p data-dialog="ei7MTcw">M3M SKY LOFT</p></td>
+                            <td>FB-Residential Project In Gurgaon1</td>
+                            <td>7/07/2024 19:32:09</td>
+                            <td>18/07/2024 11:01:00</td>
+                            <td><audio controls><source src="" type="audio/ogg"><source src="" type="audio/mpeg"></audio></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="wrp">
+                                    <input type="checkbox" class="form-control" name="" id="">
+                                    <div class="inf">
+                                        <p><span>Suraj</span></p><p data-copy="ksuraj01283@gmail.com">ksuraj01283@gmail.com</p>
+                                        <p style="display: inline-block;" data-copy="+919671314269">+919671314269</p>
+                                    </div>
+                                    <span class="noti-dupli notification-dot">2</span>
+                                </div>
+                                <div class="sub-info">
+                                    <i class="iconify" data-icon="pepicons-pencil:dots-y"></i>
+                                    <ul>
+                                        <li><a href="javascript:void(0);" data-dialog="li7DnA4"><i class="iconify" data-icon="ph:eye"></i>Quick View</a></li>
+                                        <li><a href="javascript:void(0);" data-dialog="Cl01Tpw"><i class="iconify" data-icon="fluent:apps-list-detail-20-regular"></i> Details</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>phone_no_?:9811788940;phone_number:+919811788940;</td>
+                            <td>Facebook</td>
+                            <td><p data-dialog="uGCiMh0">None</p></td>
+                            <td><p data-dialog="FkFDshc">None</p></td>
+                            <td><div class="badge green light p-14" data-dialog="zNneKS4">New</div></td>
+                            <td><p data-dialog="ibbBji4">Dolatram</p></td>
+                            <td><p data-dialog="ei7MTcw">M3M SKY LOFT</p></td>
+                            <td>FB-Residential Project In Gurgaon1</td>
+                            <td>7/07/2024 19:32:09</td>
+                            <td>18/07/2024 11:01:00</td>
+                            <td><audio controls><source src="" type="audio/ogg"><source src="" type="audio/mpeg"></audio></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="wrp">
+                                    <input type="checkbox" class="form-control" name="" id="">
+                                    <div class="inf">
+                                        <p><span>Suraj</span></p><p data-copy="ksuraj01283@gmail.com">ksuraj01283@gmail.com</p>
+                                        <p style="display: inline-block;" data-copy="+919671314269">+919671314269</p>
+                                    </div>
+                                    <span class="noti-dupli notification-dot">2</span>
+                                </div>
+                                <div class="sub-info">
+                                    <i class="iconify" data-icon="pepicons-pencil:dots-y"></i>
+                                    <ul>
+                                        <li><a href="javascript:void(0);" data-dialog="li7DnA4"><i class="iconify" data-icon="ph:eye"></i>Quick View</a></li>
+                                        <li><a href="javascript:void(0);" data-dialog="Cl01Tpw"><i class="iconify" data-icon="fluent:apps-list-detail-20-regular"></i> Details</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>phone_no_?:9811788940;phone_number:+919811788940;</td>
+                            <td>Facebook</td>
+                            <td><p data-dialog="uGCiMh0">None</p></td>
+                            <td><p data-dialog="FkFDshc">None</p></td>
+                            <td><div class="badge green light p-14" data-dialog="zNneKS4">New</div></td>
+                            <td><p data-dialog="ibbBji4">Dolatram</p></td>
+                            <td><p data-dialog="ei7MTcw">M3M SKY LOFT</p></td>
+                            <td>FB-Residential Project In Gurgaon1</td>
+                            <td>7/07/2024 19:32:09</td>
+                            <td>18/07/2024 11:01:00</td>
+                            <td><audio controls><source src="" type="audio/ogg"><source src="" type="audio/mpeg"></audio></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="bottom-filter">
+                    <ul>
+                        <li><a href=""><i class="iconify" data-icon="jam:arrow-left"></i></a></li>
+                        <li><a href="">1</a></li>
+                        <li><a class="active" href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                        <li><a href="">6</a></li>
+                        <li><a href=""><i class="iconify" data-icon="jam:arrow-right"></i></a></li>
+                    </ul>
+                    <p class="no-of-results">120 Results</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <dialog data-model="zNneKS4">
+        <div class="dialog-wrapper">
+            <div class="lead-status-pop">
+                <div class="title-up">
+                    <p>Change Lead Status</p>
+                    <div class="col-se">
+                        <select name="" id="" class="form-control small">
+                            <option value="">Lead Status Type</option>
+                            <option value="">Phone Call</option>
+                            <option value="">Email</option>
+                            <option value="">Meeting</option>
+                            <option value="">Site Visit</option>
+                        </select>
+                        <button type="button" class="close-dialog"><i class="iconify" data-icon="material-symbols-light:close"></i></button>
+                    </div>
+                </div>
+                <div class="wrap-div-sec">
+                    <div class="div-sec-lead">
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                        <div class="ld-col radio-label">
+                            <input type="radio" name="lead-radio">
+                            <span class="radio-dot"></span>
+                            <label for="">Call Not Pick</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="task-wrap-strip">
+                    <div class="task-wrap-dgl">
+                        <div class="flex">
+                            <select name="" id="" class="form-control medium">
+                                <option value="">Lead Status Type</option>
+                                <option value="">Phone Call</option>
+                                <option value="">Email</option>
+                                <option value="">Meeting</option>
+                                <option value="">Site Visit</option>
+                            </select>
+                            <select name="" id="" class="form-control medium">
+                                <option value="">Time</option>
+                                <option value="">01:00 AM</option>
+                                <option value="">01:30 AM</option>
+                                <option value="">02:00 AM</option>
+                                <option value="">02:30 AM</option>
+                                <option value="">03:00 AM</option>
+                                <option value="">03:30 AM</option>
+                                <option value="">04:00 AM</option>
+                                <option value="">04:30 AM</option>
+                                <option value="">05:00 AM</option>
+                                <option value="">05:30 AM</option>
+                                <option value="">06:00 AM</option>
+                                <option value="">06:30 AM</option>
+                                <option value="">07:00 AM</option>
+                                <option value="">07:30 AM</option>
+                                <option value="">08:00 AM</option>
+                                <option value="">08:30 AM</option>
+                                <option value="">09:00 AM</option>
+                                <option value="">09:30 AM</option>
+                                <option value="">10:00 AM</option>
+                                <option value="">10:30 AM</option>
+                                <option value="">11:00 AM</option>
+                                <option value="">11:30 AM</option>
+                                <option value="">12:00 PM</option>
+                                <option value="">01:00 PM</option>
+                                <option value="">01:30 PM</option>
+                                <option value="">02:00 PM</option>
+                                <option value="">02:30 PM</option>
+                                <option value="">03:00 PM</option>
+                                <option value="">03:30 PM</option>
+                                <option value="">04:00 PM</option>
+                                <option value="">04:30 PM</option>
+                                <option value="">05:00 PM</option>
+                                <option value="">05:30 PM</option>
+                                <option value="">06:00 PM</option>
+                                <option value="">06:30 PM</option>
+                                <option value="">07:00 PM</option>
+                                <option value="">07:30 PM</option>
+                                <option value="">08:00 PM</option>
+                                <option value="">08:30 PM</option>
+                                <option value="">09:00 PM</option>
+                                <option value="">09:30 PM</option>
+                                <option value="">10:00 PM</option>
+                                <option value="">10:30 PM</option>
+                                <option value="">11:00 PM</option>
+                                <option value="">11:30 PM</option>
+                                <option value="">12:00 PM</option>
+                            </select>
+                            <input type="text" class="form-control medium date" placeholder="Date">
+                        </div>
+                    </div>
+                </div>
+                <div class="submt-task-rw">
+                    <div class="subt-wrp">
+                        <small>Note (Minimum 10 letters) *</small>
+                        <textarea name="" id="" class="form-control" height="63" placeholder="Add a note"></textarea>
+                        <div class="btn-wrap">
+                            <button type="button" class="close-dialog btn small btn-btn">Cancel</button>
+                            <a href="" class="btn small ">Save</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dialog>
+    <dialog data-model="ibbBji4">
+        <div class="dialog-wrapper">
+            <div class="lead-status-pop">
+                <div class="title-up">
+                    <p>Change Owner</p>
+                    <div class="col-se">
+                        <input type="text" class="form-control small search" placeholder="Search...">
+                        <button type="button" class="close-dialog"><i class="iconify" data-icon="material-symbols-light:close"></i></button>
+                    </div>
+                </div>
+                <div class="wrap-div-sec"> 
+                    <div class="div-sec-lead fzoZiCs">
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                        <div class="OqIVc-I radio-label-2">
+                            <input type="radio" name="h0dm2Nk" id="">
+                            <span class="radio-dot"></span>
+                            <div class="inf">
+                                <p class="f-14 f-medium general-c lh-18">Rahul Baswal</p>
+                                <p class="f-12 general-d lh-24">Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="task-wrap-strip">
+                    <div class="task-wrap-dgl">
+                        <div class="flex">
+                            <div class="sFC7UaE mr-auto">
+                                <select name="" id="" class="form-control small">
+                                    <option value="">Lead Status</option>
+                                    <option value="">Phone Call</option>
+                                    <option value="">Email</option>
+                                    <option value="">Meeting</option>
+                                    <option value="">Site Visit</option>
+                                </select>
+                                <select name="" id="" class="form-control small">
+                                    <option value="">Lead Source</option>
+                                    <option value="">Phone Call</option>
+                                    <option value="">Email</option>
+                                    <option value="">Meeting</option>
+                                    <option value="">Site Visit</option>
+                                </select>
+                            </div>
+                            <div class="btm-btn">
+                                <button type="button" class="close-dialog btn small btn-btn">Cancel</button>
+                                <a href="" class="btn small">Save</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="submt-task-rw">
+                    <div class="subt-wrp">
+                        <div class="inline-flex align-center">
+                            <input type="checkbox" class="form-control small"> 
+                            <small class="text-color">Do you want to share previous lead history..? (Like: Comments, Follow Up, Lead History)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dialog>
+    <dialog data-model="uGCiMh0">
+        <div class="dialog-wrapper">
+            <div class="model-pop-small">
+                <div class="title">
+                    <p class="f-16 f-medium general-a">Change Quality</p>
+                    <div class="clo"></div>
+                </div>
+                <div class="BriSUzA radio-list">
+                    <div class="ld-col radio-label">
+                        <input type="radio" name="lead-radio">
+                        <span class="radio-dot"></span>
+                        <label for="">Cold</label>
+                    </div>
+                    <div class="ld-col radio-label">
+                        <input type="radio" name="lead-radio">
+                        <span class="radio-dot"></span>
+                        <label for="">Warm</label>
+                    </div>
+                    <div class="ld-col radio-label">
+                        <input type="radio" name="lead-radio">
+                        <span class="radio-dot"></span>
+                        <label for="">Hot</label>
+                    </div>
+                    <div class="ld-col radio-label">
+                        <input type="radio" name="lead-radio">
+                        <span class="radio-dot"></span>
+                        <label for="">Dead</label>
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <button type="button" class="btn btn-btn small close-dialog">Close</button>
+                    <button type="button" class="btn small">Apply</button>
+                </div>
+            </div>
+        </div>
+    </dialog>
+    <dialog data-model="FkFDshc">
+        <div class="dialog-wrapper">
+            <div class="model-pop-small">
+                <div class="title">
+                    <p class="f-16 f-medium general-a">Change Priority</p>
+                    <div class="clo"></div>
+                </div>
+                <div class="BriSUzA radio-list">
+                    <div class="ld-col radio-label">
+                        <input type="radio" name="lead-radio">
+                        <span class="radio-dot"></span>
+                        <label for="">None</label>
+                    </div>
+                    <div class="ld-col radio-label">
+                        <input type="radio" name="lead-radio">
+                        <span class="radio-dot"></span>
+                        <label for="">Low</label>
+                    </div>
+                    <div class="ld-col radio-label">
+                        <input type="radio" name="lead-radio">
+                        <span class="radio-dot"></span>
+                        <label for="">Medium</label>
+                    </div>
+                    <div class="ld-col radio-label">
+                        <input type="radio" name="lead-radio">
+                        <span class="radio-dot"></span>
+                        <label for="">High</label>
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <button type="button" class="btn btn-btn small close-dialog">Close</button>
+                    <button type="button" class="btn small">Apply</button>
+                </div>
+            </div>
+        </div>
+    </dialog>
+    <dialog data-model="ei7MTcw">
+        <div class="dialog-wrapper">
+            <div class="model-pop-small">
+                <div class="title">
+                    <p class="f-16 f-medium general-a">Change Project</p>
+                    <div class="clo"></div>
+                </div>
+                <div class="BriSUzA radio-list">
+                    <div class="ld-col radio-label">
+                        <input type="radio" name="lead-radio">
+                        <span class="radio-dot"></span>
+                        <label for="">M3M SKY LOFT	</label>
+                    </div>
+                    <div class="ld-col radio-label">
+                        <input type="radio" name="lead-radio">
+                        <span class="radio-dot"></span>
+                        <label for="">M3M SKY LOFT	</label>
+                    </div>
+                    <div class="ld-col radio-label">
+                        <input type="radio" name="lead-radio">
+                        <span class="radio-dot"></span>
+                        <label for="">M3M SKY LOFT	</label>
+                    </div>
+                    <div class="ld-col radio-label">
+                        <input type="radio" name="lead-radio">
+                        <span class="radio-dot"></span>
+                        <label for="">M3M SKY LOFT	</label>
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <button type="button" class="btn btn-btn small close-dialog">Close</button>
+                    <button type="button" class="btn small">Apply</button>
+                </div>
+            </div>
+        </div>
+    </dialog>
+    <dialog data-model="li7DnA4">
+        <div class="dialog-wrapper">
+            <div class="quick-view-wrap">
+                <div class="upper-sec SLerzno">
+                    <div class="flex">
+                        <div class="colA">
+                            <div class="erp-fgt">
+                                <a href="" class="black f-16 inline-flex align-center lh-20 f-medium mb-5 aqMEp58">Kali Parsad <i class="iconify" data-icon="iconamoon:edit"></i></a>
+                                <a href="" class="inline-flex align-center f-14 lh-20 general-b"><i class="iconify" data-icon="fluent:phone-32-regular"></i>+919987010672</a>
+                                <a href="" class="inline-flex align-center f-14 lh-20 general-b"><i class="iconify" data-icon="material-symbols:mail-outline"></i> kaa83@gmail.com </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-wrap">
+                    <div class="tab-nav">
+                        <button type="button" class="nav-li-tb active" onclick="showtab('table','details')">Details</button>
+                        <button type="button" class="nav-li-tb" onclick="showtab('table','dotes')">Notes</button>
+                        <button type="button" class="nav-li-tb" onclick="showtab('table','tasks')">Tasks</button>
+                    </div>
+                    <div class="table-content">
+                        <div class="tabs-gd" data-table="details">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Sub Source</td>
+                                        <td>Null</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Budget</td>
+                                        <td>₹ 50000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>City</td>
+                                        <td>Grugaon</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Recording</td>
+                                        <td>0:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Created On Date</td>
+                                        <td>07/17/2024 14:48:33</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Modified On Date</td>
+                                        <td>07/17/2024 14:51:23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Recents Comment</td>
+                                        <td>Lorem Ipsum is simply dummy text of the printing...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tabs-gd" style="display: none;" data-table="dotes">
+                            <div class="lead-history-list">
+                                <div class="lead-his">
+                                    <i class="iconify" data-icon="ion:document-outline"></i>
+                                    <div class="inf">
+                                        <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                        <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                        <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                    </div>
+                                </div>
+                                <div class="lead-his">
+                                    <i class="iconify" data-icon="ion:document-outline"></i>
+                                    <div class="inf">
+                                        <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                        <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                        <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                    </div>
+                                </div>
+                                <div class="lead-his">
+                                    <i class="iconify" data-icon="ion:document-outline"></i>
+                                    <div class="inf">
+                                        <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                        <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                        <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                    </div>
+                                </div>
+                                <div class="lead-his">
+                                    <i class="iconify" data-icon="ion:document-outline"></i>
+                                    <div class="inf">
+                                        <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                        <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                        <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                    </div>
+                                </div>
+                                <div class="lead-his">
+                                    <i class="iconify" data-icon="ion:document-outline"></i>
+                                    <div class="inf">
+                                        <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                        <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                        <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                    </div>
+                                </div>
+                                <div class="lead-his">
+                                    <i class="iconify" data-icon="ion:document-outline"></i>
+                                    <div class="inf">
+                                        <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                        <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                        <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                    </div>
+                                </div>
+                                <div class="lead-his">
+                                    <i class="iconify" data-icon="ion:document-outline"></i>
+                                    <div class="inf">
+                                        <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                        <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                        <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                    </div>
+                                </div>
+                                <div class="lead-his">
+                                    <i class="iconify" data-icon="ion:document-outline"></i>
+                                    <div class="inf">
+                                        <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                        <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                        <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                    </div>
+                                </div>
+                                <div class="lead-his">
+                                    <i class="iconify" data-icon="ion:document-outline"></i>
+                                    <div class="inf">
+                                        <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                        <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                        <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                    </div>
+                                </div>
+                                <div class="lead-his">
+                                    <i class="iconify" data-icon="ion:document-outline"></i>
+                                    <div class="inf">
+                                        <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                        <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                        <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                    </div>
+                                </div>
+                                <div class="lead-his">
+                                    <i class="iconify" data-icon="ion:document-outline"></i>
+                                    <div class="inf">
+                                        <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                        <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                        <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                    </div>
+                                </div>
+                                <div class="lead-his">
+                                    <i class="iconify" data-icon="ion:document-outline"></i>
+                                    <div class="inf">
+                                        <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                        <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                        <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs-gd" style="display: none;" data-table="tasks">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Sub Source</td>
+                                        <td>Null</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Budget</td>
+                                        <td>₹ 50000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>City</td>
+                                        <td>Grugaon</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Recording</td>
+                                        <td>0:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Created On Date</td>
+                                        <td>07/17/2024 14:48:33</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Modified On Date</td>
+                                        <td>07/17/2024 14:51:23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Recents Comment</td>
+                                        <td>Lorem Ipsum is simply dummy text of the printing...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="btm-wrap flex justify-end">
+                    <button type="button" class="btn btn-btn small close-dialog">Close</button>
+                    <a href="" class="btn small">Apply</a>
+                </div>
+            </div>
+        </div>
+    </dialog>
+    <dialog data-model="Cl01Tpw">
+        <div class="dialog-wrapper full">
+            <div class="quick-detail-wrap">
+                <div class="qck-dtl-secA">
+                    <div class="upper-sec SLerzno">
+                        <div class="flex">
+                            <div class="colA">
+                                <div class="erp-fgt">
+                                    <a href="" class="black f-16 inline-flex align-center lh-20 f-medium mb-10 aqMEp58">Kali Parsad <i class="iconify" data-icon="iconamoon:edit"></i></a>
+                                    <a href="" class="inline-flex align-center f-14 lh-20 general-b"><i class="iconify" data-icon="fluent:phone-32-regular"></i>+919987010672</a>
+                                    <a href="" class="inline-flex align-center f-14 lh-20 general-b"><i class="iconify" data-icon="material-symbols:mail-outline"></i> kaa83@gmail.com </a>
+                                </div>
+                            </div>
+                            <div class="colB">
+                                <div class="col-md-dtl-ld">
+                                    <p class="f-16 black f-bold black mb-9">Lead ID : 444741</p>
+                                    <a href="edit-leads.html" class="btn small">EDIT</a>
+                                </div>
+                                <div class="col-md-dtl-ld flex align-end">
+                                    <div class="btn-wrp">
+                                        <a href="" class="btn box btn-btn medium"><i class="iconify" data-icon="icon-park-outline:left"></i></a>
+                                        <a href="" class="btn box btn-btn medium"><i class="iconify" data-icon="icon-park-outline:right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bn-pr-ld-sc-inf">
+                        <div class="col-mc" data-dialog="ei7MTcw">
+                            <p class="f-bold general-c yNVN2Wo">Project </p>
+                            <p class="l3Z0H40">Omaxe 19B</p>
+                            <div class="plu-ico"><i class="iconify" data-icon="bi:plus"></i></div>
+                        </div>
+                        <div class="col-mc" data-dialog="ibbBji4">
+                            <p class="f-bold general-c yNVN2Wo">Owner </p>
+                            <p class="l3Z0H40">Monu</p>
+                            <div class="plu-ico"><i class="iconify" data-icon="bi:plus"></i></div>
+                        </div>
+                        <div class="col-mc" data-dialog="zNneKS4">
+                            <p class="f-bold general-c yNVN2Wo">Status</p>
+                            <div class="startus-strip-dg-sf warn flex justify-between">
+                                <p>New</p>
+                                <i class="iconify" data-icon="iconamoon:edit"></i>
+                            </div>
+                        </div>
+                        <div class="col-mc" data-dialog="FkFDshc">
+                            <p class="f-bold general-c yNVN2Wo">Priority</p>
+                            <p class="l3Z0H40">None</p>
+                            <div class="plu-ico"><i class="iconify" data-icon="bi:plus"></i></div>
+                        </div>
+                        <div class="col-mc">
+                            <p class="f-bold general-c yNVN2Wo">Next Task</p>
+                            <p class="l3Z0H40">Null</p>
+                        </div>
+                        <div class="col-mc">
+                            <p class="f-bold general-c yNVN2Wo">Schedule for</p>
+                            <p class="l3Z0H40">Null</p>
+                        </div>
+                    </div>
+                    <div class="tab-wrap">
+                        <div class="tab-nav">
+                            <button type="button" class="nav-li-tb active" onclick="showtab('tabledetail','details')">Details</button>
+                            <button type="button" class="nav-li-tb" onclick="showtab('tabledetail','dotes')">Notes</button>
+                            <button type="button" class="nav-li-tb" onclick="showtab('tabledetail','tasks')">Tasks</button>
+                        </div>
+                        <div class="table-content">
+                            <div class="tabs-gd" data-tabledetail="details">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Alternative Mobile</td>
+                                            <td>FB-Omaxe Dwarka</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sub Source</td>
+                                            <td>Null</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Budget</td>
+                                            <td>₹ 50000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>City</td>
+                                            <td>Grugaon</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Recording</td>
+                                            <td>0:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Created On Date</td>
+                                            <td>07/17/2024 14:48:33</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Modified On Date</td>
+                                            <td>07/17/2024 14:51:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Recents Comment</td>
+                                            <td>Lorem Ipsum is simply dummy text of the printing...</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tabs-gd" style="display: none;" data-tabledetail="dotes">
+                                <div class="lead-history-list">
+                                    <div class="lead-his">
+                                        <i class="iconify" data-icon="ion:document-outline"></i>
+                                        <div class="inf">
+                                            <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                            <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                            <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                        </div>
+                                    </div>
+                                    <div class="lead-his">
+                                        <i class="iconify" data-icon="ion:document-outline"></i>
+                                        <div class="inf">
+                                            <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                            <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                            <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                        </div>
+                                    </div>
+                                    <div class="lead-his">
+                                        <i class="iconify" data-icon="ion:document-outline"></i>
+                                        <div class="inf">
+                                            <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                            <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                            <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                        </div>
+                                    </div>
+                                    <div class="lead-his">
+                                        <i class="iconify" data-icon="ion:document-outline"></i>
+                                        <div class="inf">
+                                            <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                            <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                            <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                        </div>
+                                    </div>
+                                    <div class="lead-his">
+                                        <i class="iconify" data-icon="ion:document-outline"></i>
+                                        <div class="inf">
+                                            <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                            <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                            <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                        </div>
+                                    </div>
+                                    <div class="lead-his">
+                                        <i class="iconify" data-icon="ion:document-outline"></i>
+                                        <div class="inf">
+                                            <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                            <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                            <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                        </div>
+                                    </div>
+                                    <div class="lead-his">
+                                        <i class="iconify" data-icon="ion:document-outline"></i>
+                                        <div class="inf">
+                                            <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                            <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                            <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                        </div>
+                                    </div>
+                                    <div class="lead-his">
+                                        <i class="iconify" data-icon="ion:document-outline"></i>
+                                        <div class="inf">
+                                            <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                            <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                            <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                        </div>
+                                    </div>
+                                    <div class="lead-his">
+                                        <i class="iconify" data-icon="ion:document-outline"></i>
+                                        <div class="inf">
+                                            <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                            <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                            <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                        </div>
+                                    </div>
+                                    <div class="lead-his">
+                                        <i class="iconify" data-icon="ion:document-outline"></i>
+                                        <div class="inf">
+                                            <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                            <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                            <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                        </div>
+                                    </div>
+                                    <div class="lead-his">
+                                        <i class="iconify" data-icon="ion:document-outline"></i>
+                                        <div class="inf">
+                                            <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                            <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                            <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                        </div>
+                                    </div>
+                                    <div class="lead-his">
+                                        <i class="iconify" data-icon="ion:document-outline"></i>
+                                        <div class="inf">
+                                            <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                            <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                            <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs-gd" style="display: none;" data-tabledetail="tasks">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Sub Source</td>
+                                            <td>Null</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Budget</td>
+                                            <td>₹ 50000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>City</td>
+                                            <td>Grugaon</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Recording</td>
+                                            <td>0:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Created On Date</td>
+                                            <td>07/17/2024 14:48:33</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Modified On Date</td>
+                                            <td>07/17/2024 14:51:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Recents Comment</td>
+                                            <td>Lorem Ipsum is simply dummy text of the printing...</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="qck-dtl-secB">
+                    <div class="ttl-kjssoi">
+                        <p class="f-medium general-d LgldxGE">Lead History</p>
+                        <button type="button" class="btn box small close-dialog"><i class="iconify" data-icon="ic:round-close"></i></button>
+                    </div>
+                    <div class="lead-history-list">
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ion:document-outline"></i>
+                            <div class="inf">
+                                <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ion:document-outline"></i>
+                            <div class="inf">
+                                <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ion:document-outline"></i>
+                            <div class="inf">
+                                <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ion:document-outline"></i>
+                            <div class="inf">
+                                <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ion:document-outline"></i>
+                            <div class="inf">
+                                <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ion:document-outline"></i>
+                            <div class="inf">
+                                <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ion:document-outline"></i>
+                            <div class="inf">
+                                <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ion:document-outline"></i>
+                            <div class="inf">
+                                <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ion:document-outline"></i>
+                            <div class="inf">
+                                <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ion:document-outline"></i>
+                            <div class="inf">
+                                <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ion:document-outline"></i>
+                            <div class="inf">
+                                <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ion:document-outline"></i>
+                            <div class="inf">
+                                <p class="medium general-c VnvZQ2g">Lead Merged</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <p class="general-d mJomifU"><span>System</span> | Today at 2:51 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dialog>
+    <dialog data-model="vCWRi7g">
+        <div class="dialog-wrapper">
+            <div class="model-pop-medium">
+                <div class="title">
+                    <p class="f-16 f-medium general-a">Import Leads</p>
+                    <div class="clo"></div>
+                </div>
+                <div class="hiNEqgQ">
+                    <p class="general-c">Instant Import only supports up to 100 Leads at a time. New feature to add more Leads will be released SOON....</p>
+                    <div class="atLkMmGm"><input type="file" name="" id="" class="form-control color full"></div>
+                    <a class="lD7NQVI general-c f-medium d-block text-center" href="">Download Sample File</a>
+                    <div class="V0fehGJv">
+                        <p class="f-13 f-bold general-c f-medium">Handling duplicate lead record:</p>
+                        <div class="qtUkpxy1 radio-list">
+                            <div class="ld-col radio-label">
+                                <input type="radio" name="radip-e">
+                                <span class="radio-dot"></span>
+                                <label for="" class="f-13">Ignore if Duplicate</label>
+                            </div>
+                            <div class="ld-col radio-label">
+                                <input type="radio" name="radip-e">
+                                <span class="radio-dot"></span>
+                                <label for="" class="f-13">Merge if Duplicate</label>
+                            </div>
+                        </div>
+                        <p class="f-12 general-c">(When the source of the file does not match the list or the source does not exist in the file then the default source i.e. UNKNOWN will be set)</p>
+                        <div class="tmbYPPJC">
+                            <label for="" class="f-13 d-block f-bold general-c mb-8">Default Lead Source</label>
+                            <div class="gNdwVfnm">
+                                <select name="" id="" class="form-control">
+                                    <option value="">Select Source</option>
+                                    <option value="">Select Source</option>
+                                    <option value="">Select Source</option>
+                                    <option value="">Select Source</option>
+                                    <option value="">Select Source</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="tmbYPPJC">
+                            <label for="" class="f-13 f-bold d-block general-c mb-8">Important Summery Note</label>
+                            <p class="general-c f-13">Lead imported on 19 July 2024 5:49PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <button type="button" class="btn btn-btn small close-dialog">Close</button>
+                    <button type="button" class="btn small">Apply</button>
+                </div>
+            </div>
+        </div>
+    </dialog>
+    <dialog data-model="zuwkw" class="notification-model">
+        <div class="notification-div-wrap">
+            <div class="ydpqo flex">
+                <div class="colA">
+                    <input type="text" class="form-control medium search" placeholder="Search...">
+                </div>
+                <div class="colB ml-auto flex align-center">
+                    <select name="" id="" class="form-control medium">
+                        <option value="">Team</option>
+                        <option value="">Team</option>
+                        <option value="">Team</option>
+                        <option value="">Team</option>
+                    </select>
+                    <select name="" id="" class="form-control medium">
+                        <option value="">Today</option>
+                        <option value="">Team</option>
+                        <option value="">Team</option>
+                        <option value="">Team</option>
+                    </select>
+                </div>
+            </div>
+            <div class="ubcnw">
+                <div class="tab-nav">
+                    <button type="button" class="nav-li-tb active" onclick="showtab('noti','whatsapp')">Whatsapp</button>
+                    <button type="button" class="nav-li-tb" onclick="showtab('noti','sms')">SMS</button>
+                    <button type="button" class="nav-li-tb" onclick="showtab('noti','push')">Push</button>
+                </div>
+                <div class="yuflq" data-noti="whatsapp">
+                    <div class="lead-history-list">
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yuflq" data-noti="sms" style="display: none;">
+                    <div class="lead-history-list">
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yuflq" data-noti="push" style="display: none;">
+                    <div class="lead-history-list">
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lead-his">
+                            <i class="iconify" data-icon="ic:baseline-whatsapp"></i>
+                            <div class="inf">
+                                <p class="general-d tiegf"><span>Lalit Kumar </span> | <b>9871436995 </b></p>
+                                <p class="general-d VnvZQ2g">A fresh lead name "Narendra" mobile "xxxx1331" query about project "Omaxe 19 B"</p>
+                                <p class="general-d">Duplicate by mobile number +919987010672.</p>
+                                <ul class="onqwn">
+                                    <li><b>Sent :</b> 18 Jul 2024 10:07</li>|<li><b class="gray">Delivered :</b> 18 Jul 2024 10:07</li>|<li><b class="green">Read :</b> 18 Jul 2024 10:07</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dialog>
+</body>
+</html>

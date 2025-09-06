@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowPro CRM</title>
+    <link rel="stylesheet" href="assets/fonts/font.css">
+    <!-- Select 2 css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- datepicker css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.min.css" integrity="sha512-rBi1cGvEdd3NmSAQhPWId5Nd6QxE8To4ADjM2a6n0BrqQdisZ/RPUlm0YycDzvNL1HHAh1nKZqI0kSbif+5upQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- datatable css -->
+    <link rel="stylesheet" href="assets/css/datatables.min.css">
+    <!-- Style css -->
+    <link rel="stylesheet" href="assets/sass/style.css">
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Iconify -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js" integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Select2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- DatePicker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <!-- Data Tables -->
+    <script type="text/javascript" src="assets/js/datatables.min.js"></script>
+    <!-- Main Js -->
+    <script type="text/javascript" src="assets/js/main.js"></script>
+</head>
+<body style="overflow: hidden;">
+    <header>
+        <div class="header-wrapper">
+            <div class="colA">
+                <a href="" class="logo"><img src="assets/img/realtydigi-logo.png" alt=""></a>
+            </div>
+            <div class="colB">
+                <ul>
+                    <li>
+                        <div class="notification-div" data-dropdown>
+                            <img src="assets/icon/notification.svg" alt="">
+                            <span>5</span>
+                            <div class="dropdown-menu notification-menu">
+                                <div class="notification-menu-wrap">
+                                    <div class="title-head">
+                                        <p>Notifications</p>
+                                        <button type="button" class="real-all-btn"><i class="iconify" data-icon="mage:email-opened"></i></button>
+                                    </div>
+                                    <menu>
+                                        <li class="new">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, autem.</li>
+                                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, sequi ipsum? Neque quos reiciendis dolorem modi vel aliquid nihil iste.</li>
+                                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vitae quia, vero quisquam architecto quae?</li>
+                                    </menu>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown-wrap inline-flex align-center">
+                            <div class="user-ico"><img src="assets/img/user.png" alt=""></div>
+                            <div data-dropdown>
+                                <span class="title">Deepak chauhan</span>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li><a href="">My Profile</a></li>
+                                        <li><a href="">Settings</a></li>
+                                        <li><a href="">Leads</a></li>
+                                        <li><a href="">Projects</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="" class="logo"><img src="assets/img/grow-logo.png" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <aside>
+        <div class="aside-wrap">
+            <div class="aside-col">
+                <ul>
+                    <li><a href="dashboard-home.html"><i class="iconify" data-icon="eva:home-outline"></i>Home</a></li>
+                    <li><a href=""><i class="iconify" data-icon="ph:user"></i>User</a></li>
+                    <li><a href=""><i class="iconify" data-icon="ant-design:team-outlined"></i>Team</a></li>
+                    <li><a href=""><i class="iconify" data-icon="carbon:laptop"></i>Projects</a></li>
+                    <li><a class="active" href="manage-leads.html"><i class="iconify" data-icon="solar:chart-linear"></i>Leads</a></li>
+                    <li><a href=""><i class="iconify" data-icon="bi:phone"></i>Calling</a></li>
+                    <li><a href=""><i class="iconify" data-icon="solar:widget-linear"></i>Reports</a></li>
+                    <li><a href=""><i class="iconify" data-icon="mi:notification"></i>Notificaitons</a></li>
+                    <li><a href=""><i class="iconify" data-icon="tabler:message"></i>Activity</a></li>
+                    <li><a href=""><i class="iconify" data-icon="hugeicons:logout-04"></i>Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <button type="button" class="aside-collapse-btn"><i class="iconify" data-icon="ic:round-play-arrow"></i></button>
+    <main>
+        <div class="main-wrap">
+            <div class="edit-leads-sec">
+                <div class="filter-wrap">
+                    <div class="colA">
+                        <div class="col">
+                            <a href="" class="inline-flex"><i class="iconify" data-icon="ep:back"></i> Back</a>
+                        </div>
+                    </div>
+                    <div class="colB">
+                        <div class="col">
+                            <select name="" id="" class="form-control small">
+                                <option value="">Lead Qualification</option>
+                                <option value="">Lead Qualification</option>
+                                <option value="">Lead Qualification</option>
+                                <option value="">Lead Qualification</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <a href="" class="btn btn-btn small">Cancel</a>
+                            <button type="button" class="btn small">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-body mb-25">
+                <div class="form-wrap">
+                    <div class="form">
+                        <div class="form-title">
+                            <p>Contact Information</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Salutation</label>
+                            <select name="" id="" class="form-control medium">
+                                <option value="">Select Option</option>
+                                <option value="">Salutation</option>
+                                <option value="">Salutation</option>
+                                <option value="">Salutation</option>
+                                <option value="">Salutation</option>
+                                <option value="">Salutation</option>
+                                <option value="">Salutation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">First Name</label>
+                            <input type="text" class="form-control medium" placeholder="Enter First Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Last Name</label>
+                            <input type="text" class="form-control medium" placeholder="Enter Last Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Email</label>
+                            <input type="email" class="form-control medium" placeholder="Enter Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Secondary Email</label>
+                            <input type="email" class="form-control medium" placeholder="Enter Secondary Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Mobile</label>
+                            <input type="tel" class="form-control medium" placeholder="Enter Mobile">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Date of Birth</label>
+                            <input type="text" class="form-control date medium" placeholder="DOB">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Date of Anniversary</label>
+                            <input type="text" class="form-control date medium" placeholder="Anniversary">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Website</label>
+                            <input type="text" class="form-control medium" placeholder="Website URL">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Industry</label>
+                            <input type="text" class="form-control medium" placeholder="Industry">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Job Title</label>
+                            <input type="text" class="form-control medium" placeholder="Job Title">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Annual Revenue</label>
+                            <input type="text" class="form-control medium" placeholder="Annual Revenue">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-wrap">
+                    <div class="form">
+                        <div class="form-title">
+                            <p>Lead Information</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Subject</label>
+                            <input type="text" class="form-control medium" placeholder="Enter Subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Lead Source</label>
+                            <input type="text" class="form-control medium" placeholder="Enter Lead Source">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Sub Source</label>
+                            <select name="" id="" class="form-control medium">
+                                <option value="">Select Sub Source</option>
+                                <option value="">Sub Source</option>
+                                <option value="">Sub Source</option>
+                                <option value="">Sub Source</option>
+                                <option value="">Sub Source</option>
+                                <option value="">Sub Source</option>
+                                <option value="">Sub Source</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Lead Quality</label>
+                            <select name="" id="" class="form-control medium">
+                                <option value="">Select Lead Quality</option>
+                                <option value="">Lead Quality</option>
+                                <option value="">Lead Quality</option>
+                                <option value="">Lead Quality</option>
+                                <option value="">Lead Quality</option>
+                                <option value="">Lead Quality</option>
+                                <option value="">Lead Quality</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Priority</label>
+                            <select name="" id="" class="form-control medium">
+                                <option value="">Select Priority</option>
+                                <option value="">Priority</option>
+                                <option value="">Priority</option>
+                                <option value="">Priority</option>
+                                <option value="">Priority</option>
+                                <option value="">Priority</option>
+                                <option value="">Priority</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Owner</label>
+                            <select name="" id="" class="form-control medium">
+                                <option value="">Select Owner</option>
+                                <option value="">Owner</option>
+                                <option value="">Owner</option>
+                                <option value="">Owner</option>
+                                <option value="">Owner</option>
+                                <option value="">Owner</option>
+                                <option value="">Owner</option>
+                            </select>
+                        </div>
+                        <div class="form-group full">
+                            <label for="">Description</label>
+                            <textarea name="" id="" class="form-control medium" placeholder="Enter Description"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-wrap">
+                    <div class="form">
+                        <div class="form-title">
+                            <p>Enquiry About</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Property City</label>
+                            <input type="text" class="form-control medium" placeholder="Enter Property City">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Property Locality</label>
+                            <input type="text" class="form-control medium" placeholder="Enter Property Locality">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Property Type</label>
+                            <select name="" id="" class="form-control medium">
+                                <option value="">Select Property Type</option>
+                                <option value="">Property Type</option>
+                                <option value="">Property Type</option>
+                                <option value="">Property Type</option>
+                                <option value="">Property Type</option>
+                                <option value="">Property Type</option>
+                                <option value="">Property Type</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Construction Status</label>
+                            <select name="" id="" class="form-control medium">
+                                <option value="">Select Construction Status</option>
+                                <option value="">Construction Status</option>
+                                <option value="">Construction Status</option>
+                                <option value="">Construction Status</option>
+                                <option value="">Construction Status</option>
+                                <option value="">Construction Status</option>
+                                <option value="">Construction Status</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Area</label>
+                            <select name="" id="" class="form-control medium">
+                                <option value="">Select Area</option>
+                                <option value="">Area</option>
+                                <option value="">Area</option>
+                                <option value="">Area</option>
+                                <option value="">Area</option>
+                                <option value="">Area</option>
+                                <option value="">Area</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Bedrooms</label>
+                            <select name="" id="" class="form-control medium">
+                                <option value="">Select Bedrooms</option>
+                                <option value="">Bedrooms</option>
+                                <option value="">Bedrooms</option>
+                                <option value="">Bedrooms</option>
+                                <option value="">Bedrooms</option>
+                                <option value="">Bedrooms</option>
+                                <option value="">Bedrooms</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Floor Preference</label>
+                            <select name="" id="" class="form-control medium">
+                                <option value="">Select Floor Preference</option>
+                                <option value="">Floor Preference</option>
+                                <option value="">Floor Preference</option>
+                                <option value="">Floor Preference</option>
+                                <option value="">Floor Preference</option>
+                                <option value="">Floor Preference</option>
+                                <option value="">Floor Preference</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Property Facing</label>
+                            <select name="" id="" class="form-control medium">
+                                <option value="">Select Property Facing</option>
+                                <option value="">Property Facing</option>
+                                <option value="">Property Facing</option>
+                                <option value="">Property Facing</option>
+                                <option value="">Property Facing</option>
+                                <option value="">Property Facing</option>
+                                <option value="">Property Facing</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Project</label>
+                            <select name="" id="" class="form-control medium">
+                                <option value="">Select Project</option>
+                                <option value="">Project</option>
+                                <option value="">Project</option>
+                                <option value="">Project</option>
+                                <option value="">Project</option>
+                                <option value="">Project</option>
+                                <option value="">Project</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Purpose</label>
+                            <select name="" id="" class="form-control medium">
+                                <option value="">Select Purpose</option>
+                                <option value="">Purpose</option>
+                                <option value="">Purpose</option>
+                                <option value="">Purpose</option>
+                                <option value="">Purpose</option>
+                                <option value="">Purpose</option>
+                                <option value="">Purpose</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Fund Source</label>
+                            <select name="" id="" class="form-control medium">
+                                <option value="">Select Fund Source</option>
+                                <option value="">Fund Source</option>
+                                <option value="">Fund Source</option>
+                                <option value="">Fund Source</option>
+                                <option value="">Fund Source</option>
+                                <option value="">Fund Source</option>
+                                <option value="">Fund Source</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Budget</label>
+                            <select name="" id="" class="form-control medium">
+                                <option value="">Select Budget</option>
+                                <option value="">Budget</option>
+                                <option value="">Budget</option>
+                                <option value="">Budget</option>
+                                <option value="">Budget</option>
+                                <option value="">Budget</option>
+                                <option value="">Budget</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-wrap">
+                    <div class="form">
+                        <div class="form-title">
+                            <p>Permanent Address </p>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Street</label>
+                            <input type="text" name="" id="" class="form-control medium" placeholder="Enter Street">
+                        </div>
+                        <div class="form-group">
+                            <label for="">City</label>
+                            <input type="text" name="" id="" class="form-control medium" placeholder="Enter City">
+                        </div>
+                        <div class="form-group">
+                            <label for="">State</label>
+                            <input type="text" name="" id="" class="form-control medium" placeholder="Enter State">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Country</label>
+                            <select name="" id="" class="form-control medium">
+                                <option value="">Select Country</option>
+                                <option value="">Country</option>
+                                <option value="">Country</option>
+                                <option value="">Country</option>
+                                <option value="">Country</option>
+                                <option value="">Country</option>
+                                <option value="">Country</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Zip Code</label>
+                            <input type="text" name="" id="" class="form-control medium" placeholder="Enter Zip Code">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Address</label>
+                            <input type="text" name="" id="" class="form-control medium" placeholder="Enter Address">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-wrap">
+                    <div class="form">
+                        <div class="form-title">
+                            <p>Correspondence Address </p>
+                            <span class="inline-flex"><input type="checkbox" class="form-control">Same As Permanent Address </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Street</label>
+                            <input type="text" name="" id="" class="form-control medium" placeholder="Enter Street">
+                        </div>
+                        <div class="form-group">
+                            <label for="">City</label>
+                            <input type="text" name="" id="" class="form-control medium" placeholder="Enter City">
+                        </div>
+                        <div class="form-group">
+                            <label for="">State</label>
+                            <input type="text" name="" id="" class="form-control medium" placeholder="Enter State">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Country</label>
+                            <select name="" id="" class="form-control medium">
+                                <option value="">Select Country</option>
+                                <option value="">Country</option>
+                                <option value="">Country</option>
+                                <option value="">Country</option>
+                                <option value="">Country</option>
+                                <option value="">Country</option>
+                                <option value="">Country</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Zip Code</label>
+                            <input type="text" name="" id="" class="form-control medium" placeholder="Enter Zip Code">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Address</label>
+                            <input type="text" name="" id="" class="form-control medium" placeholder="Enter Address">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="btn-sbmt text-right">
+                    <a href="" class="btn btn-btn medium mr-10">Cancel</a>
+                    <a href="" class="btn medium">Save</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowPro CRM</title>
+    <link rel="stylesheet" href="assets/fonts/font.css">
+    <link rel="stylesheet" href="assets/sass/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="form-wrap">
+            <div class="login-form" data-tab="login-form">
+                <div class="model-body">
+                    <div class="logo"><img src="assets/img/realtydigi-logo.png" alt=""></div>
+                    <form action="#" class="form">
+                        <div class="form-group">
+                            <label for="name">User Name</label>
+                            <input type="text" class="form-control" placeholder="Enter user name" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="password-wrap">
+                                <input type="password" class="form-control login-password" placeholder="Enter Password" id="password">
+                                <button class="show-hide-password" type="button">
+                                    <img src="assets/icon/eye.svg" alt="">
+                                    <img src="assets/icon/eye-disable.svg" alt="" style="display: none;">
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" onclick="showtab('tab','otp-verify')" class="form-group btn w-100">Login</button>
+                    </form>
+                    <div class="register"><button class="reg-btn" type="button" onclick="showtab('tab','password-reset')">Forgot Password?</button></div>
+                </div>
+            </div>
+            <div class="password-reset-form" data-tab="password-reset" style="display: none;">
+                <div class="model-body">
+                    <div class="title text-center">
+                        <h3>Password Reset</h3>
+                        <p>We Will Help You Reset your Password</p>
+                    </div>
+                    <form action="#" class="form">
+                        <div class="form-group">
+                            <label for="">Email</label>
+                            <input type="text" class="form-control" placeholder="Enter Email Address">
+                        </div>
+                        <div class="form-group"><button type="submit" class="btn w-100">Reset Password</button></div>
+                    </form>
+                    <hr>
+                    <div class="register gray"><p>Remembered your Password?</p></div>
+                    <button type="button" class="back-to-sign btn btn-btn w-100" onclick="showtab('tab','login-form')">Back to Sign In</button>
+                </div>
+            </div>
+            <div class="otp-verify" data-tab="otp-verify" style="display: none;">
+                <div class="model-body">
+                    <div class="title text-center">
+                        <h3>Confirm Email</h3>
+                        <p>Check Your Email and Enter Confirmation Code</p>
+                    </div>
+                    <form action="#" class="form">
+                        <div class="form-group">
+                            <label for="">Confirmation Code</label>
+                            <input type="text" class="form-control" placeholder="Enter Code">
+                        </div>
+                        <div class="form-group"><a class="btn w-100" href="dashboard-home.html">Confirm Email</a></div>
+                    </form>
+                    <hr>
+                    <div class="register gray"><a href="">Haven’t received your code?</a></div>
+                    <a class="back-to-sign btn btn-btn w-100" href="">Resend Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
