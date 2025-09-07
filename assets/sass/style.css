@@ -5885,4 +5885,47 @@ main .dream-wrap .dream-list-wrap .dreamlist-wrap .colB .bucketlist ul li::befor
   border: 1px solid #348EFE;
   background: var(--white);
   border-radius: 50%;
+}
+main .dream-wrap .dream-list-wrap .financial-wrap {
+  gap: 15px;
+}
+main .dream-wrap .dream-list-wrap .financial-wrap .colA, main .dream-wrap .dream-list-wrap .financial-wrap .colB {
+  flex: 0 1 49%;
+  max-width: 49%;
+  width: 100%;
+}
+main .dream-wrap .dream-list-wrap .financial-wrap .colA .title, main .dream-wrap .dream-list-wrap .financial-wrap .colB .title {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
+}
+main .dream-wrap .dream-list-wrap .financial-wrap .colA .title p, main .dream-wrap .dream-list-wrap .financial-wrap .colB .title p {
+  font-size: 14px;
+  font-family: "Inter-600";
+}
+main .dream-wrap .dream-list-wrap .financial-wrap .colA .title .action_wrap, main .dream-wrap .dream-list-wrap .financial-wrap .colB .title .action_wrap {
+  align-items: center;
+  gap: 20px;
+}
+main .dream-wrap .dream-list-wrap .financial-wrap .colA .content table, main .dream-wrap .dream-list-wrap .financial-wrap .colB .content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+main .dream-wrap .dream-list-wrap .financial-wrap .colA .content table tr, main .dream-wrap .dream-list-wrap .financial-wrap .colB .content table tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
+}
+main .dream-wrap .dream-list-wrap .financial-wrap .colA .content table tr td, main .dream-wrap .dream-list-wrap .financial-wrap .colB .content table tr td {
+  padding: 15px 20px;
+  color: #333333;
+  font-family: "Inter-500";
+}
+main .dream-wrap .dream-list-wrap .financial-wrap .colA .content table tr td .val_col, main .dream-wrap .dream-list-wrap .financial-wrap .colB .content table tr td .val_col {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+}
+main .dream-wrap .dream-list-wrap .financial-wrap .colA .content table tr td .val_col input, main .dream-wrap .dream-list-wrap .financial-wrap .colB .content table tr td .val_col input {
+  text-align: right;
 }/*# sourceMappingURL=style.css.map */

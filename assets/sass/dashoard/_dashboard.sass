@@ -745,3 +745,37 @@ main
                                     border: 1px solid #348EFE
                                     background: $white
                                     border-radius: 50%
+            .financial-wrap
+                gap: 15px
+                .colA, .colB
+                    flex: 0 1 49%
+                    max-width: 49%
+                    width: 100%
+                    .title
+                        padding: 10px 20px
+                        display: flex
+                        justify-content: space-between
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843)
+                        p
+                            font-size: 14px
+                            @include font(600)
+                        .action_wrap
+                            align-items: center
+                            gap: 20px
+                    .content
+                        table
+                            width: 100%
+                            border-collapse: collapse
+                            tr
+                                border-bottom: 1px solid #0000001A
+                                td
+                                    padding: 15px 20px
+                                    color: #333333
+                                    @include font(500)
+                                    .val_col
+                                        display: flex
+                                        align-items: center
+                                        justify-content: end
+                                        gap: 10px
+                                        input
+                                            text-align: right
