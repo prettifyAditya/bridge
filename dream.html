@@ -1,176 +1,467 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Dream | Bridge</title>
-    <link rel="stylesheet" href="assets/fonts/font.css">
-    <link rel="stylesheet" href="assets/sass/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js" integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="assets/fonts/font.css" />
+    <link rel="stylesheet" href="assets/sass/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+        integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Select 2 css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- datepicker css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.min.css" integrity="sha512-rBi1cGvEdd3NmSAQhPWId5Nd6QxE8To4ADjM2a6n0BrqQdisZ/RPUlm0YycDzvNL1HHAh1nKZqI0kSbif+5upQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- datatable css -->
+    <link rel="stylesheet" href="/assets/css/datatables.min.css" />
+  </head>
+  <body>
     <header>
-        <div class="header-wrapper">
-            <div class="colA">
-                <a href="" class="logo"><img src="assets/img/realtydigi-logo.png" alt=""></a>
-            </div>
-            <div class="colB">
-                <ul>
-                    <li>
-                        <div class="notification-div" data-dropdown>
-                            <img src="assets/icon/notification.svg" alt="">
-                            <span>5</span>
-                            <div class="dropdown-menu notification-menu">
-                                <div class="notification-menu-wrap">
-                                    <div class="title-head">
-                                        <p>Notifications</p>
-                                        <button type="button" class="real-all-btn"><i class="iconify" data-icon="mage:email-opened"></i></button>
-                                    </div>
-                                    <menu>
-                                        <li class="new">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, autem.</li>
-                                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, sequi ipsum? Neque quos reiciendis dolorem modi vel aliquid nihil iste.</li>
-                                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vitae quia, vero quisquam architecto quae?</li>
-                                    </menu>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="dropdown-wrap inline-flex align-center">
-                            <div class="user-ico"><img src="assets/img/user.png" alt=""></div>
-                            <div data-dropdown>
-                                <span class="title">Deepak chauhan</span>
-                                <div class="dropdown-menu">
-                                    <ul>
-                                        <li><a href="">My Profile</a></li>
-                                        <li><a href="">My Profile</a></li>
-                                        <li><a href="">My Profile</a></li>
-                                        <li><a href="">My Profile</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="" class="logo"><img src="assets/img/grow-logo.png" alt=""></a>
-                    </li>
-                </ul>
-            </div>
+      <div class="header-wrapper">
+        <div class="colA">
+          <a href="" class="logo"
+            ><img src="assets/img/realtydigi-logo.png" alt=""
+          /></a>
         </div>
+        <div class="colB">
+          <ul>
+            <li>
+              <div class="notification-div" data-dropdown>
+                <img src="assets/icon/notification.svg" alt="" />
+                <span>5</span>
+                <div class="dropdown-menu notification-menu">
+                  <div class="notification-menu-wrap">
+                    <div class="title-head">
+                      <p>Notifications</p>
+                      <button type="button" class="real-all-btn">
+                        <i class="iconify" data-icon="mage:email-opened"></i>
+                      </button>
+                    </div>
+                    <menu>
+                      <li class="new">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Recusandae, autem.
+                      </li>
+                      <li>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Accusantium, sequi ipsum? Neque quos reiciendis dolorem
+                        modi vel aliquid nihil iste.
+                      </li>
+                      <li>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ipsa vitae quia, vero quisquam architecto quae?
+                      </li>
+                    </menu>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown-wrap inline-flex align-center">
+                <div class="user-ico">
+                  <img src="assets/img/user.png" alt="" />
+                </div>
+                <div data-dropdown>
+                  <span class="title">Deepak chauhan</span>
+                  <div class="dropdown-menu">
+                    <ul>
+                      <li><a href="">My Profile</a></li>
+                      <li><a href="">My Profile</a></li>
+                      <li><a href="">My Profile</a></li>
+                      <li><a href="">My Profile</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="" class="logo"
+                ><img src="assets/img/grow-logo.png" alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
     <aside>
-        <div class="aside-wrap">
-            <div class="aside-col">
-                <ul>
-                    <li><a class="active" href="dashboard-home.html"><i class="iconify" data-icon="eva:home-outline"></i>Home</a></li>
-                    <li><a href=""><i class="iconify" data-icon="ph:user"></i>User</a></li>
-                    <li><a href=""><i class="iconify" data-icon="ant-design:team-outlined"></i>Team</a></li>
-                    <li><a href=""><i class="iconify" data-icon="carbon:laptop"></i>Projects</a></li>
-                    <li><a href="manage-leads.html"><i class="iconify" data-icon="solar:chart-linear"></i>Leads</a></li>
-                    <li><a href=""><i class="iconify" data-icon="bi:phone"></i>Calling</a></li>
-                    <li><a href=""><i class="iconify" data-icon="solar:widget-linear"></i>Reports</a></li>
-                    <li><a href=""><i class="iconify" data-icon="mi:notification"></i>Notificaitons</a></li>
-                    <li><a href=""><i class="iconify" data-icon="tabler:message"></i>Activity</a></li>
-                    <li><a href=""><i class="iconify" data-icon="hugeicons:logout-04"></i>Logout</a></li>
-                </ul>
-            </div>
+      <div class="aside-wrap">
+        <div class="aside-col">
+          <ul>
+            <li>
+              <a class="active" href="dashboard-home.html"
+                ><i class="iconify" data-icon="eva:home-outline"></i>Home</a
+              >
+            </li>
+            <li>
+              <a href=""><i class="iconify" data-icon="ph:user"></i>User</a>
+            </li>
+            <li>
+              <a href=""
+                ><i class="iconify" data-icon="ant-design:team-outlined"></i
+                >Team</a
+              >
+            </li>
+            <li>
+              <a href=""
+                ><i class="iconify" data-icon="carbon:laptop"></i>Projects</a
+              >
+            </li>
+            <li>
+              <a href="manage-leads.html"
+                ><i class="iconify" data-icon="solar:chart-linear"></i>Leads</a
+              >
+            </li>
+            <li>
+              <a href=""><i class="iconify" data-icon="bi:phone"></i>Calling</a>
+            </li>
+            <li>
+              <a href=""
+                ><i class="iconify" data-icon="solar:widget-linear"></i
+                >Reports</a
+              >
+            </li>
+            <li>
+              <a href=""
+                ><i class="iconify" data-icon="mi:notification"></i
+                >Notificaitons</a
+              >
+            </li>
+            <li>
+              <a href=""
+                ><i class="iconify" data-icon="tabler:message"></i>Activity</a
+              >
+            </li>
+            <li>
+              <a href=""
+                ><i class="iconify" data-icon="hugeicons:logout-04"></i
+                >Logout</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </aside>
     <main>
-        <div class="main-wrap dream-wrap">
-            <div class="dream-secA flex mt-26">
-                <div class="col badge green">
-                    <div class="inf">
-                        <h5>This Month Income</h5>
-                        <p>₹10,045</p>
-                        <div class="perct">+0.3 %</div>
-                    </div>
-                    <div class="ico">
-                        <img src="/assets/img/sections/card-line.svg" alt="">
-                    </div>
-                </div>
-                <div class="col badge red">
-                    <div class="inf">
-                        <h5>This Quarter Income</h5>
-                        <p>₹10,045</p>
-                        <div class="perct">+0.3 %</div>
-                    </div>
-                    <div class="ico">
-                        <img src="/assets/img/sections/card-line.svg" alt="">
-                    </div>
-                </div>
-                <div class="col badge violet">
-                    <div class="inf">
-                        <h5>This Year income</h5>
-                        <p>₹10,045</p>
-                        <div class="perct">+0.3 %</div>
-                    </div>
-                    <div class="ico">
-                        <img src="/assets/img/sections/card-line.svg" alt="">
-                    </div>
-                </div>
-                <div class="col badge blue">
-                    <div class="inf">
-                        <h5>This Month Income</h5>
-                        <p>₹10,045</p>
-                        <div class="perct">+0.3 %</div>
-                    </div>
-                    <div class="ico">
-                        <img src="/assets/img/sections/card-line.svg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="due-payments flex card mt-26">
-                <p>My Due Payments : </p>
-                <div class="pay">INR 20000 Due on 25th, Credit Card Dues on 31st</div>
-                <div class="pay">INR 20000 Due on 25th, Credit Card Dues on 31st</div>
-                <div class="pay">INR 20000 Due on 25th, Credit Card Dues on 31st</div>
-            </div>
-            <div class="ledger-wrap flex mt-26">
-                <div class="colA card">
-                    <div class="title flex">
-                        <p class="f-bold black">This Month Due Payments</p>
-                        <div class="icon">
-                            <img src="/assets/img/sections/coin-gif.gif" alt="">
-                        </div>
-                    </div>
-                    <div class="card-content flex">
-                        <div class="list">
-                            <p>Particulars</p>
-                            <ul>
-                                <li>Rent</li>
-                                <li>Credit Card</li>
-                                <li>Housing Loan</li>
-                                <li>Bank Loan</li>
-                                <li>Car EMI</li>
-                            </ul>
-                        </div>
-                        <div class="list">
-                            <p>Due</p>
-                            <ul>
-                                <li>2,000</li>
-                                <li>1,500</li>
-                                <li>1100</li>
-                                <li>5000</li>
-                                <li>6000</li>
-                            </ul>
-                        </div>
-                        <div class="list">
-                            <p>Status</p>
-                            <ul>
-                                <li class="green">Paid</li>
-                                <li class="red">Due</li>
-                                <li class="green">Paid</li>
-                                <li class="red">Due</li>
-                                <li class="red">Due</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="top-nav card">
+        <ul>
+          <li class="active"><a href="">My Vision Board</a></li>
+          <li><a href="">My Dream List</a></li>
+          <li><a href="">My Financial Planner</a></li>
+          <li><a href="">My Financial Tracker</a></li>
+          <li><a href="">Debt & Saving Trackers</a></li>
+          <li><a href="">Income & Expenses</a></li>
+        </ul>
+      </div>
+      <div class="main-wrap dream-wrap">
+        <div class="due-notibar flex">
+          <div class="icon">
+            <img src="/assets/img/sections/notification.gif" alt="">
+          </div>
+          <div class="info">
+            <h6>INR 20000 Due</h6>
+            <p>Credit Card Dues on 6 Sep</p>
+          </div>
         </div>
+        <div class="dream-secA flex mt-26">
+          <div class="col badge green">
+            <div class="inf">
+              <h5>This Month Income</h5>
+              <p>₹10,045</p>
+              <div class="perct">+0.3 %</div>
+            </div>
+            <div class="ico">
+              <img src="/assets/img/sections/card-line.svg" alt="" />
+            </div>
+          </div>
+          <div class="col badge red">
+            <div class="inf">
+              <h5>This Quarter Income</h5>
+              <p>₹10,045</p>
+              <div class="perct">+0.3 %</div>
+            </div>
+            <div class="ico">
+              <img src="/assets/img/sections/card-line.svg" alt="" />
+            </div>
+          </div>
+          <div class="col badge violet">
+            <div class="inf">
+              <h5>This Year income</h5>
+              <p>₹10,045</p>
+              <div class="perct">+0.3 %</div>
+            </div>
+            <div class="ico">
+              <img src="/assets/img/sections/card-line.svg" alt="" />
+            </div>
+          </div>
+          <div class="col badge blue">
+            <div class="inf">
+              <h5>This Month Income</h5>
+              <p>₹10,045</p>
+              <div class="perct">+0.3 %</div>
+            </div>
+            <div class="ico">
+              <img src="/assets/img/sections/card-line.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="due-payments flex card mt-26">
+          <p>My Due Payments :</p>
+          <div class="marque">
+            <div class="pay">INR 20000 Due on 25th, Credit Card Dues on 31st</div>
+            <div class="pay">INR 20000 Due on 25th, Credit Card Dues on 31st</div>
+            <div class="pay">INR 20000 Due on 25th, Credit Card Dues on 31st</div>
+          </div>
+        </div>
+        <div class="ledger-wrap flex mt-26">
+          <div class="colA card">
+            <div class="title flex">
+              <p class="f-bold black">This Month Due Payments</p>
+              <div class="icon">
+                <img src="/assets/img/sections/coin-gif.gif" alt="" />
+              </div>
+            </div>
+            <div class="card-content flex">
+              <div class="list">
+                <p>Particulars</p>
+                <ul>
+                  <li>Rent</li>
+                  <li>Credit Card</li>
+                  <li>Housing Loan</li>
+                  <li>Bank Loan</li>
+                  <li>Car EMI</li>
+                </ul>
+              </div>
+              <div class="list">
+                <p>Due</p>
+                <ul>
+                  <li>2,000</li>
+                  <li>1,500</li>
+                  <li>1100</li>
+                  <li>5000</li>
+                  <li>6000</li>
+                </ul>
+              </div>
+              <div class="list">
+                <p>Status</p>
+                <ul>
+                  <li class="green">Paid</li>
+                  <li class="red">Due</li>
+                  <li class="green">Paid</li>
+                  <li class="red">Due</li>
+                  <li class="red">Due</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="colB card">
+            <div class="title flex">
+              <p class="f-bold black">My Dream List</p>
+              <button type="button" class="btn btn-btn medium">Update</button>
+            </div>
+            <div class="card-body">
+              <div class="dream-slider-wrapper">
+                <div class="dream-nav swpier-nav center-full">
+                  <button type="button" class="swiper-prev dream-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024"><path fill="#666666" d="M752.145 0c8.685 0 17.572 3.434 24.237 10.099c13.33 13.33 13.33 35.143 0 48.473L320.126 515.03l449.591 449.591c13.33 13.33 13.33 35.144 0 48.474s-35.142 13.33-48.472 0L247.418 539.268c-13.33-13.33-13.33-35.144 0-48.474L727.91 10.1C734.575 3.435 743.46.002 752.146.002z"/></svg>
+                  </button>
+
+                  <button type="button" class="swiper-next dream-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024"><path fill="#666666" d="M752.145 0c8.685 0 17.572 3.434 24.237 10.099c13.33 13.33 13.33 35.143 0 48.473L320.126 515.03l449.591 449.591c13.33 13.33 13.33 35.144 0 48.474s-35.142 13.33-48.472 0L247.418 539.268c-13.33-13.33-13.33-35.144 0-48.474L727.91 10.1C734.575 3.435 743.46.002 752.146.002z"/></svg>
+                  </button>
+                </div>
+                <div class="dream-slider swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="item">
+                        <figure>
+                          <img
+                            src="/assets/img/sections/dream-slide1.jpg"
+                            alt=""
+                          />
+                        </figure>
+                        <figcaption>
+                          <p>I want to go to Goa for Family Vacation</p>
+                        </figcaption>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="item">
+                        <figure>
+                          <img
+                            src="/assets/img/sections/dream-slide1.jpg"
+                            alt=""
+                          />
+                        </figure>
+                        <figcaption>
+                          <p>I want to go to Goa for Family Vacation</p>
+                        </figcaption>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="item">
+                        <figure>
+                          <img
+                            src="/assets/img/sections/dream-slide1.jpg"
+                            alt=""
+                          />
+                        </figure>
+                        <figcaption>
+                          <p>I want to go to Goa for Family Vacation</p>
+                        </figcaption>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dream-dots"></div>
+              </div>
+            </div>
+          </div>
+          <div class="colC card">
+            <div class="title flex">
+              <p class="f-bold black">My Financial Tracker</p>
+              <button type="button" class="btn btn-btn medium">Update</button>
+            </div>
+            <div class="card-body">
+              <ul>
+                <li>
+                  <div class="icon">
+                    <img src="/assets/img/sections/finance1.svg" alt="Finance Icon">
+                  </div>
+                  <div class="info">
+                    <h6>Emergency Fund</h6>
+                    <p><span>Target :</span> 50,0000 Dec 2025</p>
+                    <p class="red"><span>Actual :</span> 50,0000 Dec 2025</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="icon">
+                    <img src="/assets/img/sections/finance2.svg" alt="Finance Icon">
+                  </div>
+                  <div class="info">
+                    <h6>Debt Tracker</h6>
+                    <p><span>Target :</span> 50,0000 Dec 2025</p>
+                    <p class="red"><span>Actual :</span> 50,0000 Dec 2025</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="icon">
+                    <img src="/assets/img/sections/finance3.svg" alt="Finance Icon">
+                  </div>
+                  <div class="info">
+                    <h6>Saving Goals</h6>
+                    <p><span>Target :</span> 50,0000 Dec 2025</p>
+                    <p class="red"><span>Actual :</span> 50,0000 Dec 2025</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="report-wrap flex mt-26">
+          <div class="colA card">
+            <div class="title flex">
+              <p class="f-bold f-18 black">Revenue Report</p>
+              <div class="year-select">
+                <select class="form-control">
+                  <option value="This Year">This Year</option>
+                  <option value="2025">2025</option>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                </select>
+              </div>
+            </div>
+            <div class="chartdiv">
+              <canvas id="revenueReport" height="80"></canvas>
+            </div>
+          </div>
+          <div class="colB card">
+            <div class="title flex">
+              <p class="f-bold black">My Income Targets</p>
+              <button type="button" class="btn btn-btn medium">Update</button>
+            </div>
+            <div class="content">
+              <table>
+                <thead>
+                  <th>Month</th>
+                  <th>Target</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Jan - 2025</td>
+                    <td>2,000</td>
+                  </tr>
+                  <tr>
+                    <td>Jan - 2025</td>
+                    <td>2,000</td>
+                  </tr>
+                  <tr>
+                    <td>Jan - 2025</td>
+                    <td>2,000</td>
+                  </tr>
+                  <tr>
+                    <td>Jan - 2025</td>
+                    <td>2,000</td>
+                  </tr>
+                  <tr>
+                    <td>Jan - 2025</td>
+                    <td>2,000</td>
+                  </tr>
+                  <tr>
+                    <td>Jan - 2025</td>
+                    <td>2,000</td>
+                  </tr>
+                  <tr>
+                    <td>Jan - 2025</td>
+                    <td>2,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-</body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"
+      integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- DatePicker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <!-- Data Tables -->
+    <script type="text/javascript" src="/assets/js/datatables.min.js"></script>
+    <!-- Main Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+        integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function(){
+          new Swiper('.dream-slider', {
+              speed: 1000,
+              slidesPerView: 1,
+              navigation: {
+                  nextEl: '.dream-next',
+                  prevEl: '.dream-prev',
+              },
+              pagination: {
+                  el: '.dream-dots',
+                  clickable: true,
+              },
+          })
+        })
+    </script>
+  </body>
 </html>
