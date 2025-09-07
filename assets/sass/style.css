@@ -5857,6 +5857,9 @@ main .dream-wrap .dream-list-wrap .dreamlist-wrap .colB .bucketlist {
   height: 100%;
   border-left: 1px solid #348EFE;
 }
+main .dream-wrap .dream-list-wrap .dreamlist-wrap .colB .bucketlist button {
+  margin-left: 20px;
+}
 main .dream-wrap .dream-list-wrap .dreamlist-wrap .colB .bucketlist ul {
   padding-top: 40px;
   margin-left: -8px;
