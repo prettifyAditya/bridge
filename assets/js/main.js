@@ -15,6 +15,10 @@ $(function(){
     //selct2
 
     $("select.form-control").select2();
+    $("select.dropdown-select").select2({
+        dropdownParent: '.dropdown-select-menu'
+    });
+    
 
     // datepicker
     
