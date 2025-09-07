@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Dream | Bridge</title>
+    <link rel="stylesheet" href="assets/fonts/font.css" />
+    <link rel="stylesheet" href="assets/sass/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+        integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Select 2 css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- datepicker css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.min.css" integrity="sha512-rBi1cGvEdd3NmSAQhPWId5Nd6QxE8To4ADjM2a6n0BrqQdisZ/RPUlm0YycDzvNL1HHAh1nKZqI0kSbif+5upQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- datatable css -->
+    <link rel="stylesheet" href="/assets/css/datatables.min.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-wrapper">
+        <div class="colA">
+          <a href="" class="logo"
+            ><img src="assets/img/realtydigi-logo.png" alt=""
+          /></a>
+        </div>
+        <div class="colB">
+          <ul>
+            <li>
+              <div class="notification-div" data-dropdown>
+                <img src="assets/icon/notification.svg" alt="" />
+                <span>5</span>
+                <div class="dropdown-menu notification-menu">
+                  <div class="notification-menu-wrap">
+                    <div class="title-head">
+                      <p>Notifications</p>
+                      <button type="button" class="real-all-btn">
+                        <i class="iconify" data-icon="mage:email-opened"></i>
+                      </button>
+                    </div>
+                    <menu>
+                      <li class="new">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Recusandae, autem.
+                      </li>
+                      <li>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Accusantium, sequi ipsum? Neque quos reiciendis dolorem
+                        modi vel aliquid nihil iste.
+                      </li>
+                      <li>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ipsa vitae quia, vero quisquam architecto quae?
+                      </li>
+                    </menu>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown-wrap inline-flex align-center">
+                <div class="user-ico">
+                  <img src="assets/img/user.png" alt="" />
+                </div>
+                <div data-dropdown>
+                  <span class="title">Deepak chauhan</span>
+                  <div class="dropdown-menu">
+                    <ul>
+                      <li><a href="">My Profile</a></li>
+                      <li><a href="">My Profile</a></li>
+                      <li><a href="">My Profile</a></li>
+                      <li><a href="">My Profile</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="" class="logo"
+                ><img src="assets/img/grow-logo.png" alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <aside>
+      <div class="aside-wrap">
+        <div class="aside-col">
+          <ul>
+            <li>
+              <a class="active" href="dashboard-home.html"
+                ><i class="iconify" data-icon="eva:home-outline"></i>Home</a
+              >
+            </li>
+            <li>
+              <a href=""><i class="iconify" data-icon="ph:user"></i>User</a>
+            </li>
+            <li>
+              <a href=""
+                ><i class="iconify" data-icon="ant-design:team-outlined"></i
+                >Team</a
+              >
+            </li>
+            <li>
+              <a href=""
+                ><i class="iconify" data-icon="carbon:laptop"></i>Projects</a
+              >
+            </li>
+            <li>
+              <a href="manage-leads.html"
+                ><i class="iconify" data-icon="solar:chart-linear"></i>Leads</a
+              >
+            </li>
+            <li>
+              <a href=""><i class="iconify" data-icon="bi:phone"></i>Calling</a>
+            </li>
+            <li>
+              <a href=""
+                ><i class="iconify" data-icon="solar:widget-linear"></i
+                >Reports</a
+              >
+            </li>
+            <li>
+              <a href=""
+                ><i class="iconify" data-icon="mi:notification"></i
+                >Notificaitons</a
+              >
+            </li>
+            <li>
+              <a href=""
+                ><i class="iconify" data-icon="tabler:message"></i>Activity</a
+              >
+            </li>
+            <li>
+              <a href=""
+                ><i class="iconify" data-icon="hugeicons:logout-04"></i
+                >Logout</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <div class="top-nav card">
+        <ul>
+          <li><a href="">My Vision Board</a></li>
+          <li><a href="">My Dream List</a></li>
+          <li><a href="">My Financial Planner</a></li>
+          <li><a href="">My Financial Tracker</a></li>
+          <li><a href="">Debt & Saving Trackers</a></li>
+          <li class="active"><a href="">Income & Expenses</a></li>
+        </ul>
+      </div>
+      <div class="main-wrap dream-wrap">
+        <div class="dream-secA flex mt-26">
+          <div class="col badge green">
+            <div class="inf">
+              <h5>This Month Income</h5>
+              <p>₹10,045</p>
+              <div class="perct">+0.3 %</div>
+            </div>
+            <div class="ico">
+              <img src="/assets/img/sections/card-line.svg" alt="" />
+            </div>
+          </div>
+          <div class="col badge red">
+            <div class="inf">
+              <h5>This Quarter Income</h5>
+              <p>₹10,045</p>
+              <div class="perct">+0.3 %</div>
+            </div>
+            <div class="ico">
+              <img src="/assets/img/sections/card-line.svg" alt="" />
+            </div>
+          </div>
+          <div class="col badge violet">
+            <div class="inf">
+              <h5>This Year income</h5>
+              <p>₹10,045</p>
+              <div class="perct">+0.3 %</div>
+            </div>
+            <div class="ico">
+              <img src="/assets/img/sections/card-line.svg" alt="" />
+            </div>
+          </div>
+          <div class="col badge blue">
+            <div class="inf">
+              <h5>This Month Income</h5>
+              <p>₹10,045</p>
+              <div class="perct">+0.3 %</div>
+            </div>
+            <div class="ico">
+              <img src="/assets/img/sections/card-line.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="dream-list-wrap mt-26">
+            <div class="title flex">
+              <p class="f-bold black">Income & Expenses</p>
+            </div>
+            <div class="financial-wrap flex mt-26">
+                <div class="colA card">
+                    <div class="title flex">
+                        <p class="bold black">My Expense Ledger</p>
+                        <button type="button" class="btn btn-btn medium">Update</button>
+                    </div>
+                    <div class="content">
+                        <table>
+                            <tr>
+                                <th>Month</th>
+                                <th>Target</th>
+                            </tr>
+                            <tr>
+                                <td>Jan - 2025</td>
+                                <td>
+                                    <div class="val_col">
+                                        <input type="text" readonly value="2000"></input>
+                                        <button type="button" class="edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M14.236 1.764a2.62 2.62 0 0 0-3.707 0L2.657 9.636a2.96 2.96 0 0 0-.772 1.354l-.87 3.386a.5.5 0 0 0 .61.608l3.385-.869a2.95 2.95 0 0 0 1.354-.772l7.872-7.872a2.62 2.62 0 0 0 0-3.707m-3 .707a1.621 1.621 0 1 1 2.293 2.293l-.779.779l-2.293-2.293zM9.75 3.957l2.293 2.293l-6.386 6.386a1.95 1.95 0 0 1-.896.51l-2.567.66l.66-2.567a1.94 1.94 0 0 1 .51-.896z"/></svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Feb - 2025</td>
+                                <td>
+                                    <div class="val_col">
+                                        <input type="text" readonly value="2000"></input>
+                                        <button type="button" class="edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M14.236 1.764a2.62 2.62 0 0 0-3.707 0L2.657 9.636a2.96 2.96 0 0 0-.772 1.354l-.87 3.386a.5.5 0 0 0 .61.608l3.385-.869a2.95 2.95 0 0 0 1.354-.772l7.872-7.872a2.62 2.62 0 0 0 0-3.707m-3 .707a1.621 1.621 0 1 1 2.293 2.293l-.779.779l-2.293-2.293zM9.75 3.957l2.293 2.293l-6.386 6.386a1.95 1.95 0 0 1-.896.51l-2.567.66l.66-2.567a1.94 1.94 0 0 1 .51-.896z"/></svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mar - 2025</td>
+                                <td>
+                                    <div class="val_col">
+                                        <input type="text" readonly value="2000"></input>
+                                        <button type="button" class="edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M14.236 1.764a2.62 2.62 0 0 0-3.707 0L2.657 9.636a2.96 2.96 0 0 0-.772 1.354l-.87 3.386a.5.5 0 0 0 .61.608l3.385-.869a2.95 2.95 0 0 0 1.354-.772l7.872-7.872a2.62 2.62 0 0 0 0-3.707m-3 .707a1.621 1.621 0 1 1 2.293 2.293l-.779.779l-2.293-2.293zM9.75 3.957l2.293 2.293l-6.386 6.386a1.95 1.95 0 0 1-.896.51l-2.567.66l.66-2.567a1.94 1.94 0 0 1 .51-.896z"/></svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>April - 2025</td>
+                                <td>
+                                    <div class="val_col">
+                                        <input type="text" readonly value="2000"></input>
+                                        <button type="button" class="edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M14.236 1.764a2.62 2.62 0 0 0-3.707 0L2.657 9.636a2.96 2.96 0 0 0-.772 1.354l-.87 3.386a.5.5 0 0 0 .61.608l3.385-.869a2.95 2.95 0 0 0 1.354-.772l7.872-7.872a2.62 2.62 0 0 0 0-3.707m-3 .707a1.621 1.621 0 1 1 2.293 2.293l-.779.779l-2.293-2.293zM9.75 3.957l2.293 2.293l-6.386 6.386a1.95 1.95 0 0 1-.896.51l-2.567.66l.66-2.567a1.94 1.94 0 0 1 .51-.896z"/></svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>This Year</td>
+                                <td>
+                                    <div class="val_col">
+                                        <input type="text" readonly value="2000"></input>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="colB card">
+                    <div class="title flex">
+                        <p class="bold black">My Expense Ledger</p>
+                        <div class="action_wrap flex">
+                            <select class="form-control">
+                                <option value="Sep 2025">Sep 2025</option>
+                                <option value="Oct 2025">Oct 2025</option>
+                                <option value="Nov 2025">Nov 2025</option>
+                            </select>
+                            <button type="button" class="btn btn-btn medium">Add</button>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <table>
+                            <tr>
+                                <td>Salary</td>
+                                <td>
+                                    <div class="val_col">
+                                        <input type="text" readonly value="2000"></input>
+                                        <button type="button" class="edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M14.236 1.764a2.62 2.62 0 0 0-3.707 0L2.657 9.636a2.96 2.96 0 0 0-.772 1.354l-.87 3.386a.5.5 0 0 0 .61.608l3.385-.869a2.95 2.95 0 0 0 1.354-.772l7.872-7.872a2.62 2.62 0 0 0 0-3.707m-3 .707a1.621 1.621 0 1 1 2.293 2.293l-.779.779l-2.293-2.293zM9.75 3.957l2.293 2.293l-6.386 6.386a1.95 1.95 0 0 1-.896.51l-2.567.66l.66-2.567a1.94 1.94 0 0 1 .51-.896z"/></svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Rent</td>
+                                <td>
+                                    <div class="val_col">
+                                        <input type="text" readonly value="2000"></input>
+                                        <button type="button" class="edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M14.236 1.764a2.62 2.62 0 0 0-3.707 0L2.657 9.636a2.96 2.96 0 0 0-.772 1.354l-.87 3.386a.5.5 0 0 0 .61.608l3.385-.869a2.95 2.95 0 0 0 1.354-.772l7.872-7.872a2.62 2.62 0 0 0 0-3.707m-3 .707a1.621 1.621 0 1 1 2.293 2.293l-.779.779l-2.293-2.293zM9.75 3.957l2.293 2.293l-6.386 6.386a1.95 1.95 0 0 1-.896.51l-2.567.66l.66-2.567a1.94 1.94 0 0 1 .51-.896z"/></svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Business Revenue</td>
+                                <td>
+                                    <div class="val_col">
+                                        <input type="text" readonly value="2000"></input>
+                                        <button type="button" class="edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M14.236 1.764a2.62 2.62 0 0 0-3.707 0L2.657 9.636a2.96 2.96 0 0 0-.772 1.354l-.87 3.386a.5.5 0 0 0 .61.608l3.385-.869a2.95 2.95 0 0 0 1.354-.772l7.872-7.872a2.62 2.62 0 0 0 0-3.707m-3 .707a1.621 1.621 0 1 1 2.293 2.293l-.779.779l-2.293-2.293zM9.75 3.957l2.293 2.293l-6.386 6.386a1.95 1.95 0 0 1-.896.51l-2.567.66l.66-2.567a1.94 1.94 0 0 1 .51-.896z"/></svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Interest</td>
+                                <td>
+                                    <div class="val_col">
+                                        <input type="text" readonly value="2000"></input>
+                                        <button type="button" class="edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M14.236 1.764a2.62 2.62 0 0 0-3.707 0L2.657 9.636a2.96 2.96 0 0 0-.772 1.354l-.87 3.386a.5.5 0 0 0 .61.608l3.385-.869a2.95 2.95 0 0 0 1.354-.772l7.872-7.872a2.62 2.62 0 0 0 0-3.707m-3 .707a1.621 1.621 0 1 1 2.293 2.293l-.779.779l-2.293-2.293zM9.75 3.957l2.293 2.293l-6.386 6.386a1.95 1.95 0 0 1-.896.51l-2.567.66l.66-2.567a1.94 1.94 0 0 1 .51-.896z"/></svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Dividends</td>
+                                <td>
+                                    <div class="val_col">
+                                        <input type="text" readonly value="2000"></input>
+                                        <button type="button" class="edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M14.236 1.764a2.62 2.62 0 0 0-3.707 0L2.657 9.636a2.96 2.96 0 0 0-.772 1.354l-.87 3.386a.5.5 0 0 0 .61.608l3.385-.869a2.95 2.95 0 0 0 1.354-.772l7.872-7.872a2.62 2.62 0 0 0 0-3.707m-3 .707a1.621 1.621 0 1 1 2.293 2.293l-.779.779l-2.293-2.293zM9.75 3.957l2.293 2.293l-6.386 6.386a1.95 1.95 0 0 1-.896.51l-2.567.66l.66-2.567a1.94 1.94 0 0 1 .51-.896z"/></svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Commissions</td>
+                                <td>
+                                    <div class="val_col">
+                                        <input type="text" readonly value="2000"></input>
+                                        <button type="button" class="edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M14.236 1.764a2.62 2.62 0 0 0-3.707 0L2.657 9.636a2.96 2.96 0 0 0-.772 1.354l-.87 3.386a.5.5 0 0 0 .61.608l3.385-.869a2.95 2.95 0 0 0 1.354-.772l7.872-7.872a2.62 2.62 0 0 0 0-3.707m-3 .707a1.621 1.621 0 1 1 2.293 2.293l-.779.779l-2.293-2.293zM9.75 3.957l2.293 2.293l-6.386 6.386a1.95 1.95 0 0 1-.896.51l-2.567.66l.66-2.567a1.94 1.94 0 0 1 .51-.896z"/></svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"
+      integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- DatePicker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <!-- Data Tables -->
+    <script type="text/javascript" src="/assets/js/datatables.min.js"></script>
+    <!-- Main Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+        integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
+</html>
