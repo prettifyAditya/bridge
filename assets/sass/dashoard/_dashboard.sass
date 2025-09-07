@@ -625,7 +625,7 @@ main
                                 p
                                     font-size: 12px
                                     line-height: 1.2
-                                    color: #666666
+                                    color: #666666  
                                     @include font(400)
                                     &:not(:last-child)
                                         padding-bottom: 3px
@@ -641,7 +641,7 @@ main
                 .title
                     justify-content: space-between
                     padding: 10px 20px
-                    align-items: center
+                    align-items: center  
             .colB
                 flex: 0 1 calc( 32% - 15px )
                 max-width: calc( 32% - 15px )
@@ -669,126 +669,3 @@ main
                             tr
                                 &:not(:last-child)
                                     border-bottom: 1px solid #0000001A
-        // Dream list page
-        .dream-list-wrap
-            .title
-                align-items: center
-                justify-content: space-between
-                p
-                    font-size: 24px
-            .dreamlist-wrap
-                justify-content: space-between
-                margin-top: 26px
-                .colA
-                    flex: 0 1 calc( 70% - 15px)
-                    max-width: calc( 70% - 15px)
-                    width: 100%
-                    padding: 20px
-                    .image-wrapper
-                        display: grid
-                        grid-template-columns: repeat(3, 1fr)
-                        grid-gap: 15px
-                        .item-md
-                            position: relative
-                            figure
-                                display: block
-                                overflow: hidden
-                                line-height: 0
-                                height: 100%
-                                img
-                                    width: 100%
-                                    height: 100%
-                                    object-fit: cover
-                            figcaption
-                                position: absolute
-                                bottom: 0
-                                left: 0
-                                z-index: 2
-                                padding: 0 20px 10px
-                                width: 100%
-                                text-align: center
-                                transition: .5s ease
-                                p
-                                    color: $white
-                                    font-size: 12px
-                                    @include font(700)
-                .colB
-                    flex: 0 1 30%
-                    max-width: 30%
-                    width: 100%
-                    padding: 0 20px 0 30px 
-                    .bucketlist
-                        height: 100%
-                        border-left: 1px solid #348EFE
-                        button
-                            margin-left: 20px
-                        ul
-                           padding-top: 40px
-                           margin-left: -8px
-                           li
-                                padding-left: 30px
-                                margin-bottom: 20px
-                                font-size: 14px
-                                @include font(500)
-                                position: relative
-                                &.active
-                                    &::before
-                                        background: #348EFE
-                                &::before
-                                    content: ""
-                                    position: absolute
-                                    left: 0
-                                    top: 50%
-                                    translate: 0 -50%
-                                    width: 15px
-                                    height: 15px
-                                    border: 1px solid #348EFE
-                                    background: $white
-                                    border-radius: 50%
-            .financial-wrap
-                gap: 15px
-                .colA, .colB
-                    flex: 0 1 49%
-                    max-width: 49%
-                    width: 100%
-                    .title
-                        padding: 10px 20px
-                        display: flex
-                        justify-content: space-between
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843)
-                        p
-                            font-size: 14px
-                            @include font(600)
-                        .action_wrap
-                            align-items: center
-                            gap: 20px
-                    .content
-                        table
-                            width: 100%
-                            border-collapse: collapse
-                            tr
-                                &:not(:first-child) &:not(:last-child)
-                                    border-bottom: 1px solid #0000001A
-                                &:last-child
-                                    td
-                                        @include font(700)
-                                        color: $black
-                                th
-                                    padding: 15px 20px
-                                    text-align: left
-                                    &:not(:first-child)
-                                        text-align: right
-                                td
-                                    text-align: left
-                                    padding: 15px 20px
-                                    color: #333333
-                                    @include font(500)
-                                    &:not(:first-child)
-                                        text-align: center
-                                    .val_col
-                                        display: flex
-                                        align-items: center
-                                        justify-content: end
-                                        gap: 10px
-                                        input
-                                            text-align: right

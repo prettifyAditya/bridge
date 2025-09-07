@@ -5885,6 +5885,7 @@ main .dream-wrap .dream-list-wrap .dreamlist-wrap .colB .bucketlist ul li::befor
   border: 1px solid #348EFE;
   background: var(--white);
   border-radius: 50%;
+<<<<<<< HEAD
 }
 main .dream-wrap .dream-list-wrap .financial-wrap {
   gap: 15px;
@@ -5943,4 +5944,6 @@ main .dream-wrap .dream-list-wrap .financial-wrap .colA .content table tr td .va
 }
 main .dream-wrap .dream-list-wrap .financial-wrap .colA .content table tr td .val_col input, main .dream-wrap .dream-list-wrap .financial-wrap .colB .content table tr td .val_col input {
   text-align: right;
+=======
+>>>>>>> upstream/main
 }/*# sourceMappingURL=style.css.map */
