@@ -5794,4 +5794,92 @@ main .dream-wrap .report-wrap .colB .content table td:first-child, main .dream-w
 }
 main .dream-wrap .report-wrap .colB .content table tbody tr:not(:last-child) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
+}
+main .dream-wrap .dream-list-wrap .title {
+  align-items: center;
+  justify-content: space-between;
+}
+main .dream-wrap .dream-list-wrap .title p {
+  font-size: 24px;
+}
+main .dream-wrap .dream-list-wrap .dreamlist-wrap {
+  justify-content: space-between;
+  margin-top: 26px;
+}
+main .dream-wrap .dream-list-wrap .dreamlist-wrap .colA {
+  flex: 0 1 calc(70% - 15px);
+  max-width: calc(70% - 15px);
+  width: 100%;
+  padding: 20px;
+}
+main .dream-wrap .dream-list-wrap .dreamlist-wrap .colA .image-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+main .dream-wrap .dream-list-wrap .dreamlist-wrap .colA .image-wrapper .item-md {
+  position: relative;
+}
+main .dream-wrap .dream-list-wrap .dreamlist-wrap .colA .image-wrapper .item-md figure {
+  display: block;
+  overflow: hidden;
+  line-height: 0;
+  height: 100%;
+}
+main .dream-wrap .dream-list-wrap .dreamlist-wrap .colA .image-wrapper .item-md figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .dream-wrap .dream-list-wrap .dreamlist-wrap .colA .image-wrapper .item-md figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  padding: 0 20px 10px;
+  width: 100%;
+  text-align: center;
+  transition: 0.5s ease;
+}
+main .dream-wrap .dream-list-wrap .dreamlist-wrap .colA .image-wrapper .item-md figcaption p {
+  color: var(--white);
+  font-size: 12px;
+  font-family: "Inter-700";
+}
+main .dream-wrap .dream-list-wrap .dreamlist-wrap .colB {
+  flex: 0 1 30%;
+  max-width: 30%;
+  width: 100%;
+  padding: 0 20px 0 30px;
+}
+main .dream-wrap .dream-list-wrap .dreamlist-wrap .colB .bucketlist {
+  height: 100%;
+  border-left: 1px solid #348EFE;
+}
+main .dream-wrap .dream-list-wrap .dreamlist-wrap .colB .bucketlist ul {
+  padding-top: 40px;
+  margin-left: -8px;
+}
+main .dream-wrap .dream-list-wrap .dreamlist-wrap .colB .bucketlist ul li {
+  padding-left: 30px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-family: "Inter-500";
+  position: relative;
+}
+main .dream-wrap .dream-list-wrap .dreamlist-wrap .colB .bucketlist ul li.active::before {
+  background: #348EFE;
+}
+main .dream-wrap .dream-list-wrap .dreamlist-wrap .colB .bucketlist ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  translate: 0 -50%;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #348EFE;
+  background: var(--white);
+  border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */
