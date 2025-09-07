@@ -5912,13 +5912,28 @@ main .dream-wrap .dream-list-wrap .financial-wrap .colA .content table, main .dr
   width: 100%;
   border-collapse: collapse;
 }
-main .dream-wrap .dream-list-wrap .financial-wrap .colA .content table tr, main .dream-wrap .dream-list-wrap .financial-wrap .colB .content table tr {
+main .dream-wrap .dream-list-wrap .financial-wrap .colA .content table tr:not(:first-child) main .dream-wrap .dream-list-wrap .financial-wrap .colA .content table tr:not(:last-child), main .dream-wrap .dream-list-wrap .financial-wrap .colA .content table tr:not(:first-child) main .dream-wrap .dream-list-wrap .financial-wrap .colB .content table tr:not(:last-child), main .dream-wrap .dream-list-wrap .financial-wrap .colB .content table tr:not(:first-child) main .dream-wrap .dream-list-wrap .financial-wrap .colA .content table tr:not(:last-child), main .dream-wrap .dream-list-wrap .financial-wrap .colB .content table tr:not(:first-child) main .dream-wrap .dream-list-wrap .financial-wrap .colB .content table tr:not(:last-child) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
 }
+main .dream-wrap .dream-list-wrap .financial-wrap .colA .content table tr:last-child td, main .dream-wrap .dream-list-wrap .financial-wrap .colB .content table tr:last-child td {
+  font-family: "Inter-700";
+  color: var(--black);
+}
+main .dream-wrap .dream-list-wrap .financial-wrap .colA .content table tr th, main .dream-wrap .dream-list-wrap .financial-wrap .colB .content table tr th {
+  padding: 15px 20px;
+  text-align: left;
+}
+main .dream-wrap .dream-list-wrap .financial-wrap .colA .content table tr th:not(:first-child), main .dream-wrap .dream-list-wrap .financial-wrap .colB .content table tr th:not(:first-child) {
+  text-align: right;
+}
 main .dream-wrap .dream-list-wrap .financial-wrap .colA .content table tr td, main .dream-wrap .dream-list-wrap .financial-wrap .colB .content table tr td {
+  text-align: left;
   padding: 15px 20px;
   color: #333333;
   font-family: "Inter-500";
+}
+main .dream-wrap .dream-list-wrap .financial-wrap .colA .content table tr td:not(:first-child), main .dream-wrap .dream-list-wrap .financial-wrap .colB .content table tr td:not(:first-child) {
+  text-align: center;
 }
 main .dream-wrap .dream-list-wrap .financial-wrap .colA .content table tr td .val_col, main .dream-wrap .dream-list-wrap .financial-wrap .colB .content table tr td .val_col {
   display: flex;

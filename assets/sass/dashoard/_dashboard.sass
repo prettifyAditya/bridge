@@ -767,11 +767,24 @@ main
                             width: 100%
                             border-collapse: collapse
                             tr
-                                border-bottom: 1px solid #0000001A
+                                &:not(:first-child) &:not(:last-child)
+                                    border-bottom: 1px solid #0000001A
+                                &:last-child
+                                    td
+                                        @include font(700)
+                                        color: $black
+                                th
+                                    padding: 15px 20px
+                                    text-align: left
+                                    &:not(:first-child)
+                                        text-align: right
                                 td
+                                    text-align: left
                                     padding: 15px 20px
                                     color: #333333
                                     @include font(500)
+                                    &:not(:first-child)
+                                        text-align: center
                                     .val_col
                                         display: flex
                                         align-items: center
