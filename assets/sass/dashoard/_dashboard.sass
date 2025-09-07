@@ -380,3 +380,107 @@ main
                             padding-right: 3px
                         p
                             @include font(500)
+
+.dream-wrap
+    .dream-secA
+        gap: 20px
+        .col
+            flex: 1
+            display: flex
+            align-items: end
+            padding: 30px 25px
+            border: 1px solid #66666621
+            &.badge
+                --height: 100%
+            &.red
+                background: #FFEFEF
+                .inf
+                    .perct
+                        background: #FCE2E2
+                        color: #E54642
+            &.green 
+                .inf
+                    .perct
+                        background: #DEF7EE
+                        color: #3ED8A2
+            &.violet
+                background: #F9EEFF
+                .inf
+                    .perct
+                        background: #FBF6FE
+                        color: #8051E5
+            &.blue
+                background: #EAEDFE
+                .inf
+                    .perct
+                        background: #F1F5FC
+                        color: #1E5EFF
+            .inf
+                flex: 1
+                h5
+                    font-size: 14px
+                    line-height: 1.5
+                    @include font(400)
+                    color: #5A607F
+                p
+                    font-size: 18px
+                    @include font(600)
+                    color: #333333
+                .perct
+                    margin-top: 15px
+                    width: 100%
+                    max-width: max-content
+                    background: #fff
+                    padding: 2px 5px
+                    border-radius: 25px
+                    color: #000
+                    font-size: 12px
+                    line-height: 1.2
+                    @include font(600)
+            .ico
+                flex: 0 1 90px
+                max-width: 90px
+    .due-payments
+        padding: 10px 15px
+        align-items: center
+        overflow-x: hidden
+        flex-wrap: nowrap
+        p 
+            font-size: 14px
+            line-height: 1.5
+            @include font(600)
+            color: $black
+            white-space: nowrap
+        .pay
+            padding: 0 10px 0 15px
+            white-space: nowrap
+            border-right: 2px solid #E95D5D
+            color: #E95D5D
+            @include font(600)
+    .ledger-wrap
+        width: 100%
+        .colA
+            .title
+                border-bottom: 1px solid #0000001A
+                justify-content: space-between
+                padding: 10px 20px
+                align-items: center
+                .icon
+                    flex: 0 1 40px
+                    img
+                        width: 40px
+            .card-content
+                .list
+                    flex: 1
+                    padding: 10px 0
+                    p
+                        padding: 0px 20px 10px
+                        @include font(500)
+                        color: $black
+                    ul
+                        li
+                            @include font(500)
+                            white-space: nowrap
+                            padding: 7px 20px
+                            &:not(:last-child)
+                                border-bottom: 1px solid #0000001A
