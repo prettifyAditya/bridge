@@ -1,0 +1,53 @@
+@import '../_var'
+
+
+.form-group
+    label
+        display: block
+        line-height: 20px
+        margin-bottom: 4px
+    input,textarea
+        width: 100%
+    .select2
+        width: 100% !important
+
+.form
+    --item: 3
+    --gaplr: 16px
+    --gaptb: 24px
+    display: grid
+    grid-template-columns: repeat(var(--item), calc((100% - (var(--gaplr) * (var(--item) - 1))) / var(--item)))
+    gap: var(--gaptb) var(--gaplr)
+    &.form-2
+        --item: 2
+    &.form-4
+        --item: 4
+    &.form-5
+        --item: 5
+    .form-title
+        grid-column: span var(--item)
+        display: flex
+        align-items: center
+        justify-content: space-between
+        p
+            color: var(--black)
+            font-size: 16px
+            @include font(600)
+    .full
+        grid-column: span var(--item)
+    .span-2
+        grid-column: span 2
+    .span-3
+        grid-column: span 3
+    .span-4
+        grid-column: span 4
+    .span-5
+        grid-column: span 5
+    .span-6
+        grid-column: span 6
+    
+.form-wrap
+    &:not(:last-child)
+        margin-bottom: 3rem
+    & ~ hr
+        margin: 3rem 0

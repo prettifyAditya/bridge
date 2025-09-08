@@ -2,29 +2,16 @@
 .login-wrapper
     height: 100vh
     width: 100%
-    background-repeat: no-repeat
-    background-size: cover
-    background-position: bottom
+    background: var(--general-h)
     display: flex
     align-items: center
     justify-content: center
-    background: url(../img/vector-1.svg)
-    background-repeat: repeat-x
-    background-position: 0 100%
-    @include media(767)
-        background: var(--white)
     .form-wrap
         max-width: 450px
         width: 100%
-        padding: 35px 28px
+        padding: 60px 28px 60px
         border-radius: 5px
         background: var(--white)
-        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px
-        @include media(675)
-            max-width: 100%
-            padding: 35px 20px
-            border-radius: 0
-            box-shadow: none
         .logo
             line-height: 0
             text-align: center
@@ -34,9 +21,9 @@
             p
                 color: var(--general-c)
         .form
-            --item: 1
-            --gaptb: 18px
             .form-group
+                &:not(:last-child)
+                    margin-bottom: 24px
                 label
                     display: block
                     line-height: 20px

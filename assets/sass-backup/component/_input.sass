@@ -25,8 +25,6 @@
         outline: none
     &.full
         width: 100%
-    &.padding-medium
-        --padding: 5px
     &.search
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%237E84A3' fill-rule='evenodd' d='m16.31 15.561l4.114 4.115l-.848.848l-4.123-4.123a7 7 0 1 1 .857-.84M16.8 11a5.8 5.8 0 1 0-11.6 0a5.8 5.8 0 0 0 11.6 0'/%3E%3C/svg%3E")
         background-repeat: no-repeat
@@ -35,7 +33,7 @@
         padding-left: calc( var(--iconsize) + var(--padding) + 4px )
         &.medium
             --iconsize: 20px
-    &.date-range,&.date-icon
+    &.date-range
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%237E84A3' d='M19 4h-2V3a1 1 0 0 0-2 0v1H9V3a1 1 0 0 0-2 0v1H5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3m1 15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-7h16Zm0-9H4V7a1 1 0 0 1 1-1h2v1a1 1 0 0 0 2 0V6h6v1a1 1 0 0 0 2 0V6h2a1 1 0 0 1 1 1Z'/%3E%3C/svg%3E")
         background-repeat: no-repeat
         background-position: var(--padding) 50%
@@ -43,7 +41,7 @@
         padding-left: calc( var(--iconsize) + var(--padding) + 8px )
         &.medium
             --iconsize: 20px
-    &.date,&.has-date
+    &.date
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%237E84A3' d='M19 4h-2V3a1 1 0 0 0-2 0v1H9V3a1 1 0 0 0-2 0v1H5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3m1 15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-7h16Zm0-9H4V7a1 1 0 0 1 1-1h2v1a1 1 0 0 0 2 0V6h6v1a1 1 0 0 0 2 0V6h2a1 1 0 0 1 1 1Z'/%3E%3C/svg%3E")
         background-repeat: no-repeat
         background-position: calc(100% - var(--padding)) 50%
@@ -52,11 +50,41 @@
         &.medium
             --iconsize: 20px
     &[type="checkbox"]
-        @include check-box
+        height: 20px
+        width: 20px
+        border-color: var(--general-f)
+        border-radius: none
+        position: relative
+        appearance: none
+        padding: 0
+        border: none
+        &::before,&::after
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            transition: .2s ease
+        &::before
+            background: none
+            border: 1px solid var(--general-f)
+            border-radius: 5px
+            z-index: 1
+        &::after
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAA9SURBVHgBhc3BDQAgCAPAuon7L+EoHaUS5aVFSQgBjtDwCEk9ysAPRVI7iGyY1xat3TmwqLi+UfHKI4Mtmtl1ka98m+YiAAAAAElFTkSuQmCC')
+            background-position: 50% 50%
+            background-repeat: no-repeat
+            background-size: 10px 7px
+            z-index: 2
+            transform: scale(.8)
+            opacity: 0
         &:checked
-            background: var(--primary-a)
-            border-color: var(--primary-a)
             &::before
+                background: var(--primary-a)
+                border-color: var(--primary-a)
+            &::after
+                transform: scale(1)
                 opacity: 1
     &[type="radio"]
         @include radio-btn
@@ -122,29 +150,17 @@ textarea.form-control
         left: 0
         right: 0
         bottom: 0
-        height: 100%
-        width: 100%
         appearance: none
         opacity: 0
         z-index: 2
-    &:has(input[type="radio"])
-        span.radio-dot
-            @include radio-btn
-    &:has(input[type="radio"]:checked)
-        span
-            background: var(--primary-a)
-            border-color: var(--primary-a)
-            outline-offset: -10px
-            outline: 5px solid var(--white)
-    &:has(input[type="checkbox"])
-        span.radio-dot
-            @include check-box
-    &:has(input[type="checkbox"]:checked)
-        span
-            background: var(--primary-a)
-            border-color: var(--primary-a)
-            &::before
-                opacity: 1
+        &:checked
+            & ~ span
+                background: var(--primary-a)
+                border-color: var(--primary-a)
+                outline-offset: -10px
+                outline: 5px solid var(--white)
+    span.radio-dot
+        @include radio-btn
 .radio-label-2
     display: flex
     align-items: center
@@ -160,9 +176,8 @@ textarea.form-control
         label
             font-size: 13px
         span.radio-dot
-            pointer-events: none
-            height: 18px !important
-            width: 18px !important
+            height: 18px
+            width: 18px
     label
         color: var(--general-c)
         @include font(500)
@@ -173,79 +188,13 @@ textarea.form-control
         right: 0
         bottom: 0
         appearance: none
-        height: 100%
-        width: 100%
         opacity: 0
         z-index: 2
-    &:has(input[type="radio"])
-        span.radio-dot
-            @include radio-btn
-    &:has(input[type="radio"]:checked)
-        span
-            background: var(--primary-a)
-            border-color: var(--primary-a)
-            outline-offset: -10px
-            outline: 5px solid var(--white)
-    &:has(input[type="checkbox"])
-        span.radio-dot
-            @include check-box
-    &:has(input[type="checkbox"]:checked)
-        span
-            background: var(--primary-a)
-            border-color: var(--primary-a)
-            &::before
-                transform: scale(1)
-                opacity: 1
-.radio-label-3
-    position: relative
-    padding: 7px 12px
-    display: block
-    input
-        position: absolute
-        top: 0
-        left: 0
-        right: 0
-        bottom: 0
-        z-index: 1
-        height: 100%
-        width: 100%
-        appearance: none
-        opacity: 0
-    &:has(input:checked)
-        background: var(--primary-a)
-        color: var(--white)
-    &:not(&:has(input:checked))
-        &:hover
-            background: var(--general-h)
-
-.progress
-    width: 100%
-    height: 8px
-    background: var(--general-g)
-    border-radius: 8px
-    position: relative
-    overflow: hidden
-    &::before
-        content: ''
-        background: var(--primary-a)
-        position: absolute
-        top: 0
-        bottom: 0
-        border-radius: 8px
-        left: 0
-        width: var(--progress)
-    &.green
-        &::before
-            background: var(--green-a)
-    &.red
-        &::before
-            background: var(--red-a)
-    &.yellow
-        &::before
-            background: var(--yellow-a)
-    &.blue
-        &::before
-            background: var(--primary-a)
-    &.gray
-        &::before
-            background: var(--general-a)
+        &:checked
+            & ~ span
+                background: var(--primary-a)
+                border-color: var(--primary-a)
+                outline-offset: -10px
+                outline: 5px solid var(--white)
+    span.radio-dot
+        @include radio-btn

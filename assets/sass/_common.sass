@@ -19,16 +19,16 @@
 :root
     --header: 68px
     --aside: 170px
-    --asidecollapse: 80px
     --mainpaddingleftright: 30px
-    --primary-a: #1E5EFF
-    --primary-b: #336DFF
-    --primary-c: #4F81FF
-    --primary-d: #608DFF
-    --primary-e: #89ABFF
-    --primary-f: #B6CBFF
-    --primary-g: #D9E4FF
-    --primary-h: #ECF2FF
+    --asidemobileheight: 62px
+    --primary-a: #3d789f
+    --primary-b: #3d7893
+    --primary-c: #3d789f
+    --primary-d: #3d789f
+    --primary-e: #3d789f
+    --primary-f: #3d789f
+    --primary-g: #ebe4d7
+    --primary-h: #f5f1e9
 
     --secondary-a: #6E0BD4
     --secondary-b: #8125DF
@@ -80,6 +80,14 @@
     --white: #fff
     --black: #000
     --text: #666
+    @include media(1300)
+        --mainpaddingleftright: 12px
+    @include media(767)
+        --aside: 100%
+    &.collapse
+        --aside: 80px
+        @include media(767)
+            --aside: 100%
 body,html
     font-size: 14px
     line-height: 1.5
@@ -87,6 +95,13 @@ body,html
     font-style: normal
     color: var(--general-c)
     @include font
+
+html
+    height: 100vh
+    overflow: hidden
+
+.overflow-hidden
+    overflow: hidden
 div
     line-height: normal
 
@@ -98,7 +113,8 @@ li
     color: var(--general-c)
 p
     line-height: 1.5
-
+    @include media(767)
+        font-size: 14px
 a[href]
     text-decoration: none
     transition: .5s ease
@@ -135,6 +151,8 @@ hr
     height: 1px
     background: var(--general-f)
     margin: 30px 0
+    &.medium
+        margin: 15px 0
 // 
 
 [data-copy]
@@ -171,9 +189,104 @@ hr
     display: flex
     flex-wrap: wrap
 
+.flex-gap-1
+    gap: 5px
+.flex-gap-2
+    gap: 8px
+.flex-gap-3
+    gap: 12px
+.flex-gap-4
+    gap: 15px
+
+.flex-1
+    flex: 1
+
+.flex-10
+    flex: 0 1 10%
+    max-width: 10%
+    width: 100%
+.flex-15
+    flex: 0 1 15%
+    max-width: 15%
+    width: 100%
+.flex-20
+    flex: 0 1 20%
+    max-width: 20%
+    width: 100%
+.flex-25
+    flex: 0 1 25%
+    max-width: 25%
+    width: 100%
+.flex-30
+    flex: 0 1 30%
+    max-width: 30%
+    width: 100%
+.flex-35
+    flex: 0 1 35%
+    max-width: 35%
+    width: 100%
+.flex-40
+    flex: 0 1 40%
+    max-width: 40%
+    width: 100%
+.flex-45
+    flex: 0 1 45%
+    max-width: 45%
+    width: 100%
+.flex-50
+    flex: 0 1 50%
+    max-width: 50%
+    width: 100%
+.flex-55
+    flex: 0 1 55%
+    max-width: 55%
+    width: 100%
+.flex-60
+    flex: 0 1 60%
+    max-width: 60%
+    width: 100%
+.flex-65
+    flex: 0 1 65%
+    max-width: 65%
+    width: 100%
+.flex-70
+    flex: 0 1 70%
+    max-width: 70%
+    width: 100%
+.flex-75
+    flex: 0 1 75%
+    max-width: 75%
+    width: 100%
+.flex-80
+    flex: 0 1 80%
+    max-width: 80%
+    width: 100%
+.flex-85
+    flex: 0 1 85%
+    max-width: 85%
+    width: 100%
+.flex-90
+    flex: 0 1 90%
+    max-width: 90%
+    width: 100%
+.flex-95
+    flex: 0 1 95%
+    max-width: 95%
+    width: 100%
+.flex-100
+    flex: 0 1 100%
+    max-width: 100%
+    width: 100%
+
+
+
 .inline-flex
     display: inline-flex
     gap: 12px
+
+.inline-block
+    display: inline-block
+    vertical-align: middle
 
 .align-center
     align-items: center
@@ -251,13 +364,91 @@ hr
 .general-h
     color: var(--general-h)
 
+.red-b
+    color: var(--red-b)
+.green-b
+    color: var(--green-b)
+
+.bg-red-a
+    background: var(--red-a)
+.bg-red-b
+    background: var(--red-b)
+.bg-red-c
+    background: var(--red-c)
+.bg-red-d
+    background: var(--red-d)
+.bg-red-e
+    background: var(--red-e)
+.bg-red-f
+    background: var(--red-f)
+.bg-red-g
+    background: var(--red-g)
+.bg-red-h
+    background: var(--red-h)
+
+.bg-primary-a
+    background: var(--primary-a)
+.bg-primary-b
+    background: var(--primary-b)
+.bg-primary-c
+    background: var(--primary-c)
+.bg-primary-d
+    background: var(--primary-d)
+.bg-primary-e
+    background: var(--primary-e)
+.bg-primary-f
+    background: var(--primary-f)
+.bg-primary-g
+    background: var(--primary-g)
+.bg-primary-h
+    background: var(--primary-h)
+
+.bg-green-a
+    background: var(--green-a)
+.bg-green-b
+    background: var(--green-b)
+.bg-green-c
+    background: var(--green-c)
+.bg-green-d
+    background: var(--green-d)
+.bg-green-e
+    background: var(--green-e)
+.bg-green-f
+    background: var(--green-f)
+.bg-green-g
+    background: var(--green-g)
+.bg-green-h
+    background: var(--green-h)
+
+.bg-red-white
+    background: var(--red-g)
+    color: var(--black)
+tr
+    &.bg-red-white
+        td
+            background: var(--red-g) !important
+            color: var(--black) !important
+            > *
+                color: var(--black) !important
+.bg-green-white
+    background: var(--green-g)
+    color: var(--black)
+tr
+    &.bg-green-white
+        td
+            background: var(--green-g) !important
+            color: var(--black)
+            > *
+                color: var(--black) !important
 .card
     background: var(--white)
     box-shadow: 0px 1px 4px 0px #15223214
     border-radius: 6px
 .card-body
     padding: 20px
-
+    @include media(1300)
+        padding: 15px
+        overflow-x: auto
 .border-card
     border: 1px solid #D7DBEC
     padding: 10px
@@ -276,9 +467,195 @@ h4
     line-height: 36px
     color: var(--general-a)
     @include font(700)
-
+    @include media(767)
+        font-size: 20px
+        line-height: 1.2
 h5
     font-size: 20px
     line-height: 28px
     color: var(--general-a)
     @include font(700)
+
+h6
+    font-size: 18px
+    line-height: 1.2
+    color: var(--black)
+    @include font(500)
+
+[data-tooltip]
+    position: fixed
+    --background: var(--primary-h)
+    background: var(--background)
+    display: none
+    &::before
+        content: ''
+        position: absolute
+        right: 100%
+        top: 50%
+        translate: 0 -50%
+        width: 0
+        height: 0
+        border-top: 10px solid transparent
+        border-bottom: 10px solid transparent
+        border-right:10px solid var(--background)
+        
+[data-position]
+    &:hover
+        [data-tooltip]
+            display: block
+
+
+.table
+    width: 100%
+    border-spacing: 0px
+    background: var(--white)
+    border-collapse: collapse
+    td,th
+        padding: 10px 20px
+        text-align: left
+        border-bottom: 1px solid var(--general-j)
+    &.odd-even
+        tr
+            &:nth-child(even)
+                background: var(--general-h)
+    &.space-medium
+        td,th
+            padding: 15px 20px
+    &.center
+        td,th
+            text-align: center
+    &.center-not-first
+        tr
+            td,th
+                &:not(:first-child)
+                    text-align: center
+    &.radius
+        border-radius: 5px
+    &.white-space
+        white-space: nowrap
+.user-ico
+    height: 36px
+    width: 36px
+    border-radius: 50%
+    min-width: 36px  
+    overflow: hidden
+    &.green-bg
+        span
+            background: var(--green-g)
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    span
+        border: 1px solid #ccc
+        display: flex
+        height: 100%
+        width: 100%
+        align-items: center
+        justify-content: center
+        border-radius: 50%
+        color: var(--general-c)
+        background: var(--primary-g)
+        @include font(600)
+
+main
+    --tablecustomscrollstrip: 91px
+
+
+.loader-model
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    z-index: 99
+    background: rgb(256 256 256 / .8)
+    display: flex
+    align-items: center
+    justify-content: center
+.loader
+    width: 48px
+    height: 48px
+    display: block
+    color: #FFF
+    box-sizing: border-box
+    animation: rotation 1s linear infinite
+    @keyframes rotation
+        0%
+            transform: rotate(0deg)
+        100%
+            transform: rotate(360deg)
+    &::after,&::before
+        content: ''
+        box-sizing: border-box
+        position: absolute
+        width: 24px
+        height: 24px
+        top: 50%
+        left: 50%
+        transform: scale(0.5) translate(0, 0)
+        background-color: #00e393
+        border-radius: 50%
+        animation: animloader 1s infinite ease-in-out
+        @keyframes animloader
+            50%
+                transform: scale(1) translate(-50%, -50%)
+    &::before
+        background-color: var(--primary-a)
+        transform: scale(0.5) translate(-48px, -48px)
+
+a
+    .iconify
+        color: var(--general-c)
+
+// close btn
+
+.close-medium
+    [data-icon]
+        font-size: 30px
+
+// Record not  found
+
+.record-not-found
+    width: 100%
+    padding: 30px
+    background: var(--white)
+    .rnf-wrap
+        max-width: 400px
+        margin: 0 auto
+        text-align: center
+        color: var(--general-b)
+        [data-icon]
+            font-size: 32px
+            color: var(--red-a)
+        p
+            font-size: 20px
+            @include font(500)
+
+
+
+
+div
+    &:has(>.tjwek)
+        padding-right: 50px
+
+.zpfwd
+    max-width: 500px
+    padding: 10px
+
+.fit-height
+    height: fit-content
+
+.main-container
+    padding: 20px
+    .item-container
+        .item
+            padding: 10px
+            border-radius: 10px
+            p
+                font-size: 14px
+                padding-bottom: 5px
+                b
+                    color: #000
+
+                    

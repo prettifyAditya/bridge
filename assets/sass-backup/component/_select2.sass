@@ -7,19 +7,11 @@ select.form-control
     &.medium
         & ~ .select2
             --height: 36px
-    &.full
-        & ~ .select2
-            width: 100% !important
-            @include media(1300)
-                min-width: max-content
-                 width: max-content !important
 .select2
     --height: 48px
     --padding: 14px
     --color: var(--general-e)
     width: 180px !important
-    @include media(1007)
-        width: max-content !important
     .select2-selection--single
         border-color: var(--general-i)
         height: var(--height)
@@ -27,7 +19,6 @@ select.form-control
             color: var(--color)
             line-height: var(--height)
             padding-left: var(--padding)
-            padding-right: calc(var(--padding) + 16px)
         .select2-selection__arrow
             height: var(--height)
             right: var(--padding)

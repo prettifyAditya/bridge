@@ -14,28 +14,45 @@ header
         height: 100%
         .colA
             flex: 0 1 auto
+            @include media(767)
+                flex: 0 1 80px
         .colB
             flex: 1
             text-align: right
             >ul
+                @include media(767)
+                    display: flex
+                    align-items: center
+                    gap: 14px
+                    justify-content: flex-end
                 >li
                     display: inline-block
                     vertical-align: middle
+                    &:has(.notification-div)
+                        @include media(767)
+                            order: 2
+                    &:has(.dropdown-wrap)
+                        @include media(767)
+                            order: 1
                     &:not(:last-child)
                         margin-right: 30px
+                        @include media(767)
+                            margin-right: 0
                     .notification-div
                         position: relative
                         line-height: 0
+                        @include media(767)
+                            margin-right: 0
                         span
                             display: inline-flex
                             justify-content: center
                             align-items: center
-                            height: 16px
-                            width: 16px
+                            height: 18px
+                            width: 18px
                             border-radius: 50%
                             color: var(--white)
                             background: var(--primary-a)
-                            font-size: 12px
+                            font-size: 9px
                             position: absolute
                             right: -8px
                             top: -8px
@@ -48,7 +65,20 @@ header
                             width: 100%
                             height: 100%
                             object-fit: cover
-
+                        span
+                            border: 1px solid #ccc
+                            display: flex
+                            height: 100%
+                            width: 100%
+                            align-items: center
+                            justify-content: center
+                            border-radius: 50%
+                            background: var(--primary-g)
+                            @include font(600)
+                    .logo
+                        max-width: 90px
+                        @include media(767)   
+                            display: none
 aside
     background: var(--white)
     position: fixed
@@ -60,8 +90,46 @@ aside
     overflow-y: auto
     box-shadow: -1px 0px 0px 0px #D9E1EC inset
     @include scrollbar
+    @include media(767)
+        right: 0
+        height: auto
+        box-shadow: 0px 1px 4px 0px rgba(21, 34, 50, 0.0784313725)
+        border-top: 1px solid #ccc
+        z-index: 6
     .aside-wrap
         padding: 12px 0
+        @include media(767)
+            padding: 0
+        .aside-col
+            >ul
+                @include media(767)
+                    width: 100%
+                    white-space: nowrap
+                    overflow-x: auto
+                    background: var(--white)
+                    text-align: center
+                >li
+                    @include media(767)
+                        display: inline-block
+                        vertical-align: middle
+                        padding: 0
+                    >a
+                        @include media(767)
+                            height: var(--asidemobileheight)
+                            line-height: var(--asidemobileheight)
+                            border-radius: 0
+                            padding: 0
+                            display: block
+                            gap: 0
+                            text-align: center
+                            line-height: 1.8
+                            padding: 8px 14px
+                        [data-icon]
+                            @include media(767)
+                                font-size: 22px
+                                display: block
+                                text-align: center
+                                margin: 0 auto
         ul
             li
                 padding: 0 12px
@@ -75,6 +143,7 @@ aside
                     padding: 0 8px
                     border-radius: 6px
                     color: var(--general-c)
+                    transition: 0s
                     @include media(1366)
                         height: 42px
                         line-height: 42px
@@ -85,8 +154,42 @@ aside
                         color: var(--white)
                         &:hover
                             background: var(--primary-a)
+                        .iconify
+                            color: var(--white)
                     &:hover
                         background: var(--primary-g)
+                &.hasDropdown
+                    position: relative
+                    .hasDropdown-menu-wrap
+                        --background: var(--primary-a)
+                        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+                        z-index: 1
+                        border-radius: 5px
+                        padding: 10px 5px
+                        width: 135px
+                        @include media(767)
+                            left: 5px !important
+                            transform: translate(0, calc(-100% - var(--asidemobileheight))) !important
+                            right: 5px !important
+                            width: calc(100% - 10px)
+                            border-bottom-left-radius: 0px
+                            border-bottom-right-radius: 0px
+                        &::before
+                            @include media(767)
+                                display: none
+                        li
+                            text-align: left
+                            a
+                                display: block
+                                text-align: left !important
+                                padding: 8px 10px
+                                height: auto
+                                line-height: 1.2
+                                color: var(--white)
+                                &:hover
+                                    background: var(--primary-g)
+                                    color: var(--black)
+
         .aside-col
             &:not(:first-child)
                 &:not(:last-child)
@@ -97,43 +200,118 @@ aside
                 margin-bottom: 60px
                 @include media(1366)
                     margin-bottom: 10px
+                @include media(767)
+                    margin-bottom: 0
             span
                 font-size: 12px
                 line-height: 16px
                 display: inline-block
                 margin-bottom: 12px
                 color: var(--general-e)
+    &.collapse
+        .aside-wrap
+            .aside-col
+                ul
+                    li
+                        a
+                            display: block
+                            height: auto
+                            line-height: 1
+                            font-size: 12px
+                            padding: 8px 0
+                            width: 100%
+                            white-space: nowrap
+                            overflow: hidden
+                            text-overflow: ellipsis
+                            text-align: center
+                            @include media(767)
+                                height: var(--asidemobileheight)
+                                line-height: var(--asidemobileheight)
+                                border-radius: 0
+                                padding: 0
+                                display: block
+                                gap: 0
+                                text-align: center
+                                line-height: 1.8
+                                padding: 8px 14px
+                            [data-icon]
+                                display: block
+                                margin: 0 auto 4px
+                                @include media(767)
+                                    font-size: 22px
+                                    display: block
+                                    text-align: center
+                                    margin: 0 auto
 .aside-collapse-btn
     position: fixed
     left: calc(var(--aside))
-    top: calc(var(--header) + 50px )
+    top: calc(var(--header) + 14px )
     z-index: 5
-    background: var(--general-f)
+    background: var(--primary-a)
     line-height: 0
     padding: 3px 1px
     border-top-right-radius: 4px
     border-bottom-right-radius: 4px
+    @include media(1300)
+        padding: 0
+    @include media(767)
+        display: none
     [data-icon]
         font-size: 16px
+        color: var(--white)
+        @include media(1300)
+            font-size: 12px
 main
     height: calc(100vh - var(--header))
     width: calc(100% - var(--aside))
     margin-top: var(--header)
     margin-left: auto
     background: var(--general-h)
+    @include media(767)
+        width: 100%
+        margin-bottom: var(--asidemobileheight)
+        height: calc(100vh - var(--header) - var(--asidemobileheight))
+    >div:first-child
+        &:not(.lwuloa)
+            @include media(767)
+                height: 100%
     .main-wrap
         height: 100%
         overflow-y: auto
         padding: 20px var(--mainpaddingleftright) 0
-
+        @include media(1300)
+            padding-top: 40px
+        @include media(767)
+            padding-top: 20px
+            padding-bottom: var(--asidemobileheight)
+        &:has(.kpcsah)
+            @include media(675)
+                padding-top: 55px
 .dashboard-secA
     .col
         flex: 1
         @include flex
         align-items: center
         padding: 30px 25px
+        @include media(1300)
+            padding: 15px
+        @include media(1007)
+            flex: 0 1 50%
+            max-width: 50%
+            width: 100%
+            border-bottom: 1px solid var(--general-g)
+        @include media(767)
+            flex-direction: column-reverse
+            align-items: initial
+            gap: 10px
         .inf
             flex: 1
+            h5
+                @include media(1300)
+                    font-size: 16px
+            p
+                @include media(1300)
+                    font-size: 13px
         .ico
             flex: 0 1 56px
             max-width: 56px
@@ -144,20 +322,455 @@ main
             justify-content: center
             background: var(--primary-h)
             color: var(--primary-a)
+            @include media(1300)
+                flex: 0 1 40px
+                max-width: 40px
+                height: 40px
+                font-size: 18px
         &:not(:last-child)
             border-right: 1px solid var(--general-g)
 
+.evqniy
+    margin-top: 15px
+    > a
+        margin-right: 10px
+    .flex
+        justify-content: space-between
+        .colA
+            flex: 0 1 calc(75% - 15px)
+            max-width: calc(75% - 15px)
+            width: 100%
+            @include media(1007)
+                flex: 0 1 100%
+                max-width: 100%
+                width: 100%
+                margin-bottom: 12px
+            .xnwkep
+                .fmrmga
+                    justify-content: space-between
+                    margin-bottom: 1.5rem
+                    align-items: center
+                    .fgwv
+                        display: inline-block
+                        vertical-align: middle
+                        &:not(:last-child)
+                            margin-right: 15px
+                    a
+                        display: inline-block
+                        vertical-align: middle
+                .chrt-div
+                    width: 100%
+        .colB
+            flex: 0 1 25%
+            max-width: 25%
+            width: 100%
+            @include media(1007)
+                flex: 0 1 100%
+                max-width: 100%
+                width: 100%
+            .chrt-div
+                width: 112px
+                margin: 24px auto 28px
+
+            .QbDR
+                li
+                    display: flex
+                    align-items: center
+                    color: var(--general-c)
+                    @include font(500)
+                    &:not(:last-child)
+                        margin-bottom: 12px
+                    span
+                        display: inline-block
+                        flex: 0 1 auto
+                        height: 12px
+                        width: 12px
+                        border-radius: 2px
+                        margin-right: 8px
+                    p
+                        flex: 1
+                        display: flex
+                        justify-content: space-between
+                        b
+                            padding-left: 15px
+                            color: var(--black)
+                            @include font(700)
+.flr_wrapper
+    .colA
+        .gshwjm
+            @include media(675)
+                width: fit-content
+    .colB 
+        .card-body
+            padding: 0
+            .top_banner
+                padding: 20px
+                display: flex
+                align-items: center
+                gap: 10px
+                background-color: rgb(204 204 204 / 6%)
+                border-bottom: 1px solid #cccccc3b
+                img
+                    width: 60px
+                    height: 60px
+                    border-radius: 50%
+                .user-ico
+                    width: 60px
+                    height: 60px
+                .info
+                    h6
+                        font-size: 16px
+                        font-weight: 500
+                    p
+                        font-size: 14px
+            .btm_banner
+                padding: 0 20px
+                margin: 20px 0 
+                max-height: 350px
+                overflow-y: auto
+                .team_col
+                    width: 100%
+                    display: flex
+                    align-items: center
+                    gap: 10px
+                    padding-bottom: 15px
+                    img
+                        width: 40px
+                        height: 40px
+                        border-radius: 50%
+                    .info
+                        h6
+                            font-size: 14px
+                            font-weight: 500
+                        p
+                            font-size: 12px
+.rrpmb
+    .flex
+        justify-content: space-between
+        @include media(1007)
+            gap: 12px
+        .hprspvffrx
+            flex: 0 1 calc(55% - 15px)
+            max-width: calc(55% - 15px)
+            width: 100%
+            @include media(1007)
+                flex: 0 1 100%
+                max-width: 100%
+                width: 100%
+            .team-star-table
+                margin-top: 1rem
+                max-height: 315px
+                overflow-y: auto
+                @include scrollbar
+                table
+                    width: 100%
+                    border-spacing: 0px
+                    td,th
+                        padding: 6px 10px
+                    thead
+                        position: sticky
+                        top: 0
+                        height: 100%
+                        background: var(--white)
+                    tr
+                        th
+                            font-weight: normal
+                            border-bottom: 2px solid var(--general-g)
+                            padding: 10px
+                        th,td
+                            &:not(:first-child)
+                                text-align: center
+                            &:first-child
+                                text-align: left
+                        td
+                            color: var(--black)
+                            @include font(500)
+        .gxhqqmr
+            flex: 0 1 45%
+            max-width: 45%
+            width: 100%
+            @include media(1007)
+                flex: 0 1 100%
+                max-width: 100%
+                width: 100%
+            .jtjzfdg
+                .hbrnbwcdf
+                    flex: 1
+                    margin-bottom: 0
+                    .nav-li-tb
+                        height: calc(100% - 1px)
+                .cdcmzlcx
+                    flex: 0 1 auto
+                    border-bottom: 1px solid var(--general-g)
+                    padding-bottom: 8px
+                    @include media(767)
+                        flex: 0 1 120px
+                    .xdfqtb
+                        display: flex
+                        align-items: center
+                        margin-right: 15px
+                        @include media(767)
+                            width: 100%
+            .mvcvpntzt
+                padding: 20px 0
+                max-height: 302px
+                overflow-y: auto
+                @include scrollbar
+                padding-right: 20px
+                .progress-group
+                    &:not(:last-child)
+                        margin-bottom: 24px
+                    .nnlnzp
+                        margin-bottom: 12px
+
+.uuay
+    .eaaOuEy
+        margin-bottom: 1.5rem
+        .ylKLgGCQ
+            gap: 1rem
+    .scOyjfg
+        &.count_sec
+            padding: 0
+            .flex 
+                gap: 5px
+                p:not(:last-child)
+                    border-right: 1px solid #000     
+                    
+        .leadactivity-list
+            margin-top: 0.8rem
+            li
+                display: inline-flex
+                align-items: center
+                gap: 0 10px
+                &:not(:last-child)
+                    margin-right: 25px
+                    @include media(767)
+                        margin-right: 14px
+                        gap: 0 6px
+                span
+                    height: 12px
+                    width: 12px
+                    display: inline-block
+                    border-radius: 2px
+                p
+                    @include media(767)
+                        font-size: 12px
+
+.lead-status-pop
+    &.vyxpcv
+        max-width: 1060px
+        min-width: 1060px
+        @include media(1060)
+            max-width: 100%
+            min-width: 100%
+        .ckxcknx
+            display: flex
+            align-items: center
+            gap: 10px
+            .zumjki
+                padding-left: 2rem
+                li
+                    display: inline-flex
+                    align-items: center
+                    gap: 0 10px
+                    &:not(:last-child)
+                        margin-right: 20px
+                    span
+                        height: 12px
+                        width: 12px
+                        display: inline-block
+                        border-radius: 2px
+                    p
+                        font-size: 14px
+                        @include font(400)
+                        color: var(--general-c)
+                    &:first-child
+                        span
+                            background: var(--general-d)
+                    &:nth-child(2)
+                        span
+                            background: var(--red-b)
+                    &:last-child
+                        span
+                            background: var(--green-a)
+        .table-itslkon
+            max-height: 400px
+            overflow-y: auto
+            @include scrollbar($width: 6px,$color: var(--primary-d))
+            padding-top: 0
+            @include media(767)
+                max-height: calc(100vh - 56px)
+            table
+                width: 100%
+                border-spacing: 0px
+                border-collapse: collapse
+                thead
+                    position: sticky
+                    top: 0
+                    height: 100%
+                    background: var(--white)
+                th,td
+                    border-bottom: solid var(--general-g)
+                    padding: 4px 10px
+                    text-align: left
+                th
+                    border-width: 2px
+                    color: var(--general-c)
+                    font-weight: normal
+                    padding: 10px
+                    padding-top: 30px
+                td
+                    border-width: 1px
+
+.vgsztntru
+    .djtixrnddq
+        padding: 3rem 45px
+        @include media(991)
+            padding: 2rem 20px
+        @include media(767)
+            padding: 0 20px
+    .zidvxabns
+        border-left: 1px solid var(--primary-a)
+        --padding: 2rem
+        --dot: 13px
+        padding-left: var(--padding)
+        @include media(991)
+            --padding: 20px
+            --dot: 12px
+        .noti-wrap
+            position: relative
+            padding: 2rem 0
+            border-bottom: 1px solid var(--general-f)
+            @include media(767)
+                padding: 15px 0
+            &::before
+                content: ""
+                position: absolute
+                right: calc(100% + var(--padding) - var(--dot) / 2)
+                height: var(--dot)
+                width: var(--dot)
+                background: var(--primary-a)
+                border-radius: 50%
+                position: absolute
+                top: 2rem
+                @include media(767)
+                    top: 17px
+            .ico
+                @include media(767)
+                    display: none
 // Manage Lead Pgae
 
 .main-wrap
     &:has(.team-lead-table-wrap)
         padding-top: 0
-        height: calc(100vh - (64px + var(--header)))
+        height: calc(100vh - (var(--tablecustomscrollstrip) + var(--header)))
         padding-right: 0
+        @include media(991)
+            padding-top: 20px
+        @include media(767)
+            padding-top: 10px
 .manage-leads-sec
     padding: 15px var(--mainpaddingleftright) 13px
-    height: 64px
+    height: var(--tablecustomscrollstrip)
     background: var(--general-h)
+    padding-right: 10px
+    &.modelLead
+        position: fixed
+        right: 0
+        top: 0
+        bottom: 0
+        background: rgb(0 0 0 / .5)
+        z-index: 9
+        width: 100%
+        max-width: 100%
+        height: 100%
+        padding: 0
+        transition: .5s ease
+        transform: translateX(100%)
+        &.is-open
+            transform: translateX(0%)
+        .filter-wrap
+            background: var(--white)
+            max-width: 400px
+            padding: 50px 18px 30px
+            width: 100%
+            margin-left: auto
+            position: relative
+            display: block
+            .close-modelLead
+                position: absolute
+                right: 20px
+                top: 20px
+                [data-icon]
+                    font-size: 32px
+            .colA
+                white-space: initial
+                display: block
+                width: 100%
+                height: 100%
+                position: relative
+                .flex-100
+                    position: unset
+                    margin-bottom: 2rem
+                .col
+                    margin-right: 0
+                    .select2,input
+                        max-width: 100% !important
+                        width: 100% !important
+                    &:not(.flex-100)
+                        padding-top: 0
+                        &:not(:last-child)
+                            margin-bottom: 12px
+            .colB
+                position: absolute
+                bottom: 0
+                left: 0
+                right: 0
+                padding: 0 15px 15px
+                a,button,[data-dropdown]
+                    width: 100%
+                [data-dropdown]
+                    a
+                        width: 100%
+                    .dropdown-menu
+                        top: auto
+                        bottom: 100%
+    .filter-wrap
+        height: 100%
+        align-items: flex-end
+        .colA
+            white-space: nowrap
+            width: 100%
+            flex-wrap: nowrap
+            height: 100%
+            position: relative
+            overflow: hidden
+            overflow-x: auto
+            @include scrollbar
+            .flex-100
+                position: absolute
+                top: 0
+                left: 0
+            .col
+                @include media(1300)
+                    max-width: 100%
+                &:not(.flex-100)
+                    padding-top: 30px
+
+.asacxn
+    position: fixed
+    height: 50px
+    width: 50px
+    right: 10px
+    bottom: 75px
+    border-radius: 50%
+    background: var(--primary-a)
+    color: var(--white)
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 5
+
 .filter-wrap
     @include flex
     align-items: center
@@ -165,6 +778,8 @@ main
         flex: 0 1 auto
         &:not(:last-child)
             margin-right: 6px
+        &.flex-100
+            flex: 0 1 100%
     .colA
         flex: 1
         @include flex
@@ -182,6 +797,9 @@ main
         width: 100%
         border-spacing: 0px
         border-collapse: collapse
+        tr
+            &.rwsmwf
+                pointer-events: none !important
         th,td
             white-space: nowrap
             font-weight: normal !important
@@ -210,16 +828,22 @@ main
             .inf
                 display: inline-block
                 margin-left: 12px
+                p 
+                    white-space: pre-wrap  
+                    &.wrap-text
+                        white-space: nowrap
             .noti-dupli
                 position: absolute
-                bottom: calc(100% - 15px)
-                left: calc(100% - 5px)
+                bottom: calc(100% - 17px)
+                left: calc(100% + 5px)
         td
+            &:has(.noti-dupli)
+                padding-right: 50px !important
             &:has(.sub-info)
                 position: relative
                 .sub-info
                     position: absolute
-                    bottom: 2px
+                    top: 7px
                     right: 0
                     &:hover
                         ul
@@ -253,13 +877,16 @@ main
             span
                 color: var(--general-a)
                 @include font(500)
-    .dt-layout-cell 
+    .dt-layout-cell
         padding: 0 !important
     table.dataTable.dtfc-scrolling-left tr>.dtfc-fixed-left::after
         box-shadow: inset 10px 0 7px -12px rgba(0, 0, 0, 0.2)
     .dt-scroll-body
-        height: calc(100vh - var(--header) - 64px - 106px - 64px) !important
-        max-height: calc(100vh - var(--header) - 64px - 106px - 64px) !important
+        height: calc(100vh - var(--header) - var(--tablecustomscrollstrip) - 50px - var(--tablecustomscrollstrip)) !important
+        max-height: calc(100vh - var(--header) - var(--tablecustomscrollstrip) - 50px - var(--tablecustomscrollstrip)) !important
+        @include media(767)
+            height: calc(90vh - var(--header) - var(--asidemobileheight) - 150px) !important
+            max-height: calc(90vh - var(--header) - var(--asidemobileheight) - 150px) !important
         &::-webkit-scrollbar
             width: 8px
             height: 8px
@@ -272,16 +899,38 @@ main
     .bottom-filter
         @include flex
         align-items: center
-        padding: 22px 26px 48px
+        justify-content: flex-end
+        padding: 20px 26px
         background: #fff
+        @include media(991)
+            flex-wrap: nowrap
+            padding: 10px
+        @include media(767)
+            flex-wrap: wrap
         ul
             flex: 1
+            white-space: nowrap
+            max-width: 50%
+            overflow-x: auto
+            margin-right: auto
+            margin-left: 0
+            @include media(991)
+                flex: 0 1 auto
+            @include media(767)
+                flex: 0 1 50%
+                max-width: 50%
+                width: 100%
+                white-space: nowrap
+                overflow-x: auto
             li
                 display: inline-block
                 vertical-align: middle
                 height: 36px
                 width: 36px
                 line-height: 36px
+                @include media(767)
+                    height: 30px
+                    width: 30px
                 a
                     display: flex
                     height: 100%
@@ -290,22 +939,47 @@ main
                     justify-content: center
                     font-size: 16px
                     color: var(--general-c)
-                    border-radius: 4px 
+                    border-radius: 4px
                     overflow: hidden
+                    @include media(991)
+                        font-size: 12px
+                        flex-wrap: nowrap
+                        padding: 5px
                     &.active
                         color: var(--primary-a)
                         background: var(--primary-h)
                     &:hover
                         background: var(--primary-h)
+                &.disabled
+                    pointer-events: none
+                &:first-child,&:last-child
+                    position: sticky
+                    top: 0
+                    background: var(--white)
+                &:first-child
+                    left: 0
+                &:last-child
+                    right: 0
         .no-of-results
             flex: 0 1 auto
             font-size: 16px
             @include font(500)
-
+            @include media(991)
+                font-size: 12px
+            @include media(767)
+                flex: 0 1 50%
+                max-width: 50%
+                width: 100%
+                text-align: right
 .acticity-log-grid-wrap
     display: grid
     grid-template-columns: repeat(3,1fr)
     grid-gap: 14px 12px
+    @include media(991)
+        grid-template-columns: repeat(2,1fr)
+    @include media(675)
+        grid-template-columns: 100%
+        grid-gap: 10px
     .col-md-c
         position: relative
         .oDPDzclx
@@ -327,60 +1001,699 @@ main
                 align-items: center
                 gap: 0 5px
                 font-size: 13px
-        .tjwek
-            line-height: 0
-            position: absolute
-            top: 12px
-            right: 12px
-            color: var(--primary-a)
-            --triangle: 10px
-            &:hover
-                &::before
-                    opacity: 1
-                .tjwek-pop
-                    display: block
-            &::before
-                content: ''
-                position: absolute
-                right: 3px
-                top: 100%
-                width: 0
-                height: 0
-                z-index: 3
-                border-left: var(--triangle) solid transparent
-                border-right: var(--triangle) solid transparent
-                border-bottom: var(--triangle) solid var(--primary-h)
-                opacity: 0
-            .tjwek-pop
-                position: absolute
-                top: calc(100% + var(--triangle))
-                right: 0
-                z-index: 3
-                border-radius: 5px
-                background: var(--white)
-                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px
-                border-radius: 6px
-                overflow: hidden
-                display: none
-                border-top-right-radius: 0px
-                .erp-fgt
-                    background: var(--primary-h)
-                    padding: 12px
-                ul
-                    padding: 10px
-                    li
-                        white-space: nowrap
-                        color: var(--general-c)
-                        b,p
-                            display: inline-block
-                            vertical-align: middle
-                            font-size: 13px
-                            line-height: 26px
-                        b
-                            padding-right: 3px
-                        p
-                            @include font(500)
+.tjwek
+    line-height: 0
+    position: absolute
+    top: 12px
+    right: 12px
+    color: var(--primary-a)
+    --triangle: 10px
+    &:hover
+        &::before
+            opacity: 1
+        .tjwek-pop
+            display: block
+    &::before
+        content: ''
+        position: absolute
+        right: 3px
+        top: 100%
+        width: 0
+        height: 0
+        z-index: 3
+        border-left: var(--triangle) solid transparent
+        border-right: var(--triangle) solid transparent
+        border-bottom: var(--triangle) solid var(--primary-h)
+        opacity: 0
+    .tjwek-pop
+        position: absolute
+        top: calc(100% + var(--triangle))
+        right: 0
+        z-index: 3
+        border-radius: 5px
+        background: var(--white)
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px
+        border-radius: 6px
+        overflow: hidden
+        display: none
+        border-top-right-radius: 0px
+        .erp-fgt
+            background: var(--primary-h)
+            padding: 12px
+        ul
+            padding: 10px
+            li
+                white-space: nowrap
+                color: var(--general-c)
+                b,p
+                    display: inline-block
+                    vertical-align: middle
+                    font-size: 13px
+                    line-height: 26px
+                b
+                    padding-right: 3px
+                p
+                    @include font(500)
+/*Azeem Rza*/
+.pfYBEx0
+    margin-left: 25px
 
+.oyciq
+    [data-icon]
+        font-size: 16px
+
+.project_new_rules
+    display: flex
+    width: max-content
+    margin-bottom: 10px
+    margin-left: auto
+
+.design-ekgrgb
+    font-size: 12px
+    line-height: 17px
+    display: block
+    text-align: left
+    color: var(--general-e)
+
+.atuxhq-wrapper
+    max-width: 1000px
+    min-width: 1000px
+    background: var(--white)
+    border-radius: 5px
+    overflow: hidden
+    max-height: 90%
+    overflow-y: auto
+    @include scrollbar($width: 6px,$color: var(--primary-a))
+    @include media(767)
+        max-height: 100%
+    .htfour
+        padding: 10px 15px
+        background: var(--primary-h)
+    .btxawn
+        padding: 30px
+        margin-bottom: 30px
+        max-height: 300px
+        overflow-y: auto
+        @include scrollbar($color: var(--general-e),$width: 5px)
+        h1,h2,h3,h4,h5,h6,p,ul
+            margin-bottom: 15px
+
+.flex
+    &:has(.tiegf)
+        @include media(767)
+            flex-direction: column
+            gap: 5px
+            align-items: flex-start
+            justify-content: left
+
+.chrt-div
+    &:has(#myChart)
+        @include media(767)
+            width: 100%
+            overflow-x: auto
+
+.ylKLgGCQ
+    .btn
+        @include media(767)
+            font-size: 12px
+            --padding: 7px
+            --height: 26px
+            margin-top: 0.6rem
+
+.ullahc
+    &:has(.tjwek)
+        padding-right: 45px
+
+.pfYBEx0
+    @include media(767)
+        margin-left: 0
+        flex: 0 1 100%
+        margin-top: 6px
+        display: flex
+        gap: 10px
+    &.action_btn
+        .select2
+            @include media(767)
+                flex: 1
+        .select2,.btn
+            @include media(767)
+                font-size: 10px
+                --padding: 10px
+.ufidjse
+    @include media(767)
+        padding-left: 0
+
+.igywqz
+    .inline-flex
+        @include media(767)
+            display: block
+
+.dzvxr
+    .col
+        @include media(767)
+            flex: 0 1 100%
+            max-width: 100%
+            width: 100%
+            margin-right: 0 !important
+            margin-top: 3px
+        input,.select2
+            @include media(767)
+                width: 100% !important
+                max-width: 100% !important
+
+.tui6fre
+    @include media(767)
+        --item: 2
+
+.form-group
+    &:has(.zjtsdh)
+        @include media(767)
+            display: block
+
+.pcbzdg
+    @include media(767)
+        display: grid
+        grid-template-columns: repeat(2,1fr)
+        grid-gap: 5px 12px
+    label
+        @include media(520)
+            font-size: 12px
+
+.msgllv
+    .filter-wrap
+        align-items: flex-end
+
+.lwuloa
+    display: none
+    @include media(991)
+        display: block
+        padding: 10px 12px 4px
+        @include font(600)
+        color: var(--black)
+
+.kxzvbe
+    position: absolute
+    bottom: 2px
+    right: 10px
+    @include media(991)
+        position: unset
+        text-align: right
+        margin-top: 4px
+    [data-icon]
+        color: var(--general-c)
+        display: inline-block
+    a
+        &:not(:last-child)
+            margin-right: 2px
+
+.view-attendence-home-table
+    width: 100% !important
+    margin-right: auto
+    white-space: nowrap
+    > *
+        font-size: 13px !important
+#teamLeadTable2_wrapper,#BindDataTableForBarLeaad
+    white-space: nowrap
+    font-size: 13px
+    td
+        &:has(.kxzvbe)
+            padding-bottom: 30px
+            border-right: 1px solid #f5f5f5
+        .wrp
+            .inf
+                p
+                    &:first-child
+                        span
+                            font-size: 14px
+                            color: var(--black)
+                            @include font(600)
+    .table
+        width: 100% !important
+        margin-right: auto
+    .tjwek-pop
+        width: 240px
+        white-space: normal
+        ul
+            li
+                p
+                    white-space: normal
+                    display: block
+                    font-size: 12px
+                    line-height: 18px
+
+#BindDataTableForBarLeaad
+    td
+        .kxzvbe
+            [data-icon]
+                font-size: 16px
+
+.fnyrvw
+    @include flex
+    .team-lead-table-wrap
+        flex: 0 1 80%
+        max-width: 80%
+        width: 100%
+        @include media(1300)
+            flex: 0 1 75%
+            max-width: 75%
+        @include media(991)
+            flex: 0 1 100%
+            max-width: 100%
+    .wfdlsb
+        flex: 1
+        background: var(--white)
+        box-shadow: 0px 1px 4px 0px rgba(21, 34, 50, 0.0784313725)
+        border-radius: 6px
+        margin-left: 15px
+        margin-right: 15px
+        height: 100%
+        overflow-y: auto
+        @include scrollbar
+        @include media(991)
+            position: fixed
+            top: 0
+            bottom: 0
+            right: 0
+            width: 100%
+            background: rgb(0 0 0 / .7)
+            z-index: 7
+            margin-left: 0
+            margin-right: 0
+            border-radius: 0
+            transform: translateX(100%)
+            transition: .5s ease
+            overflow: hidden
+        &.is-open
+            @include media(991)
+                transform: translateX(0%)
+        .dxpokd
+            @include media(991)
+                background: var(--white)
+                max-width: 400px
+                height: 100%
+                margin-left: auto
+                position: relative
+                padding-top: 40px
+                height: 100%
+                overflow-y: auto
+            .ykpgab
+                display: none
+                @include media(991)
+                    display: block
+                    position: absolute
+                    right: 20px
+                    top: 20px
+        .col
+            padding: 15px
+            border-bottom: 1px solid var(--general-g)
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            .inf
+                flex: 1
+                padding-left: 1rem
+                p
+                    font-size: 12px
+                h5
+                    @include media(1300)
+                        font-size: 18px
+            .ico
+                flex: 0 1 45px
+                max-width: 45px
+                height: 45px
+                border-radius: 50%
+                display: flex
+                align-items: center
+                justify-content: center
+                background: var(--primary-h)
+                color: var(--primary-a)
+                @include media(1300)
+                    flex: 0 1 38px
+                    max-width: 38px
+                    height: 38px
+                [data-icon]
+                    font-size: 16px
+                    @include media(1300)
+                        font-size: 14px
+.psvkur
+    display: none
+    @include media(991)
+        display: block
+
+.lwuloa
+    &.ghcfcq
+        @include media(991)
+            display: flex
+            align-items: center
+            justify-content: space-between
+        .psvkur
+            color: var(--primary-a)
+            @include font(600)
+
+.ivcyc
+    .lbhmz
+        @include media(1152)
+            flex: 0 1 70%
+            max-width: 70%
+            width: 100%
+        @include media(991)
+            flex: 0 1 100%
+            max-width: 100%
+            width: 100%
+.frfss
+    .ubiul
+        border-bottom: 1px solid var(--general-g)
+        .lkzpr
+            padding: 18px 14px
+            display: flex
+            flex-wrap: wrap
+            flex-direction: column
+            text-align: center
+            @include media(1300)
+                padding: 15px 10px
+            &:not(:last-child)
+                border-right: 1px solid var(--general-g)
+            .ggwem
+                flex: 0 1 auto
+                width: 45px
+                height: 45px
+                border-radius: 50%
+                display: flex
+                align-items: center
+                justify-content: center
+                background: var(--primary-h)
+                color: var(--primary-a)
+                margin-bottom: 12px
+                margin-left: auto
+                margin-right: auto
+            .xetdp
+                color: var(--general-c)
+                display: block
+                flex: 1
+                margin-bottom: 6px
+                @include media(1300)
+                    font-size: 12px
+                    line-height: 1
+                @include media(991)
+                    margin-bottom: 4px
+                    font-size: 14px
+            .ntnjx
+                flex: 0 1 auto
+                color: var(--black)
+                font-size: 18px
+                line-height: 1.1
+                @include font(600)
+                @include media(1300)
+                    font-size: 16px
+                small
+                    display: block
+                    font-size: 11px
+                    color: var(--black)
+                    @include font(500)
+                    color: var(--green-a)
+                    margin-top: 4px
+.ecxgf
+    padding: 12px
+    --lhojk: 45px
+    padding-top: var(--lhojk)
+    position: relative
+    .rlobt
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        height: var(--lhojk)
+        line-height: var(--lhojk)
+        padding: 0 12px
+        background: var(--white)
+    ul
+        .xvvpe
+            &:not(:last-child)
+                margin-bottom: 12px
+            .ypsff
+                font-size: 12px
+                margin-top: 3px
+
+.frfss
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column
+    .ubiul
+        flex: 0 1 auto
+    .ecxgf
+        flex: 1
+        height: 100%
+        ul
+            max-height: 200px
+            overflow-y: auto
+            @include scrollbar
+
+.syfqz
+    padding: 10px 20px 0
+    @include media(767)
+        padding: 10px 10px 0
+
+.stzu
+    .flex
+        @include media(767)
+            gap: 1rem
+        > *
+            @include media(767)
+                flex: 0 1 100%
+                padding: 0
+
+
+.wdrfldb
+    @include media(767)
+        white-space: nowrap
+
+.gshwjm
+    @include media(675)
+        white-space: nowrap
+        width: 100%
+        overflow-x: auto
+        margin-top: 6px
+
+.kpcsah
+    @include media(767)
+        position: fixed
+        top: var(--header)
+        left: 0
+        right: 0
+        z-index: 3
+        background: var(--white)
+        margin: 0
+        display: flex
+        border-bottom: 1px solid rgb(0 0 0 / .1)
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px
+    a
+        @include media(767)
+            flex: 1
+            text-align: center
+            padding: 12px 0
+        &:not(:last-child)
+            @include media(767)
+                margin-right: 0
+                border-right: 1px solid rgb(0 0 0 / .1)
+.fsnal
+    .wqowy
+        --hdwef: 72px
+        .kkoum
+            padding: 0 20px
+            height: var(--hdwef)
+        .lgfol
+            table
+                text-align: left
+                .select2
+                    width: 83px !important
+                    --padding: 10px
+            .dt-scroll-body
+                height: calc(100vh - var(--hdwef) - 43px) !important
+                max-height: calc(100vh - var(--hdwef) - 43px) !important
+    .naksq
+        .wjyss
+            padding: 15px
+            &:not(:last-child)
+                border-bottom: 1px solid var(--general-h)
+            .ljsfg
+                flex: 0 1 auto
+                width: 47px
+                height: 47px
+                img
+                    width: 100%
+            .ngqkx
+                padding-left: 15px
+                .spoox
+                    display: grid
+                    grid-template-columns: repeat(2,1fr)
+                    grid-gap: 5px 10px
+        .tajcs
+            display: flex
+            flex-direction: column
+            @include scrollbar($width: 4px,$color: var(--primary-c))
+            .kkfel
+                flex: 1
+        .iuhmv
+            position: sticky
+            bottom: 0
+            left: 0
+            right: 0
+            z-index: 1
+            padding: 8px 0
+            table
+                background: none
+                td,th
+                    border: none
+                    padding: 6px 12px
+                    &:last-child
+                        text-align: right
+            .ygngc
+                display: flex
+                flex-wrap: wrap
+                gap: 5px
+                padding: 10px
+                input
+                    flex: 1
+                    background: var(--white)
+                .btn
+                    flex: 0 1 auto
+
+.knkms
+    background: var(--white)
+    height: 100%
+    margin-left: auto
+    max-width: 400px
+    width: 100%
+    padding: 40px 30px 30px
+    overflow-y: auto
+    @include scrollbar($width: 5px,$color: #ccc)
+    .close-dialog
+        position: absolute
+        right: 20px
+        top: 15px
+
+#ContentPlaceHolder1_pnlTodayFollowUp
+    .follow_up
+        thead
+            tr
+                th:nth-child(2)
+                    width: 20%
+        tbody
+            tr
+                td
+                    .status_show_for_change
+                        @include media(540)
+                            width: 170px
+                    .updateon
+                        @include media(540)
+                            width: 200px
+
+.notification-body.main-wrap
+    @include media(540)
+        padding-top: 0
+        .filter-wrap
+            position: sticky
+            top: 0
+            z-index: 3
+            background: #fff
+            padding: 10px 20px
+            .colA
+                h6
+                    font-size: 14px
+                .dzvxr 
+                    .col:first-child
+                        flex: 0 1 100%
+                    .col
+                        flex: 0 1 50%
+ 
+.event_tab.rrpmb
+    .flex
+        .hprspvffrx
+            flex: 0 1 calc(37% - 15px)
+            max-width: calc(37% - 15px)
+        .gxhqqmr
+            flex: 0 1 37%
+            max-width: 37%
+        .colB.card
+            flex: 0 1 25%
+            max-width: 25%
+            width: 100%
+            .top_banner
+                gap: 10px
+                border-bottom: 1px solid #ccc
+                padding-bottom: 10px
+                .info
+                    flex: 1
+                    max-width: 80%
+                .btn_wrapper
+                    flex: 0 1 auto
+            .btm_banner
+                .team_col.event
+                    .info
+                        display: flex
+                        flex-wrap: wrap
+                        gap: 10px
+                        padding-bottom: 10px 
+                        .title
+                            flex: 1
+                        .date
+                            flex: 0 1 auto
+
+.scOyjfg
+    &.count_sec
+        padding: 0
+        .flex 
+            gap: 10px
+            p:not(:last-child)
+                border-right: 2px solid #000     
+                padding-right: 7px
+
+
+// Keshav SASS
+
+.grid-box
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 20px
+    .grid-box-item
+        background: var(--white)
+        box-shadow: 0px 1px 4px 0px rgba(21, 34, 50, 0.0784313725)
+        border-radius: 6px
+        padding: 20px 
+        &.dashboard_grid
+            .heading
+                .span
+                    h4
+                        @include media(1400)
+                            font-size: 16px
+                    p
+                        @include media(1400)
+                            padding: 0       
+                            font-size: 12px   
+        .heading
+            padding: 10px 0 15px
+            border-bottom: 1px solid #EEEEEE
+            display: flex
+            justify-content: space-between
+            h4
+                color: black
+                font-weight: 600  
+                font-size: 18px
+                line-height: 1.2
+                text-transform: uppercase
+            p
+                padding: 5px 0 0 0px
+                font-size: 14px
+                line-height: 1.2
+        .calender
+            p
+                padding: 10px 0 15px
+                border-bottom: 1px solid #EEEEEE
+                display: flex
+                justify-content: space-between
+                align-items: center
+
+// Dreams Pages
 .top-nav
     width: 100%
     position: sticky

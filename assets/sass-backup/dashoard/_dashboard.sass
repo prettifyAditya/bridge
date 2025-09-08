@@ -1,0 +1,671 @@
+header
+    position: fixed
+    left: 0
+    right: 0
+    top: 0
+    z-index: 5
+    height: var(--header)
+    background: var(--white)
+    box-shadow: 0px 1px 4px 0px #15223214
+    .header-wrapper
+        @include flex
+        align-items: center
+        padding: 0 15px
+        height: 100%
+        .colA
+            flex: 0 1 auto
+        .colB
+            flex: 1
+            text-align: right
+            >ul
+                >li
+                    display: inline-block
+                    vertical-align: middle
+                    &:not(:last-child)
+                        margin-right: 30px
+                    .notification-div
+                        position: relative
+                        line-height: 0
+                        span
+                            display: inline-flex
+                            justify-content: center
+                            align-items: center
+                            height: 16px
+                            width: 16px
+                            border-radius: 50%
+                            color: var(--white)
+                            background: var(--primary-a)
+                            font-size: 12px
+                            position: absolute
+                            right: -8px
+                            top: -8px
+                    .user-ico
+                        height: 36px
+                        width: 36px
+                        border-radius: 50%
+                        overflow: hidden
+                        img
+                            width: 100%
+                            height: 100%
+                            object-fit: cover
+
+aside
+    background: var(--white)
+    position: fixed
+    left: 0
+    bottom: 0
+    z-index: 4
+    width: var(--aside)
+    height: calc(100vh - var(--header))
+    overflow-y: auto
+    box-shadow: -1px 0px 0px 0px #D9E1EC inset
+    @include scrollbar
+    .aside-wrap
+        padding: 12px 0
+        ul
+            li
+                padding: 0 12px
+                a
+                    display: flex
+                    align-items: center
+                    gap: 10px
+                    height: 44px
+                    line-height: 44px
+                    @include font(500)
+                    padding: 0 8px
+                    border-radius: 6px
+                    color: var(--general-c)
+                    @include media(1366)
+                        height: 42px
+                        line-height: 42px
+                    [data-icon]
+                        font-size: 18px
+                    &.active
+                        background: var(--primary-a)
+                        color: var(--white)
+                        &:hover
+                            background: var(--primary-a)
+                    &:hover
+                        background: var(--primary-g)
+        .aside-col
+            &:not(:first-child)
+                &:not(:last-child)
+                    margin-bottom: 28px
+                    @include media(1366)
+                        margin-bottom: 10px
+            &:first-child
+                margin-bottom: 60px
+                @include media(1366)
+                    margin-bottom: 10px
+            span
+                font-size: 12px
+                line-height: 16px
+                display: inline-block
+                margin-bottom: 12px
+                color: var(--general-e)
+.aside-collapse-btn
+    position: fixed
+    left: calc(var(--aside))
+    top: calc(var(--header) + 50px )
+    z-index: 5
+    background: var(--general-f)
+    line-height: 0
+    padding: 3px 1px
+    border-top-right-radius: 4px
+    border-bottom-right-radius: 4px
+    [data-icon]
+        font-size: 16px
+main
+    height: calc(100vh - var(--header))
+    width: calc(100% - var(--aside))
+    margin-top: var(--header)
+    margin-left: auto
+    background: var(--general-h)
+    .main-wrap
+        height: 100%
+        overflow-y: auto
+        padding: 20px var(--mainpaddingleftright) 0
+
+.dashboard-secA
+    .col
+        flex: 1
+        @include flex
+        align-items: center
+        padding: 30px 25px
+        .inf
+            flex: 1
+        .ico
+            flex: 0 1 56px
+            max-width: 56px
+            height: 56px
+            border-radius: 50%
+            display: flex
+            align-items: center
+            justify-content: center
+            background: var(--primary-h)
+            color: var(--primary-a)
+        &:not(:last-child)
+            border-right: 1px solid var(--general-g)
+
+// Manage Lead Pgae
+
+.main-wrap
+    &:has(.team-lead-table-wrap)
+        padding-top: 0
+        height: calc(100vh - (64px + var(--header)))
+        padding-right: 0
+.manage-leads-sec
+    padding: 15px var(--mainpaddingleftright) 13px
+    height: 64px
+    background: var(--general-h)
+.filter-wrap
+    @include flex
+    align-items: center
+    .col
+        flex: 0 1 auto
+        &:not(:last-child)
+            margin-right: 6px
+    .colA
+        flex: 1
+        @include flex
+    .colB
+        flex: 0 1 auto
+        @include flex
+        align-items: center
+.edit-leads-sec
+    padding-bottom: 15px
+.team-lead-table-wrap
+    background: var(--white)
+    border-radius: 6px
+    overflow: hidden
+    table
+        width: 100%
+        border-spacing: 0px
+        border-collapse: collapse
+        th,td
+            white-space: nowrap
+            font-weight: normal !important
+        th
+            border-bottom: none !important
+            padding: 10px 20px !important
+            @include font(500)
+        td
+            border-top: 1px solid var(--general-j)
+            border-bottom: 1px solid var(--general-j)
+            padding: 10px 20px !important
+        tr
+            td
+                &:first-child
+                    border-right: 1px solid var(--general-j)
+        thead
+            border-bottom: .5px solid var(--general-f)
+        .badge
+            --padding: 14px
+        .wrp
+            position: relative
+            input
+                display: inline-block
+                vertical-align: top
+                margin-top: 5px
+            .inf
+                display: inline-block
+                margin-left: 12px
+            .noti-dupli
+                position: absolute
+                bottom: calc(100% - 15px)
+                left: calc(100% - 5px)
+        td
+            &:has(.sub-info)
+                position: relative
+                .sub-info
+                    position: absolute
+                    bottom: 2px
+                    right: 0
+                    &:hover
+                        ul
+                            opacity: 1
+                            pointer-events: all
+                    ul
+                        position: absolute
+                        right: 100%
+                        bottom: 0
+                        padding: 5px 0
+                        background: var(--general-h)
+                        box-shadow: 0px 2px 10px 0px #262C4729
+                        opacity: 0
+                        pointer-events: none
+                        li
+                            a
+                                display: flex
+                                font-size: 13px
+                                line-height: 24px
+                                color: var(--general-a)
+                                padding: 0 15px
+                                align-items: center
+                                gap: 0 5px
+                                [data-icon]
+                                    font-size: 14px
+                                &:hover
+                                    background: var(--primary-g)
+        .flex
+            gap: 0 12px
+        p
+            span
+                color: var(--general-a)
+                @include font(500)
+    .dt-layout-cell 
+        padding: 0 !important
+    table.dataTable.dtfc-scrolling-left tr>.dtfc-fixed-left::after
+        box-shadow: inset 10px 0 7px -12px rgba(0, 0, 0, 0.2)
+    .dt-scroll-body
+        height: calc(100vh - var(--header) - 64px - 106px - 64px) !important
+        max-height: calc(100vh - var(--header) - 64px - 106px - 64px) !important
+        &::-webkit-scrollbar
+            width: 8px
+            height: 8px
+            background: none
+        &::-webkit-scrollbar-track
+            box-shadow: none
+        &::-webkit-scrollbar-thumb
+            border-radius: 30px
+            background-color: var(--general-e)
+    .bottom-filter
+        @include flex
+        align-items: center
+        padding: 22px 26px 48px
+        background: #fff
+        ul
+            flex: 1
+            li
+                display: inline-block
+                vertical-align: middle
+                height: 36px
+                width: 36px
+                line-height: 36px
+                a
+                    display: flex
+                    height: 100%
+                    width: 100%
+                    align-items: center
+                    justify-content: center
+                    font-size: 16px
+                    color: var(--general-c)
+                    border-radius: 4px 
+                    overflow: hidden
+                    &.active
+                        color: var(--primary-a)
+                        background: var(--primary-h)
+                    &:hover
+                        background: var(--primary-h)
+        .no-of-results
+            flex: 0 1 auto
+            font-size: 16px
+            @include font(500)
+
+.acticity-log-grid-wrap
+    display: grid
+    grid-template-columns: repeat(3,1fr)
+    grid-gap: 14px 12px
+    .col-md-c
+        position: relative
+        .oDPDzclx
+            @include font(500)
+            color: var(--black)
+            margin-bottom: 6px
+        .TFqGTS_D
+            font-size: 13px
+        .S28y4u6l
+            display: flex
+            align-items: center
+            justify-content: space-between
+            margin: 12px 0
+            p
+                &:first-child
+                    @include font(500)
+            .voQN2paT
+                display: inline-flex
+                align-items: center
+                gap: 0 5px
+                font-size: 13px
+        .tjwek
+            line-height: 0
+            position: absolute
+            top: 12px
+            right: 12px
+            color: var(--primary-a)
+            --triangle: 10px
+            &:hover
+                &::before
+                    opacity: 1
+                .tjwek-pop
+                    display: block
+            &::before
+                content: ''
+                position: absolute
+                right: 3px
+                top: 100%
+                width: 0
+                height: 0
+                z-index: 3
+                border-left: var(--triangle) solid transparent
+                border-right: var(--triangle) solid transparent
+                border-bottom: var(--triangle) solid var(--primary-h)
+                opacity: 0
+            .tjwek-pop
+                position: absolute
+                top: calc(100% + var(--triangle))
+                right: 0
+                z-index: 3
+                border-radius: 5px
+                background: var(--white)
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px
+                border-radius: 6px
+                overflow: hidden
+                display: none
+                border-top-right-radius: 0px
+                .erp-fgt
+                    background: var(--primary-h)
+                    padding: 12px
+                ul
+                    padding: 10px
+                    li
+                        white-space: nowrap
+                        color: var(--general-c)
+                        b,p
+                            display: inline-block
+                            vertical-align: middle
+                            font-size: 13px
+                            line-height: 26px
+                        b
+                            padding-right: 3px
+                        p
+                            @include font(500)
+
+.top-nav
+    width: 100%
+    position: sticky
+    top: 0
+    left: 0
+    padding: 10px 20px
+    border-radius: 0
+    ul
+        display: flex
+        align-items: center
+        gap: 20px
+        li
+            flex: 0 1 auto
+            &.active
+                a
+                    background: #348EFE
+                    transition: .5s ease
+                    color: $white
+            a
+                display: block
+                padding: 10px 15px
+                border-radius: 5px
+                color: #666666
+                @include font(600)
+main
+    .dream-wrap
+        width: 100%
+        height: 92%
+        position: relative
+        .due-notibar
+            width: 300px
+            align-items: center
+            gap: 15px
+            padding: 20px
+            background: #06A561
+            border-radius: 5px
+            position: fixed
+            right: 3%
+            bottom: 3%
+            .icon
+                flex: 0 1 45px
+                max-width: 45px
+                width: 100%
+                border-radius: 50%
+                img
+                    border-radius: 50%
+            .info
+                flex: 1
+                h6
+                    font-size: 16px
+                    @include font(700)
+                    color: $white
+                p
+                    color: $white
+                    font-size: 14px
+                    @include font(600)
+        .dream-secA
+            gap: 20px
+            .col
+                flex: 1
+                display: flex
+                align-items: end
+                padding: 15px
+                border: 1px solid #66666621
+                &.badge
+                    --height: 100%
+                &.red
+                    background: #FFEFEF
+                    .inf
+                        .perct
+                            background: #FCE2E2
+                            color: #E54642
+                &.green 
+                    .inf
+                        .perct
+                            background: #DEF7EE
+                            color: #3ED8A2
+                &.violet
+                    background: #F9EEFF
+                    .inf
+                        .perct
+                            background: #FBF6FE
+                            color: #8051E5
+                &.blue
+                    background: #EAEDFE
+                    .inf
+                        .perct
+                            background: #F1F5FC
+                            color: #1E5EFF
+                .inf
+                    flex: 1
+                    h5
+                        font-size: 14px
+                        line-height: 1.5
+                        @include font(400)
+                        color: #5A607F
+                    p
+                        font-size: 18px
+                        @include font(600)
+                        color: #333333
+                    .perct
+                        margin-top: 15px
+                        width: 100%
+                        max-width: max-content
+                        background: #fff
+                        padding: 2px 5px
+                        border-radius: 25px
+                        color: #000
+                        font-size: 12px
+                        line-height: 1.2
+                        @include font(600)
+                .ico
+                    flex: 0 1 90px
+                    max-width: 90px
+        .due-payments
+            padding: 10px 15px
+            align-items: center
+            gap: 20px
+            flex-wrap: nowrap
+            overflow-x: hidden
+            p 
+                flex: 0 1 auto
+                font-size: 14px
+                line-height: 1.5
+                @include font(600)
+                color: $black
+                white-space: nowrap
+            .marque
+                flex: 1
+                display: flex
+                align-items: center
+                overflow: hidden
+                @keyframes marque
+                    0%
+                        transform: translateX(0)
+                    100%
+                        transform: translateX(-100%)
+                .pay
+                    padding: 0 10px 0 15px
+                    white-space: nowrap
+                    border-right: 2px solid #E95D5D
+                    color: #E95D5D
+                    @include font(600)
+                    animation: marque 15s linear infinite
+                    white-space: nowrap
+        .ledger-wrap
+            width: 100%
+            justify-content: space-between
+            .colA, .colB, .colC
+                .title
+                    border-bottom: 1px solid #0000001A
+                    justify-content: space-between
+                    padding: 10px 20px
+                    align-items: center
+                    .icon
+                        flex: 0 1 40px
+                        img
+                            width: 40px
+            .colA
+                flex: 0 1 calc( 30% - 15px )
+                max-width: calc( 30% - 15px )
+                .card-content
+                    .list
+                        flex: 1
+                        padding: 10px 0
+                        p
+                            padding: 0px 20px 10px
+                            @include font(500)
+                            color: $black
+                        ul
+                            li
+                                @include font(500)
+                                white-space: nowrap
+                                padding: 10px 20px
+                                &:not(:last-child)
+                                    border-bottom: 1px solid #0000001A
+            .colB
+                background: linear-gradient(0deg, #D9F9EE 11%, #FFFFFF 35%)
+                flex: 0 1 38%
+                max-width: 38%
+                width: 100%
+                .card-body
+                    width: 100%
+                    .dream-slider-wrapper
+                        position: relative
+                        .dream-dots
+                            text-align: center
+                            margin-top: 30px
+                            --swiper-pagination-bullet-size: 12px
+                        .dream-nav
+                            position: absolute
+                            top: 50%
+                            left: 50%
+                            translate: -50% -50%
+                            width: 100%
+                            display: flex
+                            align-items: center
+                            justify-content: space-between
+                            z-index: 2
+                            button
+                                width: 20px
+                                height: 20px
+                                &.swiper-next
+                                    transform: rotate(180deg)
+                                svg
+                                    width: 100%
+                                    height: 100%
+                        .dream-slider
+                            .item
+                                text-align: center
+                                figure
+                                    img
+                                        border-radius: 50%
+                                figcaption
+                                    margin-top: 10px
+                                    p
+                                        max-width: 210px
+                                        margin: 0 auto
+            .colC
+                flex: 0 1 calc( 32% - 15px )
+                max-width: calc( 32% - 15px )
+                .card-body
+                    ul
+                        li
+                            display: flex
+                            flex-wrap: wrap
+                            gap: 15px
+                            padding: 10px 0
+                            &:not(:last-child)
+                                border-bottom: 1px solid #00000014
+                            .icon
+                                flex: 0 1 40px
+                                width: 100%
+                                max-width: 40px
+                            .info
+                                flex: 1
+                                h6
+                                    font-size: 14px
+                                    line-height: 1.7
+                                    color: $black
+                                    @include font(400)
+                                p
+                                    font-size: 12px
+                                    line-height: 1.2
+                                    color: #666666  
+                                    @include font(400)
+                                    &:not(:last-child)
+                                        padding-bottom: 3px
+                                    span
+                                        @include font(600)
+                                        color: #666666
+        .report-wrap
+            width: 100%
+            justify-content: space-between
+            .colA
+                flex: 0 1 68%
+                max-width: 68%
+                .title
+                    justify-content: space-between
+                    padding: 10px 20px
+                    align-items: center  
+            .colB
+                flex: 0 1 calc( 32% - 15px )
+                max-width: calc( 32% - 15px )
+                .title  
+                    justify-content: space-between
+                    padding: 10px 20px
+                    align-items: center      
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843)
+                .content
+                    padding: 10px 0
+                    table
+                        border-collapse: collapse
+                        width: 100%
+                        tr
+                            th, td
+                                &:first-child
+                                    text-align: left
+                        td, th
+                            font-weight: normal
+                            padding: 10px 20px
+                            text-align: center
+                            &:first-child
+                                text-align: left
+                        tbody
+                            tr
+                                &:not(:last-child)
+                                    border-bottom: 1px solid #0000001A

@@ -1,30 +1,5 @@
 @import '../_var'
 
-.dropdown-select
-    & ~ .select2
-        width: auto !important
-        .selection
-            .select2-selection
-                border: none
-                height: auto
-                .select2-selection__rendered
-                    display: inline-block
-                    vertical-align: middle
-                    line-height: 1
-                    color: var(--general-c)
-                    caret-color: transparent
-                    user-select: none
-                    padding: 0
-                    padding-right: 20px
-                    background-image: url(../icon/arrow-down.svg)
-                    background-repeat: no-repeat
-                    white-space: nowrap
-                    background-position: 100% 50%
-                .select2-selection__arrow
-                    display: none
-.dropdown-select-menu
-    .select2-dropdown
-        width: 128px !important
 [data-dropdown]
     display: inline-block
     vertical-align: middle
@@ -46,7 +21,6 @@
         color: var(--general-c)
         caret-color: transparent
         user-select: none
-        text-align: left
     *
         line-height: 1.1
     .dropdown-menu
@@ -98,25 +72,3 @@
                         &.new
                             background: var(--general-h)
                             border-bottom: 1px solid var(--general-g)
-
-
-.dropdown-date
-    display: inline-block
-    vertical-align: middle
-    line-height: 1
-    background-image: url(../icon/arrow-down.svg)
-    background-repeat: no-repeat
-    white-space: nowrap
-    background-position: 100% 50%
-    overflow: hidden
-    text-overflow: ellipsis
-    width: 100px
-    padding-right: 20px
-    color: var(--general-c)
-    caret-color: transparent
-    user-select: none
-    &::placeholder
-        text-transform: capitalize
-        color: var(--general-c)
-
-
