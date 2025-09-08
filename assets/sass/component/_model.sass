@@ -846,15 +846,14 @@ dialog
 
 .message-pop
     position: fixed
-    right: 50%
+    left: 50%
+    translate: -50% 5%
     top: 5%
     z-index: 5
     background: var(--general-b)
     padding: 10px 20px
     color: var(--white)
     border-radius: 6px
-    @include media(1366)
-        translate: 50% 0
     &.alert
         background: var(--yellow-a)
     &.error

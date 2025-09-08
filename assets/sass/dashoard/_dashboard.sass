@@ -1697,7 +1697,7 @@ main
 .top-nav
     width: 100%
     position: sticky
-    top: 0
+    top: var(--header)
     left: 0
     padding: 10px 20px
     border-radius: 0
@@ -1856,20 +1856,22 @@ main
                 flex: 0 1 calc( 30% - 15px )
                 max-width: calc( 30% - 15px )
                 .card-content
-                    .list
-                        flex: 1
-                        padding: 10px 0
-                        p
-                            padding: 0px 20px 10px
+                    table
+                        border-collapse: collapse
+                        width: 100%
+                        tr
+                            th
+                                color: $black
+                        td, th
                             @include font(500)
-                            color: $black
-                        ul
-                            li
-                                @include font(500)
-                                white-space: nowrap
-                                padding: 10px 20px
+                            font-weight: normal
+                            padding: 10px 20px
+                            text-align: left
+                        tbody
+                            tr
                                 &:not(:last-child)
                                     border-bottom: 1px solid #0000001A
+
             .colB
                 background: linear-gradient(0deg, #D9F9EE 11%, #FFFFFF 35%)
                 flex: 0 1 38%
@@ -1955,6 +1957,8 @@ main
                     justify-content: space-between
                     padding: 10px 20px
                     align-items: center  
+                .chartdiv
+                    width: 100%
             .colB
                 flex: 0 1 calc( 32% - 15px )
                 max-width: calc( 32% - 15px )
@@ -1982,3 +1986,148 @@ main
                             tr
                                 &:not(:last-child)
                                     border-bottom: 1px solid #0000001A
+        // Dream list page
+        .dream-list-wrap
+            .title
+                align-items: center
+                justify-content: space-between
+                p
+                    font-size: 24px
+            .dreamlist-wrap
+                justify-content: space-between
+                margin-top: 26px
+                .colA
+                    flex: 0 1 calc( 70% - 15px)
+                    max-width: calc( 70% - 15px)
+                    width: 100%
+                    padding: 20px
+                    .image-wrapper
+                        display: grid
+                        grid-template-columns: repeat(3, 1fr)
+                        grid-gap: 15px
+                        .item-md
+                            position: relative
+                            overflow: hidden
+                            cursor: pointer
+                            width: 100%
+                            &.updation
+                                figcaption
+                                    transform: translateY(0)
+                                    textarea
+                                        background: $white
+                                        color: $black
+                            &.upload
+                                height: max-content
+                                figcaption
+                                    margin-top: 10px
+                                    height: 100%
+                                    position: static
+                                    padding: 0
+                                    transform: translateY(0)
+                            &:hover
+                                figcaption
+                                    transform: translateY(0)
+                            &:not(.upload)
+                                figure
+                                    &::before
+                                        content: ""
+                                        position: absolute
+                                        top: 0
+                                        left: 0
+                                        right: 0
+                                        bottom: 0
+                                        pointer-events: none
+                                        transition: 0.5s ease
+                                        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.55) 100%)
+                                        border-radius: 5px
+                                textarea
+                                    text-align: center
+                                    color: $white
+                                    font-size: 12px
+                                    @include font(700)
+                                    background: none
+                                    outline: none
+                                    border: none
+                            figure
+                                position: relative
+                                display: block
+                                overflow: hidden
+                                line-height: 0
+                                height: 100%
+                                input
+                                    position: absolute
+                                    width: 100%
+                                    height: 100%
+                                    left: 0
+                                    top: 0
+                                    opacity: 0
+                                    z-index: 1
+                                img
+                                    width: 100%
+                                    height: 100%
+                                    border-radius: 5px
+                                    object-fit: cover
+                            figcaption
+                                position: absolute
+                                bottom: 0
+                                left: 0
+                                z-index: 2
+                                padding: 0 20px 10px
+                                width: 100%
+                                transform: translateY(100%)
+                                text-align: center
+                                transition: .5s ease
+                                textarea
+                                    width: 100%
+                            .btn_wrap
+                                position: absolute
+                                top: 2%
+                                right: 3%
+                                z-index: 2
+                                transition: .3s ease
+                                .updateBtn
+                                    display: none
+                                    transition: .3s ease
+                                    &.active
+                                        display: block
+                                .edit
+                                    width: 30px
+                                    display: none
+                                    transition: .3s ease
+                                    &.open
+                                        display: block
+                .colB
+                    flex: 0 1 30%
+                    max-width: 30%
+                    width: 100%
+                    padding: 0 20px 0 30px 
+                    .bucketlist
+                        height: 100%
+                        border-left: 1px solid #348EFE
+                        button
+                            margin-left: 20px
+                        ul
+                           width: 100%
+                           word-break: break-word
+                           padding-top: 40px
+                           margin-left: -8px
+                           li
+                                padding-left: 30px
+                                margin-bottom: 20px
+                                font-size: 14px
+                                @include font(500)
+                                position: relative
+                                &.active
+                                    &::before
+                                        background: #348EFE
+                                &::before
+                                    content: ""
+                                    position: absolute
+                                    left: 0
+                                    top: 50%
+                                    translate: 0 -50%
+                                    width: 15px
+                                    height: 15px
+                                    border: 1px solid #348EFE
+                                    background: $white
+                                    border-radius: 50%
