@@ -143,12 +143,26 @@
       </div>
     </aside>
     <main>
+      <dialog data-model="celebrationPop">
+        <div class="dialog-wrapper">
+          <div class="celebration-body">
+              <button type="button" class="close-dialog"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--material-symbols-light" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" data-icon="material-symbols-light:close" > <path fill="currentColor" d="m6.4 18.308l-.708-.708l5.6-5.6l-5.6-5.6l.708-.708l5.6 5.6l5.6-5.6l.708.708l-5.6 5.6l5.6 5.6l-.708.708l-5.6-5.6z"></path> </svg> </button>
+              <div class="content">
+                <div class="icon">
+                  <img src="/assets/img/sections/clapping.gif" alt="">
+                </div>
+                <div class="title">Congratulations!!!</div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae quidem perspiciatis non harum quas dolores! Explicabo sit eligendi</p>
+              </div>
+          </div>
+        </div>
+      </dialog>
       <div class="top-nav card">
         <ul>
           <li class="active"><a href="/dream.html">My Vision Board</a></li>
           <li><a href="/dream-list.html">My Dream List</a></li>
           <li><a href="/financial-partner.html">My Financial Planner</a></li>
-          <li><a href="">My Financial Tracker</a></li>
+          <li><a href="/financial-tracker.html">My Financial Tracker</a></li>
           <li><a href="/debt-savings.html">Debt & Saving Trackers</a></li>
           <li><a href="/income-expenses.html">Income & Expenses</a></li>
         </ul>
@@ -161,6 +175,15 @@
           <div class="info">
             <h6>INR 20000 Due</h6>
             <p>Credit Card Dues on 6 Sep</p>
+          </div>
+        </div>
+        <div class="complete-profile flex">
+          <div class="icon">
+            <img src="/assets/img/sections/notification.gif" alt="">
+          </div>
+          <div class="info">
+            <p>Your profile is 60% completed, update your profile now.</p>
+            <button type="button" class="btn xsmall mt-10">Update</button>
           </div>
         </div>
         <div class="dream-secA flex">
@@ -459,7 +482,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" 
             integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" 
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-            
+
     <!-- Your custom scripts (must be last) -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/chart.js"></script>
@@ -551,6 +574,9 @@
         }
     }
   })
+  setTimeout(() => {
+    $('.complete-profile').addClass('active')
+  }, 2000)
 </script>
   </body>
 </html>

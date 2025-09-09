@@ -105,10 +105,11 @@ html
 div
     line-height: normal
 
-// Variables
+// Variables 
 $black: var(--black)
 $white: var(--white)
 $text: var(--text)
+
 
 li
     color: var(--general-c)
@@ -659,4 +660,75 @@ div
                 b
                     color: #000
 
-                    
+.complete-profile
+    width: 300px
+    gap: 15px
+    box-shadow: -1px 0px 10px 2px rgba(21, 34, 50, 0.0784313725)
+    padding: 15px
+    background: $white
+    border-radius: 5px
+    position: fixed
+    right: 3%
+    bottom: 3%
+    z-index: 2
+    transform: translateX(100vw)
+    transition: .5s ease-in-out
+    &.active
+        transform: translateX(0)
+        transition: .5s ease-in-out
+    .icon
+        flex: 0 1 45px
+        max-width: 45px
+        width: 100%
+        border-radius: 50%
+        img
+            border-radius: 50%
+    .info
+        flex: 1
+        p
+            color: $black
+            @include font(600)
+            line-height: 1.2
+        button
+            animation: bg-change 2s linear infinite
+            border: none
+            @keyframes bg-change
+                0%
+                    background: #348EFE
+                50%
+                    background: red
+                100%
+                    background: #348EFE
+
+.due-notibar
+    width: 300px
+    align-items: center
+    gap: 15px
+    padding: 20px
+    background: #06A561
+    border-radius: 5px
+    position: fixed
+    right: 3%
+    bottom: 3%
+    transform: translateX(100vw)
+    transition: .5s ease-in-out
+    &.active
+        transform: translateX(0)
+        transition: .5s ease-in-out
+    .icon
+        flex: 0 1 45px
+        max-width: 45px
+        width: 100%
+        border-radius: 50%
+        img
+            border-radius: 50%
+    .info
+        flex: 1
+        h6
+            font-size: 16px
+            @include font(700)
+            color: $white
+        p
+            color: $white
+            font-size: 14px
+            @include font(600)

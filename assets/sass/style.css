@@ -3494,6 +3494,46 @@ dialog[data-model=show_notification] .notification-div-wrap {
 dialog[data-model=show_lead_status] .dialog-wrapper .lead-status-pop .title-up {
   flex-wrap: nowrap;
 }
+dialog[data-model=celebrationPop] .dialog-wrapper .celebration-body {
+  width: 100%;
+  max-width: 600px;
+}
+dialog[data-model=celebrationPop] .dialog-wrapper .celebration-body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(/assets/img/sections/celebration.gif);
+  background-size: 70%;
+  background-position: center top;
+  z-index: -1;
+}
+dialog[data-model=celebrationPop] .dialog-wrapper .celebration-body .close-dialog {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+dialog[data-model=celebrationPop] .dialog-wrapper .celebration-body .content {
+  padding: 20px;
+}
+dialog[data-model=celebrationPop] .dialog-wrapper .celebration-body .content .icon {
+  width: 80px;
+  margin: 0 auto;
+}
+dialog[data-model=celebrationPop] .dialog-wrapper .celebration-body .content .title {
+  padding: 0;
+  text-align: center;
+  background: none;
+  border: none;
+  margin: 5px 0 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--green-b);
+}
+dialog[data-model=celebrationPop] .dialog-wrapper .celebration-body .content p {
+  text-align: center;
+  max-width: 350px;
+}
 @media only screen and (max-width: 767px) {
   dialog[data-model=jweuz] .dialog-wrapper {
     border-radius: 0;
@@ -6678,6 +6718,97 @@ div:has(> .tjwek) {
   color: #000;
 }
 
+.complete-profile {
+  width: 300px;
+  gap: 15px;
+  box-shadow: -1px 0px 10px 2px rgba(21, 34, 50, 0.0784313725);
+  padding: 15px;
+  background: var(--white);
+  border-radius: 5px;
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  z-index: 2;
+  transform: translateX(100vw);
+  transition: 0.5s ease-in-out;
+}
+.complete-profile.active {
+  transform: translateX(0);
+  transition: 0.5s ease-in-out;
+}
+.complete-profile .icon {
+  flex: 0 1 45px;
+  max-width: 45px;
+  width: 100%;
+  border-radius: 50%;
+}
+.complete-profile .icon img {
+  border-radius: 50%;
+}
+.complete-profile .info {
+  flex: 1;
+}
+.complete-profile .info p {
+  color: var(--black);
+  font-family: "Inter-600";
+  line-height: 1.2;
+}
+.complete-profile .info button {
+  animation: bg-change 2s linear infinite;
+  border: none;
+}
+@keyframes bg-change {
+  0% {
+    background: #348EFE;
+  }
+  50% {
+    background: red;
+  }
+  100% {
+    background: #348EFE;
+  }
+}
+
+.due-notibar {
+  width: 300px;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: #06A561;
+  border-radius: 5px;
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  transform: translateX(100vw);
+  transition: 0.5s ease-in-out;
+}
+.due-notibar.active {
+  transform: translateX(0);
+  transition: 0.5s ease-in-out;
+}
+.due-notibar .icon {
+  flex: 0 1 45px;
+  max-width: 45px;
+  width: 100%;
+  border-radius: 50%;
+}
+.due-notibar .icon img {
+  border-radius: 50%;
+}
+.due-notibar .info {
+  flex: 1;
+}
+.due-notibar .info h6 {
+  font-size: 16px;
+  font-family: "Inter-700";
+  color: var(--white);
+}
+.due-notibar .info p {
+  color: var(--white);
+  font-size: 14px;
+  font-family: "Inter-600";
+}
+
 .login-wrapper {
   height: 100vh;
   width: 100%;
@@ -9109,10 +9240,11 @@ main .main-wrap {
 .top-nav {
   width: 100%;
   position: sticky;
-  top: var(--header);
+  top: calc(var(--header) + var(--marqueheight));
   left: 0;
   padding: 10px 20px;
   border-radius: 0;
+  z-index: 1;
 }
 .top-nav ul {
   display: flex;
@@ -9150,6 +9282,12 @@ main .dream-wrap .due-notibar {
   position: fixed;
   right: 3%;
   bottom: 3%;
+  transform: translateX(100vw);
+  transition: 0.5s ease-in-out;
+}
+main .dream-wrap .due-notibar.active {
+  transform: translateX(0);
+  transition: 0.5s ease-in-out;
 }
 main .dream-wrap .due-notibar .icon {
   flex: 0 1 45px;
@@ -9454,12 +9592,13 @@ main .dream-wrap .report-wrap .colB .content table td:first-child, main .dream-w
 main .dream-wrap .report-wrap .colB .content table tbody tr:not(:last-child) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
 }
-main .dream-wrap .dream-list-wrap .title {
+main .dream-wrap .dream-list-wrap > .title {
   align-items: center;
   justify-content: space-between;
 }
-main .dream-wrap .dream-list-wrap .title p {
+main .dream-wrap .dream-list-wrap > .title > p {
   font-size: 24px;
+  font-weight: 700;
 }
 main .dream-wrap .dream-list-wrap .dreamlist-wrap {
   justify-content: space-between;
@@ -9637,6 +9776,7 @@ main .dream-wrap .dream-list-wrap .financial-wrap .colA, main .dream-wrap .dream
 main .dream-wrap .dream-list-wrap .financial-wrap .colA .title, main .dream-wrap .dream-list-wrap .financial-wrap .colB .title {
   padding: 10px 20px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
 }
@@ -9647,6 +9787,29 @@ main .dream-wrap .dream-list-wrap .financial-wrap .colA .title p, main .dream-wr
 main .dream-wrap .dream-list-wrap .financial-wrap .colA .title .action_wrap, main .dream-wrap .dream-list-wrap .financial-wrap .colB .title .action_wrap {
   align-items: center;
   gap: 20px;
+}
+main .dream-wrap .dream-list-wrap .financial-wrap .colA .content.expense-content table tr:first-child, main .dream-wrap .dream-list-wrap .financial-wrap .colB .content.expense-content table tr:first-child {
+  border: none;
+}
+main .dream-wrap .dream-list-wrap .financial-wrap .colA .content.expense-content table tr:last-child td, main .dream-wrap .dream-list-wrap .financial-wrap .colB .content.expense-content table tr:last-child td {
+  color: #000;
+  font-weight: 700;
+}
+main .dream-wrap .dream-list-wrap .financial-wrap .colA .content.expense-content table tr th, main .dream-wrap .dream-list-wrap .financial-wrap .colB .content.expense-content table tr th {
+  font-weight: 500;
+  color: rgba(102, 102, 102, 0.5803921569);
+}
+main .dream-wrap .dream-list-wrap .financial-wrap .colA .content.expense-content table tr td, main .dream-wrap .dream-list-wrap .financial-wrap .colB .content.expense-content table tr td {
+  color: #666666;
+}
+main .dream-wrap .dream-list-wrap .financial-wrap .colA .content.expense-content table tr th.green, main .dream-wrap .dream-list-wrap .financial-wrap .colA .content.expense-content table tr td.green, main .dream-wrap .dream-list-wrap .financial-wrap .colB .content.expense-content table tr th.green, main .dream-wrap .dream-list-wrap .financial-wrap .colB .content.expense-content table tr td.green {
+  color: var(--green-b);
+}
+main .dream-wrap .dream-list-wrap .financial-wrap .colA .content.expense-content table tr th.red, main .dream-wrap .dream-list-wrap .financial-wrap .colA .content.expense-content table tr td.red, main .dream-wrap .dream-list-wrap .financial-wrap .colB .content.expense-content table tr th.red, main .dream-wrap .dream-list-wrap .financial-wrap .colB .content.expense-content table tr td.red {
+  color: var(--red-a);
+}
+main .dream-wrap .dream-list-wrap .financial-wrap .colA .content.expense-content table tr th:not(:first-child), main .dream-wrap .dream-list-wrap .financial-wrap .colA .content.expense-content table tr td:not(:first-child), main .dream-wrap .dream-list-wrap .financial-wrap .colB .content.expense-content table tr th:not(:first-child), main .dream-wrap .dream-list-wrap .financial-wrap .colB .content.expense-content table tr td:not(:first-child) {
+  text-align: center;
 }
 main .dream-wrap .dream-list-wrap .financial-wrap .colA .content table, main .dream-wrap .dream-list-wrap .financial-wrap .colB .content table {
   width: 100%;
@@ -9759,6 +9922,71 @@ main .dream-wrap .dream-list-wrap .financial-tracker-wrap .colB .card-body ul li
 main .dream-wrap .dream-list-wrap .financial-tracker-wrap .colB .card-body ul li .info p span {
   font-family: "Inter-600";
   color: #666666;
+}
+main .dream-wrap .dream-list-wrap .due-payments-wrap .title {
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
+}
+main .dream-wrap .dream-list-wrap .due-payments-wrap .title .info {
+  align-items: center;
+}
+main .dream-wrap .dream-list-wrap .due-payments-wrap .title .info .icon {
+  flex: 0 1 40px;
+}
+main .dream-wrap .dream-list-wrap .due-payments-wrap .title .info .icon img {
+  width: 40px;
+}
+
+.label-table .title {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
+}
+.label-table .title p {
+  font-size: 14px;
+  font-family: "Inter-600";
+}
+.label-table .title .action_wrap {
+  align-items: center;
+  gap: 20px;
+}
+.label-table .content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.label-table .content table tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
+}
+.label-table .content table tr:first-child, .label-table .content table tr:last-child {
+  border-bottom: none;
+}
+.label-table .content table tr:last-child td {
+  color: #000;
+  font-weight: 700;
+}
+.label-table .content table tr th {
+  font-weight: 500;
+  color: rgba(102, 102, 102, 0.5803921569);
+  padding: 15px 20px;
+  text-align: left;
+}
+.label-table .content table tr td {
+  text-align: left;
+  padding: 15px 20px;
+  color: #666666;
+  font-family: "Inter-500";
+}
+.label-table .content table tr th.green, .label-table .content table tr td.green {
+  color: var(--green-b);
+}
+.label-table .content table tr th.red, .label-table .content table tr td.red {
+  color: var(--red-a);
+}
+.label-table .content table tr th:not(:first-child), .label-table .content table tr td:not(:first-child) {
+  text-align: center;
 }
 
 .main-report {
