@@ -419,9 +419,13 @@
               const textVal = $container.find("textarea").val().trim();
               if (textVal !== "") {
                 const index = $(".item-md").index($container);
+<<<<<<< HEAD
                 const $ulwrapper = $('.bucketlist')
                 const $ul = $(".bucketlistUl");
                 $ulwrapper.addClass('active')
+=======
+                const $ul = $(".bucketlistUl");
+>>>>>>> a60cbccf63e6489ab81e6ea8c7b28f243d53988e
                 const $existingLi = $ul.find("li").eq(index);
                 if ($existingLi.length) {
                   // Update existing li

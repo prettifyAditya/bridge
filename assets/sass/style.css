@@ -9240,7 +9240,11 @@ main .main-wrap {
 .top-nav {
   width: 100%;
   position: sticky;
+<<<<<<< HEAD
   top: calc(var(--header) + var(--marqueheight));
+=======
+  top: var(--header);
+>>>>>>> a60cbccf63e6489ab81e6ea8c7b28f243d53988e
   left: 0;
   padding: 10px 20px;
   border-radius: 0;
@@ -9592,6 +9596,7 @@ main .dream-wrap .report-wrap .colB .content table td:first-child, main .dream-w
 main .dream-wrap .report-wrap .colB .content table tbody tr:not(:last-child) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
 }
+<<<<<<< HEAD
 main .dream-wrap .dream-list-wrap > .title {
   align-items: center;
   justify-content: space-between;
@@ -9599,6 +9604,14 @@ main .dream-wrap .dream-list-wrap > .title {
 main .dream-wrap .dream-list-wrap > .title > p {
   font-size: 24px;
   font-weight: 700;
+=======
+main .dream-wrap .dream-list-wrap .title {
+  align-items: center;
+  justify-content: space-between;
+}
+main .dream-wrap .dream-list-wrap .title p {
+  font-size: 24px;
+>>>>>>> a60cbccf63e6489ab81e6ea8c7b28f243d53988e
 }
 main .dream-wrap .dream-list-wrap .dreamlist-wrap {
   justify-content: space-between;
@@ -9730,8 +9743,11 @@ main .dream-wrap .dream-list-wrap .dreamlist-wrap .colB {
 }
 main .dream-wrap .dream-list-wrap .dreamlist-wrap .colB .bucketlist {
   height: 100%;
+<<<<<<< HEAD
 }
 main .dream-wrap .dream-list-wrap .dreamlist-wrap .colB .bucketlist.active {
+=======
+>>>>>>> a60cbccf63e6489ab81e6ea8c7b28f243d53988e
   border-left: 1px solid #348EFE;
 }
 main .dream-wrap .dream-list-wrap .dreamlist-wrap .colB .bucketlist button {
@@ -9765,6 +9781,7 @@ main .dream-wrap .dream-list-wrap .dreamlist-wrap .colB .bucketlist ul li::befor
   background: var(--white);
   border-radius: 50%;
 }
+<<<<<<< HEAD
 main .dream-wrap .dream-list-wrap .financial-wrap {
   gap: 15px;
 }
@@ -9988,6 +10005,8 @@ main .dream-wrap .dream-list-wrap .due-payments-wrap .title .info .icon img {
 .label-table .content table tr th:not(:first-child), .label-table .content table tr td:not(:first-child) {
   text-align: center;
 }
+=======
+>>>>>>> a60cbccf63e6489ab81e6ea8c7b28f243d53988e
 
 .main-report {
   position: relative;
