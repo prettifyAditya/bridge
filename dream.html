@@ -145,12 +145,12 @@
     <main>
       <div class="top-nav card">
         <ul>
-          <li class="active"><a href="">My Vision Board</a></li>
-          <li><a href="">My Dream List</a></li>
-          <li><a href="">My Financial Planner</a></li>
+          <li class="active"><a href="/dream.html">My Vision Board</a></li>
+          <li><a href="/dream-list.html">My Dream List</a></li>
+          <li><a href="/financial-partner.html">My Financial Planner</a></li>
           <li><a href="">My Financial Tracker</a></li>
-          <li><a href="">Debt & Saving Trackers</a></li>
-          <li><a href="">Income & Expenses</a></li>
+          <li><a href="/debt-savings.html">Debt & Saving Trackers</a></li>
+          <li><a href="/income-expenses.html">Income & Expenses</a></li>
         </ul>
       </div>
       <div class="main-wrap dream-wrap">
@@ -163,7 +163,7 @@
             <p>Credit Card Dues on 6 Sep</p>
           </div>
         </div>
-        <div class="dream-secA flex mt-26">
+        <div class="dream-secA flex">
           <div class="col badge green">
             <div class="inf">
               <h5>This Month Income</h5>
@@ -222,36 +222,42 @@
               </div>
             </div>
             <div class="card-content flex">
-              <div class="list">
-                <p>Particulars</p>
-                <ul>
-                  <li>Rent</li>
-                  <li>Credit Card</li>
-                  <li>Housing Loan</li>
-                  <li>Bank Loan</li>
-                  <li>Car EMI</li>
-                </ul>
-              </div>
-              <div class="list">
-                <p>Due</p>
-                <ul>
-                  <li>2,000</li>
-                  <li>1,500</li>
-                  <li>1100</li>
-                  <li>5000</li>
-                  <li>6000</li>
-                </ul>
-              </div>
-              <div class="list">
-                <p>Status</p>
-                <ul>
-                  <li class="green">Paid</li>
-                  <li class="red">Due</li>
-                  <li class="green">Paid</li>
-                  <li class="red">Due</li>
-                  <li class="red">Due</li>
-                </ul>
-              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Particulars</th>
+                    <th>Due</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Rent</td>
+                    <td>2,000</td>
+                    <td class="green">Paid</td>
+                  </tr>
+                  <tr>
+                    <td>Credit Card</td>
+                    <td>1,500</td>
+                    <td class="red">Due</td>
+                  </tr>
+                  <tr>
+                    <td>Housing Loan</td>
+                    <td>1100</td>
+                    <td class="green">Paid</td>
+                  </tr>
+                  <tr>
+                    <td>Bank Loan</td>
+                    <td>5000</td>
+                    <td class="red">Due</td>
+                  </tr>
+                  <tr>
+                    <td>Car EMI</td>
+                    <td>6000</td>
+                    <td class="red">Due</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
           <div class="colB card">
@@ -363,7 +369,7 @@
             <div class="title flex">
               <p class="f-bold f-18 black">Revenue Report</p>
               <div class="year-select">
-                <select class="form-control">
+                <select class="dropdown-select">
                   <option value="This Year">This Year</option>
                   <option value="2025">2025</option>
                   <option value="2024">2024</option>
@@ -374,7 +380,7 @@
               </div>
             </div>
             <div class="chartdiv">
-              <canvas id="revenueReport" height="80"></canvas>
+              <canvas id="revenueReport"></canvas>
             </div>
           </div>
           <div class="colB card">
@@ -424,29 +430,40 @@
         </div>
       </div>
     </main>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"
-      integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- DatePicker -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <!-- Data Tables -->
-    <script type="text/javascript" src="/assets/js/datatables.min.js"></script>
-    <!-- Main Js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
-        integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <div class="dropdown-select-menu"></div>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" 
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Iconify (independent) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js" 
+            integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Select2 (needs jQuery) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" 
+            integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Moment.js (for date handling) -->
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+    <!-- DateRangePicker (depends on jQuery + Moment.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <!-- DataTables (needs jQuery) -->
+    <script src="/assets/js/datatables.min.js"></script>
+
+    <!-- Swiper (independent) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" 
+            integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+    <!-- Your custom scripts (must be last) -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/chart.js"></script>
+
     <script>
         $(function(){
           new Swiper('.dream-slider', {
@@ -463,5 +480,77 @@
           })
         })
     </script>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  var RevenueChart;
+  if (RevenueChart) {
+    RevenueChart.destroy();
+  }
+  let fontValueRevenueChart = window.innerWidth <= 767 ? 8 : 13;
+  RevenueChart = new Chart('revenueReport', {
+    type: 'line',
+    data: {
+        labels: [
+            "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+        ],
+        datasets: [
+            {
+                label: "Earning",
+                data: [45, 10, 60, 70, 65, 75, 50, 40, 42, 38, 28, 44],
+                borderColor: "#348EFE",  // green line
+                backgroundColor: "transparent",
+                tension: 0.4,
+                fill: true,
+                pointRadius: 4,
+                pointHoverRadius: 6
+            },
+            {
+                label: "Expense",
+                data: [25, 20, 50, 55, 70, 90, 60, 45, 40, 50, 35, 30],
+                borderColor: "rgba(220, 53, 69, 1)",  // red line
+                backgroundColor: "transparent",
+                tension: 0.4,
+                fill: true,
+                pointRadius: 4,
+                pointHoverRadius: 6
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                display: true
+            },
+            tooltip: {
+                mode: "index",
+                intersect: false
+            }
+        },
+        interaction: {
+            mode: "nearest",
+            axis: "x",
+            intersect: false
+        },
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                }
+            },
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                }
+            }
+        }
+    }
+  })
+</script>
   </body>
 </html>
